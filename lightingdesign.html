@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AKAS Studio | Lighting Design</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    .hero-bg {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('https://images.unsplash.com/photo-1582582494700-9064e3a243b3?auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+    .hover-scale {
+      transition: transform 0.3s ease;
+    }
+    .hover-scale:hover {
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <nav class="fixed w-full bg-white shadow-sm z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+            <div class="flex-shrink-0 flex items-center">
+                <a href="index.html" class="heading-font text-2xl font-bold text-gray-800">AKAS</a>
+            </div>
+            <div class="hidden md:block">
+                <div class="ml-10 flex items-baseline space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-amber-800 px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-amber-800 px-3 py-2 text-sm font-medium">About</a>
+                    <a href="services.html" class="nav-link text-gray-700 hover:text-amber-800 px-3 py-2 text-sm font-medium">Services</a>
+                    <a href="portfolio.html" class="nav-link text-gray-700 hover:text-amber-800 px-3 py-2 text-sm font-medium">Portfolio</a>
+                    <a href="contact.html" class="nav-link text-gray-700 hover:text-amber-800 px-3 py-2 text-sm font-medium">Contact</a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-700 hover:text-amber-800 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="index.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-amber-800">Home</a>
+            <a href="about.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-amber-800">About</a>
+            <a href="services.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-amber-800">Services</a>
+            <a href="projects.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-amber-800">Portfolio</a>
+            <a href="contact.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-amber-800">Contact</a>
+            <a href="#" class="text-gray-400 hover:text-white">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+    </div>
+</nav>
+
+  <!-- Hero Section -->
+  <section class="hero-bg h-[80vh] flex items-center justify-center text-white text-center px-4 animate__animated animate__fadeIn">
+    <div>
+      <h1 class="text-4xl md:text-6xl font-bold mb-4 animate__animated animate__fadeInDown">Lighting Design</h1>
+      <p class="text-xl max-w-2xl mx-auto animate__animated animate__fadeInUp animate__delay-1s">
+        Illuminate your environment with intention. We design lighting that enhances mood, functionality, and aesthetics.
+      </p>
+    </div>
+  </section>
+
+  <!-- Overview Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <img src="https://images.unsplash.com/photo-1615874959474-d8b30b2cce17?auto=format&fit=crop&w=800&q=80" alt="Lighting Atmosphere" class="rounded-lg shadow-lg hover-scale">
+        <div>
+          <h2 class="text-3xl font-bold mb-4">Why Lighting Design Matters</h2>
+          <p class="mb-4 text-gray-600">
+            Lighting isn’t just about visibility — it shapes how we feel, interact, and perceive space. Our lighting design service ensures every corner of your space is lit with purpose and precision.
+          </p>
+          <ul class="space-y-3 text-gray-700">
+            <li><i class="fas fa-check text-amber-600 mr-2"></i>Enhance mood and ambiance</li>
+            <li><i class="fas fa-check text-amber-600 mr-2"></i>Improve spatial functionality</li>
+            <li><i class="fas fa-check text-amber-600 mr-2"></i>Highlight key architectural features</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="bg-gray-100 py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-12">Our 3-Step Lighting Process</h2>
+      <div class="grid md:grid-cols-3 gap-8 text-left">
+        <div class="bg-white p-6 rounded-lg shadow hover-scale">
+          <img src="https://images.unsplash.com/photo-1570978321081-cfe2e5c525f3?auto=format&fit=crop&w=800&q=80" alt="Assessment" class="rounded-md mb-4">
+          <h3 class="text-xl font-semibold mb-2">Step 1: Assessment</h3>
+          <p class="text-gray-600">We evaluate your space, needs, and goals to design a lighting plan that aligns with your lifestyle and layout.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover-scale">
+          <img src="https://images.unsplash.com/photo-1591748751164-f3fd4b71ac66?auto=format&fit=crop&w=800&q=80" alt="Design Plan" class="rounded-md mb-4">
+          <h3 class="text-xl font-semibold mb-2">Step 2: Design Plan</h3>
+          <p class="text-gray-600">We develop a layered lighting strategy incorporating ambient, task, and accent lighting tailored to each area.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover-scale">
+          <img src="https://images.unsplash.com/photo-1587500158485-b3785d5dcd48?auto=format&fit=crop&w=800&q=80" alt="Implementation" class="rounded-md mb-4">
+          <h3 class="text-xl font-semibold mb-2">Step 3: Implementation Support</h3>
+          <p class="text-gray-600">We provide guidance on fixture selection, placement, and control systems for seamless execution.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-12">What Our Clients Say</h2>
+      <div class="grid md:grid-cols-2 gap-10">
+        <div class="bg-gray-100 p-6 rounded-lg shadow text-left">
+          <p class="text-gray-700 italic">“The new lighting setup has transformed my living space. Every evening feels like an experience now!”</p>
+          <div class="mt-4 font-semibold">— David K., Homeowner</div>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow text-left">
+          <p class="text-gray-700 italic">“AKAS delivered a flexible, elegant lighting scheme for our restaurant that elevated our entire guest experience.”</p>
+          <div class="mt-4 font-semibold">— Leila M., Restaurant Owner</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="bg-amber-600 text-white py-20 text-center">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Light Your Space with Intention</h2>
+      <p class="mb-8 text-lg">Book a lighting consultation today and explore how a thoughtful design can completely transform your environment.</p>
+      <a href="contact.html" class="bg-white text-amber-600 px-8 py-3 rounded-lg text-lg font-medium hover:bg-gray-100 transition">Book a Session</a>
+    </div>
+  </section>
+
+</body>
+</html>

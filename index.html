@@ -1,1 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LUXE Interior Architecture & Design - Creating beautiful, functional spaces that inspire. Residential and commercial design services.">
+    <meta name="keywords" content="interior design, architecture, home design, commercial design, space planning">
+    <title>AKAS STUDIO | Interior Architecture & Design</title>
+     <meta
+      property="og:image"
+      content="https://appliance-repairs.netlify.app/images/WhatsApp Image 2025-05-08 at 13.56.12_d1ad1fd4.jpg"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
 
+<body class="bg-gray-50">
+   <!-- Navigation -->
+<nav class="fixed w-full bg-black shadow-sm z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+            <div class="flex-shrink-0 flex items-center">
+                <a href="index.html" class="heading-font text-2xl font-bold text-white">AKAS STUDIO</a>
+            </div>
+            <div class="hidden md:block">
+                <div class="ml-10 flex items-baseline space-x-8">
+                    <a href="index.html" class="nav-link text-white hover:text-amber-500 px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="about.html" class="nav-link text-white hover:text-amber-500 px-3 py-2 text-sm font-medium">About</a>
+                    <a href="services.html" class="nav-link text-white hover:text-amber-500 px-3 py-2 text-sm font-medium">Services</a>
+                    <a href="portfolio.html" class="nav-link text-white hover:text-amber-500 px-3 py-2 text-sm font-medium">Portfolio</a>
+                    <a href="contact.html" class="nav-link text-white hover:text-amber-500 px-3 py-2 text-sm font-medium">Contact</a>
+                    <a href="#" class="text-white hover:text-amber-500">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-amber-500">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-amber-500">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white hover:text-amber-500 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-black shadow-lg">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="index.html" class="block px-3 py-2 text-base font-medium text-white hover:text-amber-500">Home</a>
+            <a href="about.html" class="block px-3 py-2 text-base font-medium text-white hover:text-amber-500">About</a>
+            <a href="services.html" class="block px-3 py-2 text-base font-medium text-white hover:text-amber-500">Services</a>
+            <a href="projects.html" class="block px-3 py-2 text-base font-medium text-white hover:text-amber-500">Portfolio</a>
+            <a href="contact.html" class="block px-3 py-2 text-base font-medium text-white hover:text-amber-500">Contact</a>
+            <div class="flex space-x-4 px-3 pt-2">
+                <a href="#" class="text-white hover:text-amber-500">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="text-white hover:text-amber-500">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="text-white hover:text-amber-500">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+            <div class="max-w-2xl">
+                <h1 class="heading-font text-5xl md:text-6xl font-bold mb-6">Elevating Spaces, Enriching Lives</h1>
+                <p class="text-lg md:text-xl mb-8">We transform ordinary spaces into extraordinary experiences through thoughtful design and architectural excellence.</p>
+                <div class="flex space-x-4">
+                    <a href="contact.html" class="bg-amber-700 hover:bg-amber-800 text-white px-6 py-3 rounded-md font-medium transition duration-300">Get Started</a>
+                    <a href="portfolio.html" class="border border-white hover:bg-white hover:text-gray-900 text-white px-6 py-3 rounded-md font-medium transition duration-300">View Projects</a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#services" class="text-white text-4xl">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <section class="w-full h-screen bg-gradient-to-b from-black via-[#1a1a1a] to-[#2e2e2e] text-white flex flex-col items-center justify-center px-6 relative">
+        <div class="absolute top-24 text-center">
+          <h2 class="text-2xl font-bold mb-2">About Us</h2>
+        </div>
+        <div class="mt-36 max-w-xl text-lg text-center">
+          <p>
+            We specialize in interior architecture and design, transforming spaces into functional, inspiring environments.
+          </p>
+        </div>
+      </section>
+      
+      <section class="w-full h-screen bg-white text-gray-800 flex flex-col items-center justify-center px-6 relative">
+        <div class="absolute top-24 text-center">
+          <h2 class="text-3xl font-bold mb-2">Our Approach</h2>
+        </div>
+        <div class="mt-36 max-w-xl text-lg text-center">
+          <p>
+            We sculpt environments through conscious materiality, light choreography, and spatial poetry – where sustainable innovation dances with human-centric design to create spaces that feel before they function.
+          </p>
+        </div>
+      </section>
+      
+      <section class="w-full bg-white px-6 pt-8 pb-16">
+        <!-- Heading -->
+        <h2 class="text-3xl font-semibold text-gray-800 text-center -mt-4 mb-4">
+          Recent Projects
+        </h2>
+        <!-- Accent divider -->
+        <div class="w-20 h-1 bg-gray-600 mx-auto mb-12"></div>
+      
+        <!-- Projects grid with divider lines -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-6xl mx-auto relative
+                    before:content-[''] before:absolute before:left-1/2 before:-translate-x-1/2 
+                    before:w-px before:bg-gray-300 before:top-8 before:bottom-8
+                    after:content-[''] after:absolute after:left-8 after:right-8 
+                    after:h-px after:bg-gray-300 after:top-1/2">
+          <!-- Project Cards -->
+          <div class="group overflow-hidden rounded-xl shadow-lg h-96 relative
+                      after:content-[''] after:absolute after:right-0 after:bottom-[-16px]
+                      after:h-px after:bg-gray-300 after:left-8 sm:after:left-[calc(50%+16px)]
+                      sm:after:right-8">
+            <img
+              src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=1632&q=80"
+              alt="Modern Apartment"
+              class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+      
+          <div class="group overflow-hidden rounded-xl shadow-lg h-96 relative
+                      after:content-[''] after:absolute after:left-0 after:bottom-[-16px]
+                      after:h-px after:bg-gray-300 after:right-8 sm:after:right-[calc(50%+16px)]
+                      sm:after:left-8">
+            <img
+              src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1632&q=80"
+              alt="Cozy Living Room"
+              class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+      
+          <div class="group overflow-hidden rounded-xl shadow-lg h-96 relative">
+            <img
+              src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1632&q=80"
+              alt="Minimal Kitchen"
+              class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+      
+          <div class="group overflow-hidden rounded-xl shadow-lg h-96 relative">
+            <img
+              src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1632&q=80"
+              alt="Stylish Bedroom"
+              class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+        </div>
+      </section>    
+      
+     <footer class="bg-black w-full border-t border-gray-800">
+    <div class="flex flex-row items-center justify-between w-full h-40"> <!-- Changed from h-64 to h-48 -->
+        <!-- Left Section -->
+        <div class="flex flex-col justify-center px-12 flex-[1.1] space-y-2">
+            <h2 class="text-amber-100 text-sm font-medium uppercase tracking-wide"> <!-- Reduced from text-1xl -->
+                ARTHUR KAMHOTI
+            </h2>
+            <div class="h-px w-12 bg-gray-500 my-1"></div>
+            <p class="text-gray-300 text-sm font-light">Founder</p> <!-- Reduced from text-base -->
+            <p class="text-gray-400 text-xs">Principal Interior Architect</p>
+            <a href="tel:+27676474091" class="text-amber-100 text-xs hover:text-amber-500 transition-colors duration-300"> <!-- Reduced from text-sm -->
+                +27 67 647 4091
+            </a>
+        </div>
+
+        <!-- Center Section -->
+        <div class="relative flex-[1.6] h-full bg-center bg-cover flex items-center justify-center" 
+             style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80');">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+            <span class="relative z-10 text-amber-100 text-base font-medium tracking-wide text-center px-8 leading-tight"> <!-- Reduced from text-lg -->
+                <span class="block text-lg mb-1 heading-font">AKAS</span> <!-- Reduced from text-1xl -->
+                AUTHENTIC · LUXURY · DESIGN
+            </span>
+        </div>
+
+        <!-- Right Section -->
+        <div class="flex flex-col justify-center items-end px-12 flex-1">
+            <div class="text-right">
+              <h2 class="text-amber-100 text-sm font-medium uppercase tracking-wide mb-2"> <!-- Reduced from text-1xl -->
+                AKAS STUDIO
+              </h2>
+              <div class="h-px w-16 bg-gray-500 mb-4"></div> <!-- Reduced margin-bottom -->
+            </div>
+          
+            <div class="text-right">
+              <p class="text-gray-300 text-sm font-light mb-2">Follow us on:</p> <!-- Reduced from text-lg -->
+              <div class="flex justify-end space-x-4">
+                <!-- Social icons remain same size -->
+                <a href="#" class="text-gray-400 hover:text-white text-sm">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white text-sm">
+                  <i class="fab fa-pinterest"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white text-sm">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

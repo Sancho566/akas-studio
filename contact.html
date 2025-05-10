@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact AKAS Studio - Interior Architecture & Design. Get in touch for design consultations and project inquiries.">
+    <meta name="keywords" content="interior design contact, architecture firm contact, design consultation">
+    <title>Contact Us | AKAS Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .contact-hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1600566752227-8f3b1a105971?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .input-field:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(180, 83, 9, 0.5);
+        }
+        
+        .map-container {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-black shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="heading-font text-2xl font-bold text-white">AKAS STUDIO</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="nav-link text-white hover:text-amber-500 px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="about.html" class="nav-link text-white hover:text-amber-500 px-3 py-2 text-sm font-medium">About</a>
+                        <a href="services.html" class="nav-link text-white hover:text-amber-500 px-3 py-2 text-sm font-medium">Services</a>
+                        <a href="portfolio.html" class="nav-link text-white hover:text-amber-500 px-3 py-2 text-sm font-medium">Portfolio</a>
+                        <a href="contact.html" class="nav-link text-white hover:text-amber-500 px-3 py-2 text-sm font-medium">Contact</a>
+                        <a href="#" class="text-white hover:text-amber-500">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-amber-500">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-amber-500">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white hover:text-amber-500 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 text-base font-medium text-white hover:text-amber-500">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-base font-medium text-white hover:text-amber-500">About</a>
+                <a href="services.html" class="block px-3 py-2 text-base font-medium text-white hover:text-amber-500">Services</a>
+                <a href="projects.html" class="block px-3 py-2 text-base font-medium text-white hover:text-amber-500">Portfolio</a>
+                <a href="contact.html" class="block px-3 py-2 text-base font-medium text-white hover:text-amber-500">Contact</a>
+                <div class="flex space-x-4 px-3 pt-2">
+                    <a href="#" class="text-white hover:text-amber-500">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-amber-500">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-amber-500">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+<section class="contact-hero h-96 flex items-center pt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white text-center">
+        <h1 class="text-3xl md:text-5xl font-bold mb-4">Let's Create Together</h1>
+        <p class="text-lg md:text-xl max-w-2xl mx-auto">Get in touch to discuss your project or schedule a consultation with our design team.</p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row gap-12">
+            <!-- Contact Form -->
+            <div class="lg:w-1/2">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-8">Send Us a Message</h2>
+                <form id="contactForm" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="firstName" class="block text-sm font-medium text-gray-700 mb-1">First Name*</label>
+                            <input type="text" id="firstName" name="firstName" required 
+                                class="input-field w-full px-4 py-3 border border-gray-300 rounded-md focus:border-amber-500">
+                        </div>
+                        <div>
+                            <label for="lastName" class="block text-sm font-medium text-gray-700 mb-1">Last Name*</label>
+                            <input type="text" id="lastName" name="lastName" required 
+                                class="input-field w-full px-4 py-3 border border-gray-300 rounded-md focus:border-amber-500">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email*</label>
+                        <input type="email" id="email" name="email" required 
+                            class="input-field w-full px-4 py-3 border border-gray-300 rounded-md focus:border-amber-500">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                        <input type="tel" id="phone" name="phone" 
+                            class="input-field w-full px-4 py-3 border border-gray-300 rounded-md focus:border-amber-500">
+                    </div>
+                    <div>
+                        <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Service Interested In</label>
+                        <select id="service" name="service" 
+                            class="input-field w-full px-4 py-3 border border-gray-300 rounded-md focus:border-amber-500">
+                            <option value="">Select a service</option>
+                            <option value="residential">Residential Design</option>
+                            <option value="commercial">Commercial Design</option>
+                            <option value="space-planning">Space Planning</option>
+                            <option value="consultation">Design Consultation</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message*</label>
+                        <textarea id="message" name="message" rows="5" required 
+                            class="input-field w-full px-4 py-3 border border-gray-300 rounded-md focus:border-amber-500"></textarea>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" id="consent" name="consent" required 
+                            class="h-4 w-4 text-amber-600 focus:ring-amber-500 border-gray-300 rounded">
+                        <label for="consent" class="ml-2 block text-sm text-gray-700">
+                            I agree to the <a href="#" class="text-amber-700 hover:text-amber-800">privacy policy</a> and <a href="#" class="text-amber-700 hover:text-amber-800">terms of service</a>.
+                        </label>
+                    </div>
+                    <button type="submit" class="w-full bg-amber-700 hover:bg-amber-800 text-white px-6 py-4 rounded-md font-medium transition duration-300">
+                        Send Message <i class="fas fa-paper-plane ml-2"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="lg:w-1/2">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-8">Contact Information</h2>
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 bg-amber-100 p-3 rounded-full text-amber-700">
+                            <i class="fas fa-map-marker-alt text-xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-semibold text-gray-800">Our Studio</h3>
+                            <p class="text-gray-600 mt-1">123 Design Avenue<br>Creative District<br>New York, NY 10001</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 bg-amber-100 p-3 rounded-full text-amber-700">
+                            <i class="fas fa-phone-alt text-xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-semibold text-gray-800">Call Us</h3>
+                            <p class="text-gray-600 mt-1">Main: <a href="tel:+12125551234" class="hover:text-amber-700">(212) 555-1234</a><br>
+                            Studio: <a href="tel:+12125554321" class="hover:text-amber-700">(212) 555-4321</a></p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 bg-amber-100 p-3 rounded-full text-amber-700">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-semibold text-gray-800">Email Us</h3>
+                            <p class="text-gray-600 mt-1">General: <a href="mailto:info@akasstudio.com" class="hover:text-amber-700">info@akasstudio.com</a><br>
+                            Projects: <a href="mailto:projects@akasstudio.com" class="hover:text-amber-700">projects@akasstudio.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Find answers to common questions about our design process and services.</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 text-left">
+                        <span class="text-lg font-medium text-gray-800">What is your design process?</span>
+                        <i class="fas fa-chevron-down text-amber-700 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 pt-0">
+                        <p class="text-gray-600">Our design process begins with an initial consultation to understand your vision, needs, and budget. We then conduct a site analysis, develop conceptual designs, refine the selected concept, and oversee the implementation. The process typically takes 8-12 weeks depending on project scope.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 text-left">
+                        <span class="text-lg font-medium text-gray-800">How much do your services cost?</span>
+                        <i class="fas fa-chevron-down text-amber-700 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 pt-0">
+                        <p class="text-gray-600">Our fees vary based on project scope, size, and complexity. We offer both flat-fee and hourly rate options. Residential projects typically range from $5,000-$50,000+, while commercial projects start at $10,000. During our initial consultation, we'll provide a detailed estimate tailored to your specific needs.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 text-left">
+                        <span class="text-lg font-medium text-gray-800">Do you work with local contractors?</span>
+                        <i class="fas fa-chevron-down text-amber-700 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 pt-0">
+                        <p class="text-gray-600">Yes, we have an extensive network of trusted contractors, artisans, and vendors that we've worked with for years. We can recommend professionals for your project or work with your preferred contractors. We also provide project management services to ensure quality execution of our designs.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 text-left">
+                        <span class="text-lg font-medium text-gray-800">What areas do you serve?</span>
+                        <i class="fas fa-chevron-down text-amber-700 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 pt-0">
+                        <p class="text-gray-600">While our studio is based in New York, we serve clients nationwide and internationally. We've completed projects in major cities across the U.S. including Los Angeles, Miami, Chicago, and Boston. For remote projects, we conduct virtual consultations and work with local partners as needed.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-6 text-left">
+                        <span class="text-lg font-medium text-gray-800">How do I schedule a consultation?</span>
+                        <i class="fas fa-chevron-down text-amber-700 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 pt-0">
+                        <p class="text-gray-600">You can schedule a consultation by filling out our contact form, calling our studio directly, or emailing us at info@akasstudio.com. We offer both in-person and virtual consultation options. Initial 30-minute consultations are complimentary, with more in-depth sessions available at our standard hourly rate.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="services.html" class="inline-flex items-center px-6 py-3 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 hover:text-gray-900 font-medium">
+                    View All Services <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+<a href="https://wa.me/1234567890" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg flex items-center justify-center transition duration-300">
+    <i class="fab fa-whatsapp text-2xl"></i>
+</a>
+
+
+ <footer class="bg-black w-full border-t border-gray-800">
+    <div class="flex flex-row items-center justify-between w-full h-40"> <!-- Changed from h-64 to h-48 -->
+        <!-- Left Section -->
+        <div class="flex flex-col justify-center px-12 flex-[1.1] space-y-2">
+            <h2 class="text-amber-100 text-sm font-medium uppercase tracking-wide"> <!-- Reduced from text-1xl -->
+                ARTHUR KAMHOTI
+            </h2>
+            <div class="h-px w-12 bg-gray-500 my-1"></div>
+            <p class="text-gray-300 text-sm font-light">Founder</p> <!-- Reduced from text-base -->
+            <p class="text-gray-400 text-xs">Principal Interior Architect</p>
+            <a href="tel:+27676474091" class="text-amber-100 text-xs hover:text-amber-500 transition-colors duration-300"> <!-- Reduced from text-sm -->
+                +27 67 647 4091
+            </a>
+        </div>
+
+        <!-- Center Section -->
+        <div class="relative flex-[1.6] h-full bg-center bg-cover flex items-center justify-center" 
+             style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80');">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+            <span class="relative z-10 text-amber-100 text-base font-medium tracking-wide text-center px-8 leading-tight"> <!-- Reduced from text-lg -->
+                <span class="block text-lg mb-1 heading-font">AKAS</span> <!-- Reduced from text-1xl -->
+                AUTHENTIC · LUXURY · DESIGN
+            </span>
+        </div>
+
+        <!-- Right Section -->
+        <div class="flex flex-col justify-center items-end px-12 flex-1">
+            <div class="text-right">
+              <h2 class="text-amber-100 text-sm font-medium uppercase tracking-wide mb-2"> <!-- Reduced from text-1xl -->
+                AKAS STUDIO
+              </h2>
+              <div class="h-px w-16 bg-gray-500 mb-4"></div> <!-- Reduced margin-bottom -->
+            </div>
+          
+            <div class="text-right">
+              <p class="text-gray-300 text-sm font-light mb-2">Follow us on:</p> <!-- Reduced from text-lg -->
+              <div class="flex justify-end space-x-4">
+                <!-- Social icons remain same size -->
+                <a href="#" class="text-gray-400 hover:text-white text-sm">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white text-sm">
+                  <i class="fab fa-pinterest"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white text-sm">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+        <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Here you would typically send the form data to your server
+            // For this example, we'll just show a success message
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

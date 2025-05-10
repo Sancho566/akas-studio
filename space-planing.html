@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Same head content as services page -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKAS Studio | Our Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation (Same as services page) -->
+    <nav class="fixed w-full bg-white shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="heading-font text-2xl font-bold text-gray-800">AKAS</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="nav-link text-gray-700 hover:text-amber-800 px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="about.html" class="nav-link text-gray-700 hover:text-amber-800 px-3 py-2 text-sm font-medium">About</a>
+                        <a href="services.html" class="nav-link text-gray-700 hover:text-amber-800 px-3 py-2 text-sm font-medium">Services</a>
+                        <a href="portfolio.html" class="nav-link text-gray-700 hover:text-amber-800 px-3 py-2 text-sm font-medium">Portfolio</a>
+                        <a href="contact.html" class="nav-link text-gray-700 hover:text-amber-800 px-3 py-2 text-sm font-medium">Contact</a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-amber-800 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-amber-800">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-amber-800">About</a>
+                <a href="services.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-amber-800">Services</a>
+                <a href="projects.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-amber-800">Portfolio</a>
+                <a href="contact.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-amber-800">Contact</a>
+                <a href="#" class="text-gray-400 hover:text-white">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg h-96 flex items-center pt-20 bg-cover bg-center text-white" 
+    style="background-image: url('https://via.placeholder.com/1920x1080'); background-color: #333;">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+   <h1 class="text-4xl md:text-5xl font-bold mb-4 animate__animated animate__fadeInUp">
+    Strategic Space Planning
+   </h1>
+   <p class="text-xl max-w-2xl mx-auto animate__animated animate__fadeInUp animate__delay-1s">
+    Optimizing spaces for maximum functionality and aesthetic harmony
+   </p>
+</div>
+</section>
+
+    <!-- Introduction Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Intelligent Spatial Solutions</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Transforming spaces through meticulous planning and creative optimization</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                <div class="fade-in-section">
+                    <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80" 
+                         alt="Floor plan analysis"
+                         class="rounded-lg shadow-lg hover-scale">
+                </div>
+                <div class="fade-in-section">
+                    <h3 class="text-2xl font-semibold mb-4">Precision Space Utilization</h3>
+                    <p class="text-gray-600 mb-6">Our space planning services focus on creating harmonious environments that perfectly balance form and function:</p>
+                    <ul class="text-gray-600 space-y-3">
+                        <li class="flex items-start">
+                            <div class="w-1 h-1 mt-3 mr-3 bg-amber-700 rounded-full"></div>
+                            <span>Comprehensive traffic flow analysis</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-1 h-1 mt-3 mr-3 bg-amber-700 rounded-full"></div>
+                            <span>Functional zoning strategies</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-1 h-1 mt-3 mr-3 bg-amber-700 rounded-full"></div>
+                            <span>Furniture placement optimization</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-1 h-1 mt-3 mr-3 bg-amber-700 rounded-full"></div>
+                            <span>ADA compliance integration</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planning Aspects Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Comprehensive Space Analysis</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Key elements of our space planning methodology</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Functional Zoning -->
+                <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 fade-in-section hover-scale">
+                    <img src="https://images.unsplash.com/photo-1598928636135-d146006ff4be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Office zoning"
+                         class="w-full h-64 object-cover rounded-t-lg">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Functional Zoning</h3>
+                        <p class="text-gray-600">Creating distinct areas for specific activities while maintaining flow</p>
+                    </div>
+                </div>
+
+                <!-- Circulation Analysis -->
+                <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 fade-in-section hover-scale">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Space circulation"
+                         class="w-full h-64 object-cover rounded-t-lg">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Circulation Planning</h3>
+                        <p class="text-gray-600">Optimizing movement patterns for safety and efficiency</p>
+                    </div>
+                </div>
+
+                <!-- Furniture Layout -->
+                <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 fade-in-section hover-scale">
+                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" 
+                         alt="Furniture layout"
+                         class="w-full h-64 object-cover rounded-t-lg">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Furniture Layout</h3>
+                        <p class="text-gray-600">Strategic placement for optimal use and visual balance</p>
+                    </div>
+                </div>
+
+                <!-- Storage Solutions -->
+                <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 fade-in-section hover-scale">
+                    <img src="https://images.unsplash.com/photo-1583845112189-80cf5edb1007?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80" 
+                         alt="Storage solutions"
+                         class="w-full h-64 object-cover rounded-t-lg">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Storage Integration</h3>
+                        <p class="text-gray-600">Innovative storage solutions that maintain spatial integrity</p>
+                    </div>
+                </div>
+
+                <!-- Lighting Plan -->
+                <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 fade-in-section hover-scale">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b3c7f28046?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1588&q=80" 
+                         alt="Lighting plan"
+                         class="w-full h-64 object-cover rounded-t-lg">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Lighting Strategy</h3>
+                        <p class="text-gray-600">Balancing ambient, task, and accent lighting for optimal use</p>
+                    </div>
+                </div>
+
+                <!-- 3D Visualization -->
+                <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 fade-in-section hover-scale">
+                    <img src="https://images.unsplash.com/photo-1615874694520-82d4f5e8b72a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1586&q=80" 
+                         alt="3D visualization"
+                         class="w-full h-64 object-cover rounded-t-lg">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">3D Visualization</h3>
+                        <p class="text-gray-600">Digital mockups for precise spatial understanding</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planning Process -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Space Planning Process</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Systematic approach to perfect spatial organization</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="fade-in-section">
+                    <img src="https://images.unsplash.com/photo-1598928636135-d146006ff4be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Planning process"
+                         class="rounded-lg shadow-lg hover-scale">
+                </div>
+                
+                <div class="fade-in-section">
+                    <div class="space-y-8">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="w-8 h-8 rounded-full bg-amber-700 flex items-center justify-center text-white">1</div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-semibold mb-2">Site Analysis</h3>
+                                <p class="text-gray-600">Detailed measurements and existing condition documentation</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="w-8 h-8 rounded-full bg-amber-700 flex items-center justify-center text-white">2</div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-semibold mb-2">Program Development</h3>
+                                <p class="text-gray-600">Defining spatial requirements and functional needs</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="w-8 h-8 rounded-full bg-amber-700 flex items-center justify-center text-white">3</div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-semibold mb-2">Conceptual Layouts</h3>
+                                <p class="text-gray-600">Creating multiple layout options for evaluation</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="w-8 h-8 rounded-full bg-amber-700 flex items-center justify-center text-white">4</div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-semibold mb-2">Detailed Planning</h3>
+                                <p class="text-gray-600">Finalizing dimensions, circulation paths, and specifications</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Benefits of Professional Space Planning</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Maximizing your space's potential through expert planning</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-sm fade-in-section hover-scale">
+                    <h3 class="text-xl font-semibold mb-3">Improved Efficiency</h3>
+                    <p class="text-gray-600">Optimized layouts that enhance workflow and daily operations</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-sm fade-in-section hover-scale">
+                    <h3 class="text-xl font-semibold mb-3">Cost Savings</h3>
+                    <p class="text-gray-600">Avoid expensive mistakes with proper spatial organization</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-sm fade-in-section hover-scale">
+                    <h3 class="text-xl font-semibold mb-3">Enhanced Safety</h3>
+                    <p class="text-gray-600">Compliant designs with proper clearances and accessibility</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-sm fade-in-section hover-scale">
+                    <h3 class="text-xl font-semibold mb-3">Future Flexibility</h3>
+                    <p class="text-gray-600">Adaptable spaces that evolve with changing needs</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-sm fade-in-section hover-scale">
+                    <h3 class="text-xl font-semibold mb-3">Aesthetic Harmony</h3>
+                    <p class="text-gray-600">Visually balanced environments that please the eye</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-sm fade-in-section hover-scale">
+                    <h3 class="text-xl font-semibold mb-3">Increased Property Value</h3>
+                    <p class="text-gray-600">Well-planned spaces that enhance real estate appeal</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section (Same as services page) -->
+
+    <!-- Footer (Same as services page) -->
+
+    <script>
+        // Same script content as services page
+    </script>
+</body>
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKAS Studio | Urban Oasis Apartment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        
+        .delay-100 {
+            animation-delay: 0.1s;
+        }
+        
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+        
+        .delay-300 {
+            animation-delay: 0.3s;
+        }
+        
+        .delay-400 {
+            animation-delay: 0.4s;
+        }
+        
+        .delay-500 {
+            animation-delay: 0.5s;
+        }
+        
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .before-after-slider {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .before-after-slider img {
+            width: 100%;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        
+        .before-after-slider:hover img {
+            transform: scale(1.03);
+        }
+        
+        .image-mask {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .slider-handle {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: white;
+            transform: translateX(-50%);
+            cursor: ew-resize;
+            z-index: 10;
+        }
+        
+        .slider-handle:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: white;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-gray-800">AKAS</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-gray-700 hover:text-amber-800 px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="about.html" class="text-gray-700 hover:text-amber-800 px-3 py-2 text-sm font-medium">About</a>
+                        <a href="services.html" class="text-gray-700 hover:text-amber-800 px-3 py-2 text-sm font-medium">Services</a>
+                        <a href="portfolio.html" class="text-gray-700 hover:text-amber-800 px-3 py-2 text-sm font-medium">Portfolio</a>
+                        <a href="contact.html" class="text-gray-700 hover:text-amber-800 px-3 py-2 text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-amber-800 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero Section -->
+    <section class="relative h-screen pt-20 overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-40 z-10"></div>
+        <div class="parallax-bg absolute inset-0" style="background-image: url('https://images.unsplash.com/photo-1617806118233-18e1de247200?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80')"></div>
+        
+        <div class="relative z-20 h-full flex items-center">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+                <div class="max-w-2xl">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 fade-in">Urban Oasis Apartment</h1>
+                    <p class="text-xl md:text-2xl mb-8 fade-in delay-100">A contemporary apartment design that maximizes space in a 750 sq ft footprint.</p>
+                    <div class="flex space-x-4 fade-in delay-200">
+                        <span class="bg-amber-700 text-white px-4 py-1 rounded-full text-sm">Residential</span>
+                        <span class="bg-white text-gray-800 px-4 py-1 rounded-full text-sm">Modern</span>
+                        <span class="bg-white text-gray-800 px-4 py-1 rounded-full text-sm">Space-Saving</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+            <a href="#project-details" class="text-white text-4xl">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Project Details Section -->
+    <section id="project-details" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="fade-in delay-300">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Project Overview</h2>
+                    <div class="space-y-4 text-gray-600">
+                        <p>The Urban Oasis Apartment is a 750 square foot space in downtown Seattle that was transformed from a dark, cramped unit into a bright, functional modern home.</p>
+                        <p>Our challenge was to create distinct living zones while maintaining an open feel, incorporate ample storage without sacrificing style, and bring natural elements into an urban environment.</p>
+                        <p>The design features custom built-ins, multi-functional furniture, and a neutral palette with warm wood accents. Large mirrors and strategic lighting enhance the sense of space.</p>
+                    </div>
+                    
+                    <div class="mt-8 grid grid-cols-2 gap-4">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h3 class="font-bold text-gray-800">Location</h3>
+                            <p class="text-gray-600">Seattle, WA</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h3 class="font-bold text-gray-800">Size</h3>
+                            <p class="text-gray-600">750 sq ft</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h3 class="font-bold text-gray-800">Year</h3>
+                            <p class="text-gray-600">2023</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h3 class="font-bold text-gray-800">Duration</h3>
+                            <p class="text-gray-600">3 months</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative fade-in delay-400">
+                    <div class="before-after-slider">
+                        <div class="image-mask">
+                            <img src="https://images.unsplash.com/photo-1618221195710-dd6b7fa356f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Before renovation" class="h-full w-full object-cover">
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="After renovation" class="h-full w-full object-cover">
+                        <div class="slider-handle"></div>
+                    </div>
+                    <div class="flex justify-between mt-2 text-sm text-gray-500">
+                        <span>Before</span>
+                        <span>After</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Features Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Design Features</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Key elements that make this space both beautiful and functional</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition duration-300 fade-in delay-100">
+                    <div class="text-amber-700 mb-4 text-4xl">
+                        <i class="fas fa-expand"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Space Optimization</h3>
+                    <p class="text-gray-600">Custom built-ins and multi-functional furniture maximize every square inch without compromising on style.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition duration-300 fade-in delay-200">
+                    <div class="text-amber-700 mb-4 text-4xl">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Natural Light</h3>
+                    <p class="text-gray-600">Strategic placement of mirrors and sheer window treatments amplify natural light throughout the space.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition duration-300 fade-in delay-300">
+                    <div class="text-amber-700 mb-4 text-4xl">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Biophilic Design</h3>
+                    <p class="text-gray-600">Incorporation of natural materials, indoor plants, and organic textures creates a calming urban retreat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Project Gallery</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore the transformation through these stunning images</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="group relative overflow-hidden rounded-lg fade-in delay-100">
+                    <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Living area" class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <span class="text-white text-lg font-medium">Living Area</span>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-lg fade-in delay-200">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b7fa356f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Kitchen" class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <span class="text-white text-lg font-medium">Kitchen</span>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-lg fade-in delay-300">
+                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Bedroom" class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <span class="text-white text-lg font-medium">Bedroom</span>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-lg fade-in delay-400">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b7fa356f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Bathroom" class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <span class="text-white text-lg font-medium">Bathroom</span>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-lg fade-in delay-500">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b7fa356f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Dining Area" class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <span class="text-white text-lg font-medium">Dining Area</span>
+                    </div>
+                </div>
+                
+                <div class="group relative overflow-hidden rounded-lg fade-in delay-600">
+                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Workspace" class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <span class="text-white text-lg font-medium">Workspace</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="py-20 bg-amber-700 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Client Testimonial</h2>
+                <p class="text-xl max-w-2xl mx-auto">Hear what our client says about this project</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto bg-white bg-opacity-10 p-8 md:p-12 rounded-lg backdrop-blur-sm fade-in delay-100">
+                <div class="flex items-center mb-8">
+                    <div class="text-amber-300 mr-2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <p class="text-xl italic mb-8">"AKAS Studio completely transformed my small apartment into a functional, beautiful space that feels much larger than it is. Their attention to detail and creative solutions for storage were beyond my expectations. I never imagined my home could look and feel this good!"</p>
+                <div class="flex items-center">
+                    <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah Johnson" class="w-16 h-16 rounded-full mr-4 border-2 border-white">
+                    <div>
+                        <h4 class="font-semibold text-lg">Sarah Johnson</h4>
+                        <p class="text-amber-200">Homeowner, Seattle</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="max-w-2xl mx-auto fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Inspired by This Project?</h2>
+                <p class="text-xl text-gray-600 mb-8">Let's collaborate to create your perfect space. Our team is ready to bring your vision to life.</p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="contact.html" class="bg-amber-700 hover:bg-amber-800 text-white px-8 py-4 rounded-md font-medium transition duration-300">Schedule a Consultation</a>
+                    <a href="portfolio.html" class="border border-gray-300 hover:bg-gray-50 text-gray-700 px-8 py-4 rounded-md font-medium transition duration-300">View More Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white text-xl font-semibold mb-4">AKAS Studio</h3>
+                    <p class="mb-4">Creating extraordinary spaces that inspire and elevate everyday living through thoughtful design.</p>
+                    <p>© 2025 AKAS Design. All rights reserved.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white text-lg font-medium mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition duration-300">About</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="portfolio.html" class="hover:text-white transition duration-300">Portfolio</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white text-lg font-medium mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html" class="hover:text-white transition duration-300">Residential Design</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-300">Commercial Design</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-300">Space Planning</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-300">Color Consultation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white text-lg font-medium mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                    <p>hello@akasstudio.com</p>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        
+        // Before/After slider functionality
+        const slider = document.querySelector('.before-after-slider');
+        if (slider) {
+            const handle = slider.querySelector('.slider-handle');
+            const mask = slider.querySelector('.image-mask');
+            let isDragging = false;
+            
+            function moveSlider(e) {
+                if (!isDragging) return;
+                
+                // Get position
+                let rect = slider.getBoundingClientRect();
+                let x = e.clientX - rect.left;
+                
+                // Constrain within slider
+                x = Math.max(0, Math.min(x, rect.width));
+                
+                // Update mask width and handle position
+                let percent = (x / rect.width) * 100;
+                mask.style.width = percent + '%';
+                handle.style.left = percent + '%';
+            }
+            
+            handle.addEventListener('mousedown', () => isDragging = true);
+            document.addEventListener('mouseup', () => isDragging = false);
+            document.addEventListener('mousemove', moveSlider);
+            
+            // Touch support
+            handle.addEventListener('touchstart', () => isDragging = true);
+            document.addEventListener('touchend', () => isDragging = false);
+            document.addEventListener('touchmove', (e) => {
+                if (e.touches.length) moveSlider(e.touches[0]);
+            });
+        }
+        
+        // Intersection Observer for scroll animations
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        fadeElements.forEach(el => {
+            el.style.opacity = 0;
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
