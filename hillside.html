@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hillside Retreat Villa | AKAS Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+        .delay-5 { animation-delay: 1s; }
+        
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-gray-800">AKAS</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-gray-700 hover:text-amber-800 px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="about.html" class="text-gray-700 hover:text-amber-800 px-3 py-2 text-sm font-medium">About</a>
+                        <a href="services.html" class="text-gray-700 hover:text-amber-800 px-3 py-2 text-sm font-medium">Services</a>
+                        <a href="portfolio.html" class="text-gray-700 hover:text-amber-800 px-3 py-2 text-sm font-medium">Portfolio</a>
+                        <a href="contact.html" class="text-gray-700 hover:text-amber-800 px-3 py-2 text-sm font-medium">Contact</a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+            <div class="max-w-2xl fade-in">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">Hillside Retreat Villa</h1>
+                <p class="text-lg md:text-xl mb-8">A 5,000 sq ft luxury villa blending modern design with natural elements, nestled in the hills with panoramic views.</p>
+                <div class="flex space-x-4">
+                    <a href="#gallery" class="bg-amber-700 hover:bg-amber-800 text-white px-6 py-3 rounded-md font-medium transition duration-300">View Gallery</a>
+                    <a href="#details" class="border border-white hover:bg-white hover:text-gray-900 text-white px-6 py-3 rounded-md font-medium transition duration-300">Project Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#overview" class="text-white text-4xl">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section id="overview" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Project Overview</h2>
+                <div class="w-20 h-1 bg-amber-700 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">A contemporary hillside retreat designed to harmonize with its natural surroundings while offering luxurious modern living.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-lg fade-in delay-1">
+                    <div class="text-amber-700 mb-4 text-3xl">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Property Type</h3>
+                    <p class="text-gray-600">Luxury Residential Villa</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg fade-in delay-2">
+                    <div class="text-amber-700 mb-4 text-3xl">
+                        <i class="fas fa-ruler-combined"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Size</h3>
+                    <p class="text-gray-600">5,000 sq ft (465 sq m)</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg fade-in delay-3">
+                    <div class="text-amber-700 mb-4 text-3xl">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Location</h3>
+                    <p class="text-gray-600">Malibu, California</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Concept -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Design Concept</h2>
+                    <div class="w-20 h-1 bg-amber-700 mb-6"></div>
+                    <p class="text-gray-600 mb-6">The Hillside Retreat Villa was conceived as a seamless integration of architecture and landscape. The design emphasizes clean lines, expansive glass walls, and natural materials to create a dialogue between the built environment and the surrounding hills.</p>
+                    <p class="text-gray-600 mb-8">Key features include cantilevered decks, a floating staircase, and a green roof that blends the structure into the hillside. The interior palette combines warm woods, polished concrete, and steel accents for a sophisticated yet organic aesthetic.</p>
+                    <div class="flex space-x-4">
+                        <div class="bg-amber-700 text-white px-4 py-2 rounded-full text-sm">Modern Architecture</div>
+                        <div class="bg-amber-700 text-white px-4py-2 rounded-full text-sm">Sustainable Design</div>
+                        <div class="bg-amber-700 text-white px-4 py-2 rounded-full text-sm">Luxury Living</div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 relative fade-in delay-1">
+                    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Villa exterior" class="rounded-lg shadow-xl w-full h-auto">
+                    <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg w-2/3 fade-in delay-2">
+                        <h4 class="font-semibold mb-2">Award-Winning Design</h4>
+                        <p class="text-sm text-gray-600">Recipient of the 2023 Architectural Digest Design Award for Residential Excellence</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Width Image -->
+    <section class="py-0">
+        <div class="parallax h-96 md:h-screen" style="background-image: url('https://images.unsplash.com/photo-1600566752227-17d0ba64a033?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
+            <div class="h-full flex items-center justify-center">
+                <div class="glass-effect p-8 rounded-lg max-w-md mx-4 text-center text-white fade-in">
+                    <h3 class="text-2xl font-bold mb-2">"Architecture should speak of its time and place, but yearn for timelessness."</h3>
+                    <p class="text-sm">- Frank Gehry</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section id="details" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Project Details</h2>
+                <div class="w-20 h-1 bg-amber-700 mx-auto mb-6"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="fade-in delay-1">
+                    <h3 class="text-2xl font-semibold mb-4">Challenges & Solutions</h3>
+                    <p class="text-gray-600 mb-6">The steep hillside location presented significant engineering challenges. Our solution was to use a combination of deep concrete piers and a steel frame structure that cantilevers over the hillside, minimizing site disturbance while maximizing views.</p>
+                    <p class="text-gray-600">Sustainable features include passive solar design, a rainwater collection system, and native drought-resistant landscaping that requires minimal irrigation.</p>
+                </div>
+                
+                <div class="fade-in delay-2">
+                    <h3 class="text-2xl font-semibold mb-4">Special Features</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-700 mr-2 mt-1"></i>
+                            <span>Infinity-edge pool with panoramic views</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-700 mr-2 mt-1"></i>
+                            <span>Floor-to-ceiling retractable glass walls</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-700 mr-2 mt-1"></i>
+                            <span>Smart home automation system</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-700 mr-2 mt-1"></i>
+                            <span>Rooftop garden with native plantings</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-700 mr-2 mt-1"></i>
+                            <span>Custom-designed furniture pieces</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-lg fade-in delay-3">
+                    <div class="text-amber-700 mb-4 text-3xl">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Project Timeline</h3>
+                    <p class="text-gray-600 mb-2"><strong>Design:</strong> 8 months</p>
+                    <p class="text-gray-600 mb-2"><strong>Construction:</strong> 18 months</p>
+                    <p class="text-gray-600"><strong>Completed:</strong> June 2023</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg fade-in delay-4">
+                    <div class="text-amber-700 mb-4 text-3xl">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Collaborators</h3>
+                    <p class="text-gray-600 mb-2"><strong>Architect:</strong> AKAS Studio</p>
+                    <p class="text-gray-600 mb-2"><strong>Structural Engineer:</strong> Summit Engineering</p>
+                    <p class="text-gray-600"><strong>Landscape:</strong> Terra Design Group</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg fade-in delay-5">
+                    <div class="text-amber-700 mb-4 text-3xl">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Awards</h3>
+                    <p class="text-gray-600 mb-2">2023 Architectural Digest Design Award</p>
+                    <p class="text-gray-600">2023 AIA Residential Excellence Honor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Project Gallery</h2>
+                <div class="w-20 h-1 bg-amber-700 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore the stunning spaces of the Hillside Retreat Villa through our curated gallery.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery Item 1 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg fade-in delay-1">
+                    <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfe3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Living room" class="w-full h-64 md:h-80 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <div class="text-white text-center p-4">
+                            <h3 class="text-xl font-bold">Living Area</h3>
+                            <p>Open concept with panoramic views</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 2 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg fade-in delay-2">
+                    <img src="https://images.unsplash.com/photo-1600566753080-7de9488a9a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Kitchen" class="w-full h-64 md:h-80 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <div class="text-white text-center p-4">
+                            <h3 class="text-xl font-bold">Gourmet Kitchen</h3>
+                            <p>Custom cabinetry and premium appliances</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 3 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg fade-in delay-3">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Master bedroom" class="w-full h-64 md:h-80 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <div class="text-white text-center p-4">
+                            <h3 class="text-xl font-bold">Master Suite</h3>
+                            <p>Private retreat with spa bathroom</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 4 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg fade-in delay-4">
+                    <img src="https://images.unsplash.com/photo-1600566752371-5c5ca474b384?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Infinity pool" class="w-full h-64 md:h-80 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <div class="text-white text-center p-4">
+                            <h3 class="text-xl font-bold">Infinity Pool</h3>
+                            <p>Seamless transition to the horizon</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 5 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg fade-in delay-5">
+                    <img src="https://images.unsplash.com/photo-1600566752227-17d0ba64a033?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Outdoor dining" class="w-full h-64 md:h-80 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <div class="text-white text-center p-4">
+                            <h3 class="text-xl font-bold">Outdoor Living</h3>
+                            <p>Alfresco dining with sunset views</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 6 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg fade-in delay-6">
+                    <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfe3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Bathroom" class="w-full h-64 md:h-80 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <div class="text-white text-center p-4">
+                            <h3 class="text-xl font-bold">Spa Bathroom</h3>
+                            <p>Luxurious materials and natural light</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3D Walkthrough -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Virtual Experience</h2>
+                <div class="w-20 h-1 bg-amber-700 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore the Hillside Retreat Villa through our interactive 3D walkthrough.</p>
+            </div>
+            
+            <div class="relative rounded-xl overflow-hidden shadow-2xl fade-in delay-1">
+                <div class="aspect-w-16 aspect-h-9 bg-gray-200">
+                    <div class="w-full h-96 md:h-[500px] bg-gray-300 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-vr-cardboard text-5xl text-amber-700 mb-4 animate-float"></i>
+                            <h3 class="text-xl font-semibold mb-2">Interactive 3D Walkthrough</h3>
+                            <p class="text-gray-600 max-w-md mx-auto">(Placeholder for embedded 3D tour - would link to Matterport or similar service in production)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute bottom-4 right-4 bg-white px-4 py-2 rounded-full shadow-md">
+                    <i class="fas fa-expand text-amber-700"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="py-20 bg-amber-700 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Client Testimonial</h2>
+                <div class="w-20 h-1 bg-white mx-auto mb-6"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto text-center fade-in delay-1">
+                <div class="text-4xl mb-6">"</div>
+                <p class="text-xl md:text-2xl mb-8">Working with AKAS Studio on our Hillside Retreat was an extraordinary experience. They took our vision of a modern home that blended with nature and elevated it beyond our expectations. Every detail was thoughtfully considered, from the orientation of the rooms to capture the best light, to the selection of materials that feel both luxurious and natural. The result is a home that's not just beautiful, but truly lives beautifully.</p>
+                <div class="flex items-center justify-center">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client" class="w-16 h-16 rounded-full border-4 border-white mr-4">
+                    <div class="text-left">
+                        <h4 class="font-bold">Sarah & Michael Thompson</h4>
+                        <p class="text-amber-200">Homeowners, Hillside Retreat Villa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gray-50 rounded-xl p-8 md:p-12 shadow-sm fade-in">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-2/3 mb-8 md:mb-0 md:pr-8">
+                        <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Ready to Create Your Dream Home?</h2>
+                        <p class="text-gray-600">Let's discuss how we can bring your vision to life with our bespoke design services.</p>
+                    </div>
+                    <div class="md:w-1/3 text-center md:text-right">
+                        <a href="contact.html" class="inline-block bg-amber-700 hover:bg-amber-800 text-white px-8 py-3 rounded-md font-medium transition duration-300">Schedule Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white text-xl font-semibold mb-4">AKAS Studio</h3>
+                    <p class="mb-4">Creating extraordinary spaces that inspire and elevate everyday living through thoughtful design.</p>
+                    <p>© 2023 AKAS Design. All rights reserved.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white text-lg font-medium mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition duration-300">About</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="portfolio.html" class="hover:text-white transition duration-300">Portfolio</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white text-lg font-medium mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html" class="hover:text-white transition duration-300">Residential Design</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-300">Commercial Design</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-300">Space Planning</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-300">Interior Architecture</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white text-lg font-medium mb-4">Connect</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    <p class="text-sm">info@akasstudio.com<br>+1 (555) 123-4567</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script to handle fade-in animations on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const fadeInOnScroll = function() {
+                fadeElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (elementTop < windowHeight - 100) {
+                        element.style.opacity = '1';
+                    }
+                });
+            };
+            
+            // Initial check
+            fadeInOnScroll();
+            
+            // Check on scroll
+            window.addEventListener('scroll', fadeInOnScroll);
+        });
+    </script>
+</body>
+</html>

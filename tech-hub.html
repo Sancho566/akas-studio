@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechHub Office Space | AKAS Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .animate-fadein {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        
+        .tech-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.03);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-gray-800">AKAS</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="portfolio.html" class="text-blue-600 px-3 py-2 text-sm font-medium">Portfolio</a>
+                        <a href="contact.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-600 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero Section -->
+    <section class="pt-32 pb-20 tech-gradient text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 animate-fadein">
+                    <span class="inline-block bg-blue-400 bg-opacity-20 text-blue-100 px-4 py-1 rounded-full mb-4">Commercial Design</span>
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">TechHub Office Space</h1>
+                    <p class="text-xl md:text-2xl mb-8 opacity-90">Innovative workspace design promoting collaboration and creativity for a fast-growing tech startup.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="glass-effect px-4 py-2 rounded-lg">
+                            <p class="text-sm">Location: San Francisco</p>
+                        </div>
+                        <div class="glass-effect px-4 py-2 rounded-lg">
+                            <p class="text-sm">Size: 8,500 sq ft</p>
+                        </div>
+                        <div class="glass-effect px-4 py-2 rounded-lg">
+                            <p class="text-sm">Completed: 2023</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center animate-fadein delay-200">
+                    <div class="relative w-full max-w-lg">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="TechHub Office Space" 
+                             class="rounded-xl shadow-2xl w-full h-auto hover-scale">
+                        <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg animate-float hidden md:block">
+                            <div class="flex items-center">
+                                <div class="bg-blue-100 p-3 rounded-lg mr-3">
+                                    <i class="fas fa-lightbulb text-blue-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-800 font-medium">Innovation Lab</p>
+                                    <p class="text-gray-500 text-sm">Collaboration Space</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="animate-fadein">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Project Overview</h2>
+                    <p class="text-gray-600 mb-6">TechHub approached us to design their new headquarters that would reflect their innovative culture while accommodating rapid growth. The challenge was to create a space that balanced open collaboration areas with focused work zones.</p>
+                    <p class="text-gray-600">Our solution incorporated flexible workspaces, cutting-edge technology integration, and biophilic design elements to create an environment that fosters creativity and productivity.</p>
+                </div>
+                <div class="animate-fadein delay-100">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">The Challenge</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <span>Accommodate 120 employees with room to grow</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <span>Create distinct zones for different work modes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <span>Incorporate brand identity into the space</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <span>Implement sustainable design practices</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="animate-fadein delay-200">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Key Features</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-users text-blue-500 text-2xl mb-2"></i>
+                            <p class="font-medium">Collaboration Hubs</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-leaf text-blue-500 text-2xl mb-2"></i>
+                            <p class="font-medium">Biophilic Design</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-bolt text-blue-500 text-2xl mb-2"></i>
+                            <p class="font-medium">Smart Technology</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <i class="fas fa-recycle text-blue-500 text-2xl mb-2"></i>
+                            <p class="font-medium">Sustainable Materials</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Width Image -->
+    <section class="py-0">
+        <div class="w-full h-96 md:h-screen max-h-[700px] overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                 alt="TechHub open workspace" 
+                 class="w-full h-full object-cover object-center">
+            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                <div class="text-center text-white px-4 animate-fadein delay-300">
+                    <h3 class="text-2xl md:text-4xl font-bold mb-4">"A workspace that inspires innovation"</h3>
+                    <p class="text-lg md:text-xl max-w-2xl mx-auto">The open plan design encourages spontaneous collaboration while acoustic treatments ensure focused work when needed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Details -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Design Details</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Every element was carefully considered to create a cohesive and functional workspace.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="animate-fadein">
+                    <div class="relative rounded-xl overflow-hidden shadow-lg hover-scale mb-6">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Collaboration space" 
+                             class="w-full h-64 md:h-80 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6">
+                            <h3 class="text-white text-xl font-semibold">Collaboration Zones</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">The collaboration zones feature modular furniture that can be reconfigured for different team sizes and project needs. Whiteboard walls and integrated technology support brainstorming sessions.</p>
+                </div>
+                
+                <div class="animate-fadein delay-100">
+                    <div class="relative rounded-xl overflow-hidden shadow-lg hover-scale mb-6">
+                        <img src="https://images.unsplash.com/photo-1593642634524-b40b5baae6bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" 
+                             alt="Focus pods" 
+                             class="w-full h-64 md:h-80 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6">
+                            <h3 class="text-white text-xl font-semibold">Focus Pods</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">Soundproof focus pods provide quiet spaces for concentrated work or private calls. Each pod is equipped with ergonomic seating, adjustable lighting, and power outlets.</p>
+                </div>
+                
+                <div class="animate-fadein delay-200">
+                    <div class="relative rounded-xl overflow-hidden shadow-lg hover-scale mb-6">
+                        <img src="https://images.unsplash.com/photo-1558002038-1055827f30a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" 
+                             alt="Breakout area" 
+                             class="w-full h-64 md:h-80 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6">
+                            <h3 class="text-white text-xl font-semibold">Breakout Areas</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">Casual breakout areas with comfortable seating and greenery create spaces for informal meetings or relaxation. These areas feature the brand's color palette in a subtle, sophisticated way.</p>
+                </div>
+                
+                <div class="animate-fadein delay-300">
+                    <div class="relative rounded-xl overflow-hidden shadow-lg hover-scale mb-6">
+                        <img src="https://images.unsplash.com/photo-1517502884422-41eaead166d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Meeting rooms" 
+                             class="w-full h-64 md:h-80 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6">
+                            <h3 class="text-white text-xl font-semibold">Tech-Enabled Meeting Rooms</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">All meeting rooms feature state-of-the-art video conferencing systems, smart whiteboards, and intuitive room booking displays. Acoustic treatments ensure clear communication.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Integration -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10 animate-fadein">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Smart Technology Integration</h2>
+                    <p class="text-gray-600 mb-6">The workspace features cutting-edge technology seamlessly integrated into the design:</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-wifi text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Enterprise-Grade WiFi</h4>
+                                <p class="text-gray-600">Full coverage with multiple access points for uninterrupted connectivity.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-tablet-screen-button text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Room Booking System</h4>
+                                <p class="text-gray-600">Digital displays outside each room show real-time availability.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-lightbulb text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Smart Lighting</h4>
+                                <p class="text-gray-600">Automated systems adjust based on occupancy and natural light levels.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 animate-fadein delay-100">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Technology integration" 
+                             class="rounded-xl shadow-lg w-full hover-scale">
+                        <div class="absolute -bottom-5 -left-5 bg-white p-4 rounded-xl shadow-md hidden md:block">
+                            <div class="flex items-center">
+                                <div class="bg-blue-100 p-3 rounded-lg mr-3">
+                                    <i class="fas fa-robot text-blue-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-800 font-medium">Smart Office</p>
+                                    <p class="text-gray-500 text-sm">IoT Enabled</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability -->
+    <section class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Sustainable Design Approach</h2>
+                <p class="text-gray-300 max-w-2xl mx-auto">The project achieved LEED Gold certification through thoughtful material selection and energy-efficient systems.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-8 rounded-xl hover-scale animate-fadein">
+                    <div class="text-blue-400 mb-4 text-4xl">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Energy Efficiency</h3>
+                    <p class="text-gray-300">LED lighting with motion sensors, high-performance glazing, and optimized HVAC systems reduce energy consumption by 35%.</p>
+                </div>
+                
+                <div class="bg-gray-800 p-8 rounded-xl hover-scale animate-fadein delay-100">
+                    <div class="text-blue-400 mb-4 text-4xl">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Material Selection</h3>
+                    <p class="text-gray-300">Over 75% of materials were sourced locally or contain recycled content, including reclaimed wood and recycled metal.</p>
+                </div>
+                
+                <div class="bg-gray-800 p-8 rounded-xl hover-scale animate-fadein delay-200">
+                    <div class="text-blue-400 mb-4 text-4xl">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Biophilic Design</h3>
+                    <p class="text-gray-300">Living walls, abundant natural light, and indoor plants improve air quality and employee wellbeing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Gallery -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Project Gallery</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore the finished spaces that make TechHub's office both functional and inspiring.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="relative group overflow-hidden rounded-xl hover-scale animate-fadein">
+                    <img src="https://images.unsplash.com/photo-1564069114550-4e0ef2295641?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" 
+                         alt="Reception area" 
+                         class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <p class="text-white font-medium">Reception Area</p>
+                    </div>
+                </div>
+                
+                <div class="relative group overflow-hidden rounded-xl hover-scale animate-fadein delay-100">
+                    <img src="https://images.unsplash.com/photo-1599461051105-984a0e85ce0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Open workspace" 
+                         class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <p class="text-white font-medium">Open Workspace</p>
+                    </div>
+                </div>
+                
+                <div class="relative group overflow-hidden rounded-xl hover-scale animate-fadein delay-200">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Collaboration lounge" 
+                         class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <p class="text-white font-medium">Collaboration Lounge</p>
+                    </div>
+                </div>
+                
+                <div class="relative group overflow-hidden rounded-xl hover-scale animate-fadein delay-300">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Team workspace" 
+                         class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <p class="text-white font-medium">Team Workspace</p>
+                    </div>
+                </div>
+                
+                <div class="relative group overflow-hidden rounded-xl hover-scale animate-fadein delay-400">
+                    <img src="https://images.unsplash.com/photo-1593642634524-b40b5baae6bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" 
+                         alt="Focus room" 
+                         class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <p class="text-white font-medium">Focus Room</p>
+                    </div>
+                </div>
+                
+                <div class="relative group overflow-hidden rounded-xl hover-scale animate-fadein delay-500">
+                    <img src="https://images.unsplash.com/photo-1558002038-1055827f30a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" 
+                         alt="Breakout space" 
+                         class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <p class="text-white font-medium">Breakout Space</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonial -->
+    <section class="py-20 bg-blue-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="animate-fadein">
+                <i class="fas fa-quote-left text-blue-200 text-4xl mb-6"></i>
+                <p class="text-xl md:text-2xl text-gray-800 mb-8">"AKAS Studio completely transformed our workplace. The design has had a measurable impact on collaboration and employee satisfaction. We've seen a 40% increase in cross-team projects since moving into the new space."</p>
+                <div class="flex items-center justify-center">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" class="w-12 h-12 rounded-full mr-4">
+                    <div>
+                        <p class="font-semibold text-gray-800">Michael Chen</p>
+                        <p class="text-blue-600">CEO, TechHub</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Project CTA -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Ready to see more?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto mb-8">Explore our other commercial design projects or get in touch to discuss your office design needs.</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="portfolio.html" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-md font-medium transition duration-300">View Portfolio</a>
+                    <a href="contact.html" class="border border-gray-300 hover:bg-gray-50 text-gray-700 px-8 py-3 rounded-md font-medium transition duration-300">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white text-xl font-semibold mb-4">AKAS Studio</h3>
+                    <p class="mb-4">Creating extraordinary spaces that inspire and elevate everyday living through thoughtful design.</p>
+                    <p>© 2023 AKAS Design. All rights reserved.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white text-lg font-medium mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition duration-300">About</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="portfolio.html" class="hover:text-white transition duration-300">Portfolio</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white text-lg font-medium mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html" class="hover:text-white transition duration-300">Commercial Design</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-300">Workplace Strategy</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-300">Space Planning</a></li>
+                        <li><a href="services.html" class="hover:text-white transition duration-300">Brand Integration</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white text-lg font-medium mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-blue-400"></i>
+                            <span>123 Design Ave, San Francisco</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2 text-blue-400"></i>
+                            <span>(415) 555-1234</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-blue-400"></i>
+                            <span>hello@akasstudio.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Scroll animation trigger
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateElements = document.querySelectorAll('.animate-fadein');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            animateElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
