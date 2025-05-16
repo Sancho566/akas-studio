@@ -48,7 +48,7 @@ body {
 }
 
 .hero-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('images/IR Academia/IR Academia 6.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -74,7 +74,7 @@ body {
     height: 2px;
     bottom: -2px;
     left: 0;
-    background-color: #b88b58;
+    background-color: #ffffff;
     transition: width 0.3s ease;
 }
 
