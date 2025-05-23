@@ -1,147 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="LUXE Interior Architecture & Design - Creating beautiful, functional spaces that inspire. Residential and commercial design services." />
-  <meta name="keywords" content="interior design, architecture, home design, commercial design, space planning" />
-  <title>AKAS STUDIO | Interior Architecture & Design</title>
-  <meta property="og:image" content="https://akasstudio.netlify.app/images/WhatsApp%20Image%202025-05-08%20at%2013.56.12_d1ad1fd4.jpg" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="LUXE Interior Architecture & Design - Creating beautiful, functional spaces that inspire. Residential and commercial design services."
+    />
+    <meta
+      name="keywords"
+      content="interior design, architecture, home design, commercial design, space planning"
+    />
+    <title>AKAS STUDIO | Interior Architecture & Design</title>
+    <meta
+      property="og:image"
+      content="https://akasstudio.netlify.app/images/WhatsApp%20Image%202025-05-08%20at%2013.56.12_d1ad1fd4.jpg"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
 
-<body class="bg-gray-50">
-  <!-- Navigation -->
-  <nav class="fixed w-full bg-black shadow-sm z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-20 items-center">
-            <div class="flex-shrink-0 flex items-center">
-                <a href="index.html" class="heading-font text-2xl font-bold text-white">AKAS STUDIO</a>
-            </div>
-            <div class="hidden md:block">
-                <div class="ml-10 flex items-baseline space-x-8">
-                    <a href="index.html" class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium">HOME</a>
-                    <a href="about.html" class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium">ABOUT</a>
-                    <a href="services.html" class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium">SERVICES</a>
-                    <a href="portfolio.html" class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium">PORTFOLIO</a>
-                    <a href="contact.html" class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium">CONTACT</a>
-                    <a href="https://www.instagram.com/akasstudio/?hl=en" class="text-white hover:text-gray-300">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/company/akas-studio/" class="text-white hover:text-gray-300">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://vimeo.com/1084278716/5a9ea08108" class="text-white hover:text-gray-300"><i class="fab fa-vimeo-v"></i></a>
-                </div>
-            </div>
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-white hover:text-gray-300 focus:outline-none">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-black shadow-lg">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="index.html" class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300">HOME</a>
-            <a href="about.html" class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300">ABOUT</a>
-            <a href="services.html" class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300">SERVICES</a>
-            <a href="projects.html" class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300">PORTFOLIO</a>
-            <a href="contact.html" class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium">CONTACT</a>
-            <div class="flex space-x-4 px-3 pt-2">
-                <a href="https://www.instagram.com/akasstudio/?hl=en" class="text-white hover:text-gray-300">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com/company/akas-studio/" class="text-white hover:text-gray-300">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://vimeo.com/1084278716/5a9ea08108" class="text-white hover:text-gray-300"><i class="fab fa-vimeo-v"></i></a>
-            </div>
-        </div>
-    </div>
-</nav>
-
-  <!-- Hero Section -->
-  <section class="hero-bg h-screen flex items-center pt-20 relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
-      <div class="max-w-2xl">
-        <h1 class="text-5xl md:text-4xl font-bold mb-6 font-sans">AUTHENTIC LUXURY DESIGN</h1>
-        <p class="text-base md:text-lg mb-8">
-           AKAS STUDIO, is a timeless pursuit of design excellence, achieved by harmoniously blending genuine stories, art, and science. It strives to create serene interior spaces while elevating the wellbeing of our discerning clients through a refined and thoughtful approach.
+  <body class="bg-gray-50">
+    <!-- Landing Page -->
+    <div
+      id="landing-page"
+      class="fixed inset-0 bg-black z-[60] flex flex-col items-center justify-center text-center px-4"
+    >
+      <div class="space-y-8 max-w-2xl">
+        <h1
+          class="text-white font-bold text-4xl md:text-6xl tracking-wide scale-fade-in"
+        >
+          Welcome to AKAS STUDIO
+        </h1>
+        <p
+          class="text-gray-300 text-lg md:text-xl scale-fade-in transition-delay-300"
+        >
+          Crafting digital experiences that matter
         </p>
-        <div class="flex space-x-4">
-          <a href="academia.html" class="border border-white hover:bg-black hover:text-white text-white px-6 py-3 rounded-md font-medium transition duration-300">View Project</a>
-        </div>
+        <button
+          id="enter-btn"
+          class="scale-fade-in transition-delay-500 bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-full text-lg md:text-xl transition-all duration-300"
+        >
+          Enter Studio
+        </button>
       </div>
     </div>
-    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-      <a href="#services" class="text-white text-4xl"><i class="fas fa-chevron-down"></i></a>
-    </div>
-  </section>
 
-  <!-- Our Approach -->
-<section class="w-full h-screen bg-black items-center justify-center text-white flex flex-col px-8 md:px-16 lg:px-24 py-24 relative">
-    <div class="mb-12">
-        <h2 class="text-2xl font-bold">Our Approach</h2>
-    </div>
-    <div class="max-w-3xl text-lg">
-        <p>At AKAS STUDIO, we craft interiors that rise above trends—grounded in authenticity, timeless elegance, and refined simplicity. Our design blends modern sophistication with meticulous detail, reflecting each client’s unique identity within a cohesive vision. We approach every space holistically—balancing context, function, and emotion—to create environments that are both luxurious and livable. From concept to completion, we collaborate closely to ensure every decision is intentional and elevates daily life. With a deep respect for materials, proportion, and craftsmanship, our work is quietly confident—contemporary, enduring, and rich in meaning.</p>
-    </div>
-</section>
-
-  <!-- Recent Projects -->
-  <section class="w-full bg-white px-6 pt-16 pb-16">
-    <h2 class="text-3xl font-semibold text-black text-center mb-8">Recent Projects</h2>
-    <div class="w-20 h-1 bg-black mx-auto mb-12"></div>
-
-    <!-- Portfolio Grid -->
-    <div class="grid grid-cols-2 gap-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Project Cards -->
-      <a href="academia.html" class="group relative overflow-hidden block" data-category="residential">
-        <img src="images\IR Academia\IR Academia 1.jpg" alt="IR Academia" class="w-full h-80 object-cover transition duration-500 group-hover:scale-105" />
-        <div class="absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center">
-          <h3 class="text-white text-xl font-semibold mb-2">IR Academia</h3>
-          <p class="text-white text-sm">ACADEMIA, NAMIBIA</p>
+    <!-- Navigation -->
+<nav class="fixed w-full bg-black shadow-sm z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-20 items-center">
+      <!-- Logo Container - Changed to h-full -->
+      <div class="flex-shrink-0 flex items-center h-full">
+        <a href="index.html" class="flex items-center h-full">
+          <!-- Increased logo height and added padding -->
+          <img 
+            src="images/logo.png" 
+            alt="AKAS STUDIO Logo" 
+            class="h-full w-auto object-contain py-2"
+          />
+        </a>
+      </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a
+                href="index.html"
+                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
+                >HOME</a
+              >
+              <a
+                href="about.html"
+                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
+                >ABOUT</a
+              >
+              <a
+                href="services.html"
+                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
+                >SERVICES</a
+              >
+              <a
+                href="portfolio.html"
+                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
+                >PORTFOLIO</a
+              >
+              <a
+                href="contact.html"
+                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
+                >CONTACT</a
+              >
+              <a
+                href="https://www.instagram.com/akasstudio/?hl=en"
+                class="text-white hover:text-gray-300"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/akas-studio/"
+                class="text-white hover:text-gray-300"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://vimeo.com/1084278716/5a9ea08108"
+                class="text-white hover:text-gray-300"
+                ><i class="fab fa-vimeo-v"></i
+              ></a>
+            </div>
+          </div>
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-button"
+              class="text-white hover:text-gray-300 focus:outline-none"
+            >
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
         </div>
-      </a>
+      </div>
 
-      <a href="apartment.html" class="group relative overflow-hidden block" data-category="residential">
-        <img src="images/Apartment TK/Apartment TK 1.png" alt="Modern Apartment" class="w-full h-80 object-cover transition duration-500 group-hover:scale-105" />
-        <div class="absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center">
-          <h3 class="text-white text-xl font-semibold mb-2">APARTMENT TK</h3>
-          <p class="text-white text-sm">CAPE TOWN, SOUTH AFRICA</p>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-black shadow-lg">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="index.html"
+            class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300"
+            >HOME</a
+          >
+          <a
+            href="about.html"
+            class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300"
+            >ABOUT</a
+          >
+          <a
+            href="services.html"
+            class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300"
+            >SERVICES</a
+          >
+          <a
+            href="projects.html"
+            class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300"
+            >PORTFOLIO</a
+          >
+          <a
+            href="contact.html"
+            class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
+            >CONTACT</a
+          >
+          <div class="flex space-x-4 px-3 pt-2">
+            <a
+              href="https://www.instagram.com/akasstudio/?hl=en"
+              class="text-white hover:text-gray-300"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/company/akas-studio/"
+              class="text-white hover:text-gray-300"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://vimeo.com/1084278716/5a9ea08108"
+              class="text-white hover:text-gray-300"
+              ><i class="fab fa-vimeo-v"></i
+            ></a>
+          </div>
         </div>
-      </a>
+      </div>
+    </nav>
 
-      <a href="kilowatt.html" class="group relative overflow-hidden block" data-category="residential">
-        <img src="images\KILOWATT\KILOWATT 1.jpg" alt="KILLOWATT" class="w-full h-80 object-cover transition duration-500 group-hover:scale-105" />
-        <div class="absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center">
-          <h3 class="text-white text-xl font-semibold mb-2">KILLOWATT</h3>
-          <p class="text-white text-sm">CAPE TOWN, SOUTH AFRICA</p>
+    <!-- Hero Section -->
+    <section class="hero-bg h-screen flex items-center pt-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+        <div class="max-w-2xl">
+          <h1 class="text-5xl md:text-4xl font-bold mb-6 font-sans">
+            AUTHENTIC LUXURY DESIGN
+          </h1>
+          <p class="text-base md:text-lg mb-8">
+            AKAS STUDIO, is on a timeless pursuit for design excellence, aiming
+            to harmoniously blend genuine stories, art, and science. Designing
+            interior spaces while elevating the wellbeing of our discerning
+            clients through a sophisticated and thoughtful approach.
+          </p>
+          <div class="flex space-x-4">
+            <a
+              href="academia.html"
+              class="border border-white hover:bg-black hover:text-white text-white px-6 py-3 rounded-none font-medium transition duration-300"
+              >View Project</a
+            >
+          </div>
         </div>
-      </a>
+      </div>
+      <div
+        class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
+      >
+        <a href="#services" class="text-white text-4xl"
+          ><i class="fas fa-chevron-down"></i
+        ></a>
+      </div>
+    </section>
 
-      <a href="lifestyle.html" class="group relative overflow-hidden block" data-category="residential">
-        <img src="images\SNR LIFESTLE\SNR LIFESTYLE 1.jpg" alt="SNR LIFESTYLE" class="w-full h-80 object-cover transition duration-500 group-hover:scale-105" />
-        <div class="absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center">
-          <h3 class="text-white text-xl font-semibold mb-2">SNR LIFESTYLE</h3>
-          <p class="text-white text-sm">ENGCOBO, EASTERN CAPE, South Africa</p>
-        </div>
-      </a>
-    </div>
-  </section>
+    <!-- Our Approach -->
+    <section
+      class="w-full h-screen bg-black items-center justify-center text-white flex flex-col px-8 md:px-16 lg:px-24 py-24 relative"
+    >
+      <div class="mb-12">
+        <h2 class="text-2xl font-bold">OUR APPROACH</h2>
+      </div>
+      <div class="max-w-3xl text-lg">
+        <p>
+          At AKAS STUDIO, we craft interiors that rise above trends, grounded in
+          authenticity, timeless elegance, and refined simplicity. Our design
+          blends modern sophistication with meticulous detail, reflecting each
+          client’s unique identity within a cohesive vision. We approach every
+          space holistically, balancing context, function, and emotion aiming to
+          create environments that are both luxurious and liveable. From concept
+          to completion, we collaborate closely to ensure every decision is
+          intentional and elevates daily life. With a deep respect for
+          materials, proportion, and craftsmanship, our work is quietly and rich
+          in meaning
+        </p>
+      </div>
+    </section>
 
-  <!-- Footer -->
-  <footer class="bg-black text-white font-sans">
+    <!-- Recent Projects -->
+    <section class="w-full bg-white px-6 pt-16 pb-16">
+      <h2 class="text-3xl font-semibold text-black text-center mb-8">
+        RECENT PROJECTS
+      </h2>
+      <div class="w-20 h-1 bg-black mx-auto mb-12"></div>
+
+      <!-- Portfolio Grid -->
+      <div
+        class="grid grid-cols-2 gap-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+      >
+        <!-- Project Cards -->
+        <a
+          href="academia.html"
+          class="group relative overflow-hidden block"
+          data-category="residential"
+        >
+          <img
+            src="images\IR Academia\IR Academia 1.jpg"
+            alt="IR Academia"
+            class="w-full h-80 object-cover transition duration-500 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center"
+          >
+            <h3 class="text-white text-xl font-semibold mb-2">IR ACADEMIA</h3>
+            <p class="text-white text-sm">ACADEMIA, NAMIBIA</p>
+          </div>
+        </a>
+
+        <a
+          href="apartment.html"
+          class="group relative overflow-hidden block"
+          data-category="residential"
+        >
+          <img
+            src="images/Apartment TK/Apartment TK 1.png"
+            alt="Modern Apartment"
+            class="w-full h-80 object-cover transition duration-500 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center"
+          >
+            <h3 class="text-white text-xl font-semibold mb-2">APARTMENT TK</h3>
+            <p class="text-white text-sm">CAPE TOWN, SOUTH AFRICA</p>
+          </div>
+        </a>
+
+        <a
+          href="kilowatt.html"
+          class="group relative overflow-hidden block"
+          data-category="residential"
+        >
+          <img
+            src="images\KILOWATT\KILOWATT 1.jpg"
+            alt="KILLOWATT"
+            class="w-full h-80 object-cover transition duration-500 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center"
+          >
+            <h3 class="text-white text-xl font-semibold mb-2">KILOWATT</h3>
+            <p class="text-white text-sm">CAPE TOWN, SOUTH AFRICA</p>
+          </div>
+        </a>
+
+        <a
+          href="lifestyle.html"
+          class="group relative overflow-hidden block"
+          data-category="residential"
+        >
+          <img
+            src="images\SNR LIFESTLE\SNR LIFESTYLE 1.jpg"
+            alt="SNR LIFESTYLE"
+            class="w-full h-80 object-cover transition duration-500 group-hover:scale-105"
+          />
+          <div
+            class="absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center"
+          >
+            <h3 class="text-white text-xl font-semibold mb-2">SNR LIFESTYLE</h3>
+            <p class="text-white text-sm">
+              ENGCOBO, EASTERN CAPE, SOUTH AFRICA
+            </p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white font-sans">
   <div class="max-w-7xl mx-auto pb-6 pt-6 px-8 flex flex-col md:flex-row md:justify-between md:items-start">
     <!-- Left: Logo -->
     <div class="md:w-1/4">
       <div class="flex items-center gap-3 mb-4">
-        <div class="heading-font font-bold tracking-widest leading-tight text-sm">AKAS STUDIO</div>
+        <a href="index.html" class="flex items-center">
+          <img 
+            src="images/logo.png" 
+            alt="AKAS STUDIO Logo" 
+            class="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+          >
+        </a>
       </div>
     </div>
 
@@ -164,14 +350,14 @@
     <!-- Right: Contact -->
     <div class="flex flex-col items-end mt-6 md:mt-0 md:w-1/4">
       <div class="text-sm text-white text-right">
-        <div>+27 67 647 4091</div>
-        <div>contact@akasstudio.co.za</div>
+        <div>+27 74 260 3393</div>
+        <div>info@akasstudio.co.za</div>
         <div>Cape town, South Africa</div>
       </div>
     </div>
   </div>
 </footer>
 
-   <script src="index.js"></script>
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>

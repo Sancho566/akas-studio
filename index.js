@@ -23,4 +23,37 @@ if (newsletterForm) {
    aboutSection.style.transform = `scale(${scaleFactor})`;
  });
 
- 
+  // Landing Page Logic
+    document.addEventListener('DOMContentLoaded', () => {
+      const landingPage = document.getElementById('landing-page');
+      const mainContent = document.getElementById('main-content');
+      
+      if(localStorage.getItem('akasStudioVisited')) {
+        landingPage.remove();
+        mainContent.style.display = 'block';
+      } else {
+        setTimeout(() => {
+          document.querySelectorAll('.scale-fade-in').forEach(el => {
+            el.classList.add('visible');
+          });
+        }, 200);
+      }
+    });
+
+    document.getElementById('enter-btn')?.addEventListener('click', () => {
+      localStorage.setItem('akasStudioVisited', 'true');
+      const landingPage = document.getElementById('landing-page');
+      
+      landingPage.classList.add('landing-page-fade-out');
+      
+      setTimeout(() => {
+        landingPage.remove();
+        document.getElementById('main-content').style.display = 'block';
+      }, 900);
+    });
+
+    // Keep your existing JavaScript for mobile menu
+    document.getElementById('mobile-menu-button')?.addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    });
