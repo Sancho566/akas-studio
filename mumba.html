@@ -18,66 +18,131 @@
   </head>
   <body class="bg-white text-zinc-900">
     <!-- Navbar -->
-     <nav class="fixed w-full bg-black shadow-sm z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-20 items-center">
-            <div class="flex-shrink-0 flex items-center">
-                <a href="index.html" class="heading-font text-2xl font-bold text-white">AKAS STUDIO</a>
+<nav class="fixed w-full bg-black shadow-sm z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-20 items-center">
+      <!-- Logo Container - Changed to h-full -->
+      <div class="flex-shrink-0 flex items-center h-full">
+        <a href="index.html" class="flex items-center h-full">
+          <!-- Increased logo height and added padding -->
+          <img 
+            src="images/logo.png" 
+            alt="AKAS STUDIO Logo" 
+            class="h-full w-auto object-contain py-2"
+          />
+        </a>
+      </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a
+                href="index.html"
+                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
+                >HOME</a
+              >
+              <a
+                href="about.html"
+                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
+                >ABOUT</a
+              >
+              <a
+                href="services.html"
+                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
+                >SERVICES</a
+              >
+              <a
+                href="portfolio.html"
+                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
+                >PORTFOLIO</a
+              >
+              <a
+                href="contact.html"
+                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
+                >CONTACT</a
+              >
+              <a
+                href="https://www.instagram.com/akasstudio/?hl=en"
+                class="text-white hover:text-gray-300"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/akas-studio/"
+                class="text-white hover:text-gray-300"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://vimeo.com/1084278716/5a9ea08108"
+                class="text-white hover:text-gray-300"
+                ><i class="fab fa-vimeo-v"></i
+              ></a>
             </div>
-            <div class="hidden md:block">
-                <div class="ml-10 flex items-baseline space-x-8">
-                    <a href="index.html" class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium">HOME</a>
-                    <a href="about.html" class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium">ABOUT</a>
-                    <a href="services.html" class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium">SERVICES</a>
-                    <a href="portfolio.html" class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium">PORTFOLIO</a>
-                    <a href="contact.html" class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium">CONTACT</a>
-                    <a href="https://www.instagram.com/akasstudio/?hl=en" class="text-white hover:text-gray-300">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/company/akas-studio/" class="text-white hover:text-gray-300">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://vimeo.com/1084278716/5a9ea08108" class="text-white hover:text-gray-300"><i class="fab fa-vimeo-v"></i></a>
-                </div>
-            </div>
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-white hover:text-gray-300 focus:outline-none">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
+          </div>
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-button"
+              class="text-white hover:text-gray-300 focus:outline-none"
+            >
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
         </div>
-    </div>
-    
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-black shadow-lg">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="index.html" class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300">HOME</a>
-            <a href="about.html" class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300">ABOUT</a>
-            <a href="services.html" class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300">SERVICES</a>
-            <a href="projects.html" class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300">PORTFOLIO</a>
-            <a href="contact.html" class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium">CONTACT</a>
-            <div class="flex space-x-4 px-3 pt-2">
-                <a href="https://www.instagram.com/akasstudio/?hl=en" class="text-white hover:text-gray-300">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com/company/akas-studio/" class="text-white hover:text-gray-300">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://vimeo.com/1084278716/5a9ea08108" class="text-white hover:text-gray-300"><i class="fab fa-vimeo-v"></i></a>
-            </div>
-        </div>
-    </div>
-</nav>
+      </div>
 
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-black shadow-lg">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="index.html"
+            class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300"
+            >HOME</a
+          >
+          <a
+            href="about.html"
+            class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300"
+            >ABOUT</a
+          >
+          <a
+            href="services.html"
+            class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300"
+            >SERVICES</a
+          >
+          <a
+            href="projects.html"
+            class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300"
+            >PORTFOLIO</a
+          >
+          <a
+            href="contact.html"
+            class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
+            >CONTACT</a
+          >
+          <div class="flex space-x-4 px-3 pt-2">
+            <a
+              href="https://www.instagram.com/akasstudio/?hl=en"
+              class="text-white hover:text-gray-300"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/company/akas-studio/"
+              class="text-white hover:text-gray-300"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://vimeo.com/1084278716/5a9ea08108"
+              class="text-white hover:text-gray-300"
+              ><i class="fab fa-vimeo-v"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
     <!-- Hero image -->
-    <div
-      class="w-full h-72 md:h-[400px] lg:h-[475px] overflow-hidden flex items-center justify-center bg-zinc-200"
-    >
-      <img
-        src="images/DW MUMBA/Mumba Lounge 1.jpg"
-        alt="Hero"
-        class="w-full h-full object-cover object-center"
-      />
+    <div class="w-full h-72 md:h-[400px] lg:h-[475px] overflow-hidden flex items-center justify-center bg-zinc-200">
+      <img src="images\DW MUMBA\Mumba Kitchen 2.jpg" alt="Hero" class="w-full h-full object-cover object-center">
     </div>
 
     <!-- Main Section -->
@@ -91,27 +156,22 @@
         >
           DW MUMBA
         </h1>
-        <p class="text-lg md/text-base text-black leading-relaxed mb-6">
-          A signature of natural textures and honest materials an approach
-          clearly expressed in this bespoke kitchen design. Rooted in a
-          philosophy of refined simplicity, the space is intended to feel
-          sophisticated, organic, and effortlessly contemporary. Every detail
-          was selected with purpose, ensuring a tactile and visually rich
-          experience that remains understated and timeless.
-        </p>
-        <p class="text-lg md/text-base text-black leading-relaxed mb-6">
-          The kitchen is framed by a raw brick finish, lending a grounded,
-          architectural presence that pays homage to traditional craftsmanship
-          while introducing a layer of texture and warmth. This rawness is
-          balanced by the clean lines of custom cabinetry and minimalist
-          detailing, creating a harmonious interplay between rough and refined
-        </p>
-
-        <p class="text-lg md/text-base text-black leading-relaxed mb-6">
-          Ultimately, this kitchen is a clear expression of our studio’s design
-          ethos: modern yet rooted, tactile yet polished, and deeply attuned to
-          the spirit of its context.
-        </p>
+       <p class="text-base md:text-base text-black leading-relaxed mb-6">
+    A signature of natural textures and honest materials an approach
+    clearly expressed in this bespoke kitchen design. Rooted in a
+    philosophy of refined simplicity, the space is intended to feel
+    sophisticated, organic, and effortlessly contemporary. Every detail
+    was selected with purpose, ensuring a tactile and visually rich
+    experience that remains understated and timeless.
+    The kitchen is framed by a raw brick finish, lending a grounded,
+    architectural presence that pays homage to traditional craftsmanship
+    while introducing a layer of texture and warmth. This rawness is
+    balanced by the clean lines of custom cabinetry and minimalist
+    detailing, creating a harmonious interplay between rough and refined
+    Ultimately, this kitchen is a clear expression of our studio’s design
+    ethos: modern yet rooted, tactile yet polished, and deeply attuned to
+    the spirit of its context.
+</p>
       </div>
       <!-- Right (Overview) -->
       <aside
@@ -131,40 +191,47 @@
       </aside>
     </section>
 
-    <div class="w-full max-w-4xl px-4 py-8 bg-white mx-auto text-center">
-  <div class="relative">
+   <!-- Carousel Section -->
+<div class="w-full max-w-6xl px-4 py-8 bg-white mx-auto">
+  <div id="carousel" class="relative overflow-hidden rounded-none shadow">
     <!-- Image Display -->
     <img
       id="carousel-image"
       src="images/DW MUMBA/Mumba Kitchen 3.jpg"
-      alt="Interior example"
-      class="w-full h-96 md:h-[520px] object-cover rounded shadow mx-auto transition duration-300"
+      alt="Carousel image"
+      class="w-full h-96 md:h-[520px] object-cover"
     />
 
     <!-- Left Arrow -->
     <button
-      id="prev-btn"
-      class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-80"
+      id="carousel-prev"
+      class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 focus:outline-none text-xl"
     >
-      &#8592;
+      &#10094;
     </button>
 
     <!-- Right Arrow -->
     <button
-      id="next-btn"
-      class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-80"
+      id="carousel-next"
+      class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 focus:outline-none text-xl"
     >
-      &#8594;
+      &#10095;
     </button>
   </div>
 </div>
 
-     <footer class="bg-black text-white font-sans">
+<footer class="bg-black text-white font-sans">
   <div class="max-w-7xl mx-auto pb-6 pt-6 px-8 flex flex-col md:flex-row md:justify-between md:items-start">
     <!-- Left: Logo -->
     <div class="md:w-1/4">
       <div class="flex items-center gap-3 mb-4">
-        <div class="heading-font font-bold tracking-widest leading-tight text-sm">AKAS STUDIO</div>
+        <a href="index.html" class="flex items-center">
+          <img 
+            src="images/logo.png" 
+            alt="AKAS STUDIO Logo" 
+            class="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+          >
+        </a>
       </div>
     </div>
 
@@ -187,32 +254,35 @@
     <!-- Right: Contact -->
     <div class="flex flex-col items-end mt-6 md:mt-0 md:w-1/4">
       <div class="text-sm text-white text-right">
-        <div>+27 67 647 4091</div>
-        <div>contact@akasstudio.co.za</div>
+        <div>+27 74 260 3393</div>
+        <div>info@akasstudio.co.za</div>
         <div>Cape town, South Africa</div>
       </div>
     </div>
   </div>
-</footer>
+</footer>   
+
 <script>
-  const images = [
-    "images/DW MUMBA/Mumba Kitchen 3.jpg",
-    "images/DW MUMBA/Mumba Kitchen 2.jpg",
-    "images/DW MUMBA/Mumba Kitchen 1.jpg"
-  ];
+ (function() {
+    const images = [
+      "images/DW MUMBA/Mumba Kitchen 3.jpg",
+      "images/DW MUMBA/Mumba Kitchen 2.jpg",
+      "images/DW MUMBA/Mumba Kitchen 1.jpg"
+    ];
 
-  let current = 0;
-  const imageElement = document.getElementById("carousel-image");
+    let idx = 0;
+    const imgEl = document.getElementById('carousel-image');
+    const prevBtn = document.getElementById('carousel-prev');
+    const nextBtn = document.getElementById('carousel-next');
 
-  document.getElementById("prev-btn").addEventListener("click", () => {
-    current = (current - 1 + images.length) % images.length;
-    imageElement.src = images[current];
-  });
+    function showImage(i) {
+      idx = (i + images.length) % images.length;
+      imgEl.src = images[idx];
+    }
 
-  document.getElementById("next-btn").addEventListener("click", () => {
-    current = (current + 1) % images.length;
-    imageElement.src = images[current];
-  });
+    prevBtn.addEventListener('click', () => showImage(idx - 1));
+    nextBtn.addEventListener('click', () => showImage(idx + 1));
+  })();
 </script>
   </body>
 </html>

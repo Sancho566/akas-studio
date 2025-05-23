@@ -1,143 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <head>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>About | AKAS STUDIO</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
-</head>
-<body class="bg-gray-50">
-     <!-- Navigation -->
-     <nav class="fixed w-full bg-black shadow-sm z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-20 items-center">
-            <div class="flex-shrink-0 flex items-center">
-                <a href="index.html" class="heading-font text-2xl font-bold text-white">AKAS STUDIO</a>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+<nav class="fixed w-full bg-black shadow-sm z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-20 items-center">
+      <!-- Logo Container - Changed to h-full -->
+      <div class="flex-shrink-0 flex items-center h-full">
+        <a href="index.html" class="flex items-center h-full">
+          <!-- Increased logo height and added padding -->
+          <img 
+            src="images/logo.png" 
+            alt="AKAS STUDIO Logo" 
+            class="h-full w-auto object-contain py-2"
+          />
+        </a>
+      </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a
+                href="index.html"
+                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
+                >HOME</a
+              >
+              <a
+                href="about.html"
+                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
+                >ABOUT</a
+              >
+              <a
+                href="services.html"
+                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
+                >SERVICES</a
+              >
+              <a
+                href="portfolio.html"
+                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
+                >PORTFOLIO</a
+              >
+              <a
+                href="contact.html"
+                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
+                >CONTACT</a
+              >
+              <a
+                href="https://www.instagram.com/akasstudio/?hl=en"
+                class="text-white hover:text-gray-300"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/akas-studio/"
+                class="text-white hover:text-gray-300"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://vimeo.com/1084278716/5a9ea08108"
+                class="text-white hover:text-gray-300"
+                ><i class="fab fa-vimeo-v"></i
+              ></a>
             </div>
-            <div class="hidden md:block">
-                <div class="ml-10 flex items-baseline space-x-8">
-                    <a href="index.html" class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium">HOME</a>
-                    <a href="about.html" class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium">ABOUT</a>
-                    <a href="services.html" class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium">SERVICES</a>
-                    <a href="portfolio.html" class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium">PORTFOLIO</a>
-                    <a href="contact.html" class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium">CONTACT</a>
-                    <a href="https://www.instagram.com/akasstudio/?hl=en" class="text-white hover:text-gray-300">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/company/akas-studio/" class="text-white hover:text-gray-300">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://vimeo.com/1084278716/5a9ea08108" class="text-white hover:text-gray-300"><i class="fab fa-vimeo-v"></i></a>
-                </div>
-            </div>
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-white hover:text-gray-300 focus:outline-none">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
+          </div>
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-button"
+              class="text-white hover:text-gray-300 focus:outline-none"
+            >
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
         </div>
-    </div>
-    
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-black shadow-lg">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="index.html" class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300">HOME</a>
-            <a href="about.html" class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300">ABOUT</a>
-            <a href="services.html" class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300">SERVICES</a>
-            <a href="projects.html" class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300">PORTFOLIO</a>
-            <a href="contact.html" class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium">CONTACT</a>
-            <div class="flex space-x-4 px-3 pt-2">
-                <a href="https://www.instagram.com/akasstudio/?hl=en" class="text-white hover:text-gray-300">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com/company/akas-studio/" class="text-white hover:text-gray-300">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://vimeo.com/1084278716/5a9ea08108" class="text-white hover:text-gray-300"><i class="fab fa-vimeo-v"></i></a>
-            </div>
-        </div>
-    </div>
-</nav>
+      </div>
 
- <section class="w-full h-screen bg-white flex items-center justify-center">
-    <!-- Main Content Container -->
-    <div class="w-full max-w-6xl px-6 relative
-            before:absolute before:left-[calc(50%-600px)] before:top-[2%] before:bottom-[4%] 
-            before:w-[2px] before:bg-black before:content-''">
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-black shadow-lg">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="index.html"
+            class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300"
+            >HOME</a
+          >
+          <a
+            href="about.html"
+            class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300"
+            >ABOUT</a
+          >
+          <a
+            href="services.html"
+            class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300"
+            >SERVICES</a
+          >
+          <a
+            href="projects.html"
+            class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300"
+            >PORTFOLIO</a
+          >
+          <a
+            href="contact.html"
+            class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
+            >CONTACT</a
+          >
+          <div class="flex space-x-4 px-3 pt-2">
+            <a
+              href="https://www.instagram.com/akasstudio/?hl=en"
+              class="text-white hover:text-gray-300"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/company/akas-studio/"
+              class="text-white hover:text-gray-300"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://vimeo.com/1084278716/5a9ea08108"
+              class="text-white hover:text-gray-300"
+              ><i class="fab fa-vimeo-v"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="w-full h-screen bg-white flex items-center justify-center">
 
         <!-- Combined Content Block -->
         <div class="text-center">
-            <h1 class="text-xl font-bold text-black mb-8">
-                AKAS STUDIO is a distinguished interior architecture and design studio based in Capetown,
-                South Africa, known for its modern, high-end approach and commitment to authentic luxury.
-            </h1>
+          <h1 class="text-xl font-bold text-black mb-8 px-4 max-w-2xl mx-auto">
+    AKAS STUDIO is a distinguished interior architecture and design
+    studio based in Capetown, South Africa, known for its modern,
+    high-end approach and commitment to authentic luxury.
+</h1>
 
-            <div class="text-lg leading-relaxed text-black max-w-5xl mx-auto space-y-6">
-                AKAS STUDIO is a premium interior architecture design studio founded by visionary designer Arthur Kamhoti, who trained at the prestigious BHC School of Design. His style blends authenticity and calm energy to create spaces that enrich life. We approach luxury as a timeless journey—merging storytelling, art, and science to craft serene spaces that prioritize the well-being of our discerning clients. Our studio specializes in bespoke interiors that redefine luxury through immersive experiences and refined detail, shaped by Arthur's passion and professional foundation. At AKAS STUDIO, we turn vision into timeless elegance—blending creativity with precision from concept to completion as your trusted design partner.
-            </div>
+          <div
+            class="text-lg leading-relaxed text-black max-w-5xl mx-auto space-y-6"
+          >
+            AKAS STUDIO is a premium interior architecture design studio founded
+            by visionary designer Arthur Kamhoti, who trained at the prestigious
+            BHC School of Design. His style blends authenticity and calm energy
+            to create spaces that enrich life. We approach luxury as a timeless
+            journey—merging storytelling, art, and science to craft serene
+            spaces that prioritize the well-being of our discerning clients. Our
+            studio specializes in bespoke interiors that redefine luxury through
+            immersive experiences and refined detail, shaped by Arthur's passion
+            and professional foundation. At AKAS STUDIO, we turn vision into
+            timeless elegance—blending creativity with precision from concept to
+            completion as your trusted design partner.
+          </div>
 
-            <!-- CTA Buttons -->
-            <div class="mt-12 flex flex-col md:flex-row gap-4 justify-center">
-                <a href="services.html"
-                    class="inline-block px-8 py-4 border-2 border-black rounded-full text-black uppercase 
-                           text-sm tracking-wider hover:bg-gray-100 transition-colors">
-                    View Our Services
-                </a>
-                
-                <a href="AKAS STUDIO (PTY) LTD CONSULTATION DOCUMENT.pdf" download
-                    class="inline-block px-8 py-4 bg-black rounded-full text-white uppercase 
-                           text-sm tracking-wider hover:bg-gray-800 transition-colors">
-                    Our Consultation Process
-                </a>
-            </div>
+          <!-- CTA Buttons -->
+          <div class="mt-12 flex flex-col md:flex-row gap-4 justify-center">
+            <a
+              href="services.html"
+              class="inline-block px-8 py-4 border-2 border-black text-black uppercase text-sm tracking-wider hover:bg-gray-100 transition-colors rounded-none"
+            >
+              View Our Services
+            </a>
+
+            <a
+              href="AKAS STUDIO (PTY) LTD CONSULTATION DOCUMENT.pdf"
+              download
+              class="inline-block px-8 py-4 bg-black text-white uppercase text-sm tracking-wider hover:bg-gray-800 transition-colors rounded-none"
+            >
+              Our Consultation Process
+            </a>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
     <!-- Designer's Section -->
-        <main class="px-7 md:px-20 max-w-[1550px] mx-auto pt-10 bg-black text-white">
-        <!-- Page Title -->
-        <h1 class="text-4xl md:text-3xl font-bold uppercase mb-10 leading-none tracking-tight !text-white">
-            Designers
-        </h1>
+    <main
+      class="px-7 md:px-20 max-w-[1550px] mx-auto pt-10 bg-black text-white"
+    >
+      <!-- Page Title -->
+      <h1
+        class="text-4xl md:text-3xl font-bold uppercase mb-10 leading-none tracking-tight !text-white"
+      >
+        Designers
+      </h1>
 
-        <!-- Designer 1 -->
-        <div class="flex flex-col md:flex-row items-start justify-start gap-10 md:gap-14">
-            <!-- Image -->
-            <div class="bg-neutral-800 w-[200px] h-[240px] flex items-center justify-center overflow-hidden">
-                <img src="images\ARTHUR KAMHOTI.jpg"
-                    alt="Designer"
-                    class="object-cover w-full h-full grayscale" />
-            </div>
-
-            <!-- Name & Button -->
-            <div class="flex flex-col md:flex-row md:items-end justify-between w-full">
-                <div>
-                    <span class="text-2xl md:text-2xl font-semibold uppercase tracking-tight leading-snug !text-white">
-                        ARTHUR KAMHOTI
-                    </span>
-                </div>
-                <div class="flex items-center md:ml-10 mt-5 md:mt-0">
-                    <span class="text-xl font-normal mr-4 !text-white">+</span>
-                    <a href="arthur.html"
-                    class="px-5 py-2 bg-white text-black text-sm font-semibold rounded-full uppercase tracking-wide hover:bg-gray-200 transition-colors">
-                        Discover
-                    </a>
-                </div>
-            </div>
+      <!-- Designer 1 -->
+      <div
+        class="flex flex-col md:flex-row items-start justify-start gap-10 md:gap-14"
+      >
+        <!-- Image -->
+        <div
+          class="bg-neutral-800 w-[200px] h-[240px] flex items-center justify-center overflow-hidden"
+        >
+          <img
+            src="images\EMP_9453.jpg"
+            alt="Designer"
+            class="object-cover w-full h-full grayscale"
+          />
         </div>
 
-        <!-- Bottom Border -->
-        <div class="border-t border-white/30 w-full mt-8"></div>
-    </main> 
+        <!-- Name & Button -->
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between w-full"
+        >
+          <div>
+            <span
+              class="text-2xl md:text-2xl font-semibold uppercase tracking-tight leading-snug !text-white"
+            >
+              ARTHUR KAMHOTI
+            </span>
+          </div>
+          <div class="flex items-center md:ml-10 mt-5 md:mt-0">
+            <span class="text-xl font-normal mr-4 !text-white">+</span>
+            <a
+              href="arthur.html"
+              class="px-5 py-2 bg-white text-black text-sm font-semibold rounded-none uppercase tracking-wide hover:bg-gray-200 transition-colors"
+            >
+              Discover
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Border -->
+      <div class="border-t border-white/30 w-full mt-8"></div>
+    </main>
 
    <footer class="bg-black text-white font-sans">
   <div class="max-w-7xl mx-auto pb-6 pt-6 px-8 flex flex-col md:flex-row md:justify-between md:items-start">
     <!-- Left: Logo -->
     <div class="md:w-1/4">
       <div class="flex items-center gap-3 mb-4">
-        <div class="heading-font font-bold tracking-widest leading-tight text-sm">AKAS STUDIO</div>
+        <a href="index.html" class="flex items-center">
+          <img 
+            src="images/logo.png" 
+            alt="AKAS STUDIO Logo" 
+            class="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+          >
+        </a>
       </div>
     </div>
 
@@ -160,39 +268,38 @@
     <!-- Right: Contact -->
     <div class="flex flex-col items-end mt-6 md:mt-0 md:w-1/4">
       <div class="text-sm text-white text-right">
-        <div>+27 67 647 4091</div>
-        <div>contact@akasstudio.co.za</div>
+        <div>+27 74 260 3393</div>
+        <div>info@akasstudio.co.za</div>
         <div>Cape town, South Africa</div>
       </div>
     </div>
   </div>
 </footer>
 
-   
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 1000,
-            once: true,
-            easing: 'ease-in-out',
-            mirror: false
-        });
+      AOS.init({
+        duration: 1000,
+        once: true,
+        easing: "ease-in-out",
+        mirror: false,
+      });
 
-        // Parallax effect for hero section
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallaxElement = document.querySelector('.hero-bg');
-            parallaxElement.style.backgroundPositionY = `${scrolled * 0.5}px`;
-        });
+      // Parallax effect for hero section
+      window.addEventListener("scroll", () => {
+        const scrolled = window.pageYOffset;
+        const parallaxElement = document.querySelector(".hero-bg");
+        parallaxElement.style.backgroundPositionY = `${scrolled * 0.5}px`;
+      });
 
-        document.querySelectorAll('.team-member').forEach(member => {
-            member.addEventListener('mouseover', () => {
-                member.querySelector('img').style.transform = 'scale(1.1)';
-            });
-            member.addEventListener('mouseout', () => {
-                member.querySelector('img').style.transform = 'scale(1)';
-            });
+      document.querySelectorAll(".team-member").forEach((member) => {
+        member.addEventListener("mouseover", () => {
+          member.querySelector("img").style.transform = "scale(1.1)";
         });
+        member.addEventListener("mouseout", () => {
+          member.querySelector("img").style.transform = "scale(1)";
+        });
+      });
     </script>
-</body>
+  </body>
 </html>

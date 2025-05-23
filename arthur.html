@@ -1,115 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About – AKAS Studio</title>
-  <!-- TailwindCSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css" />
-  <!-- Font Awesome CDN -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-p+U+2qO6VNmeAtB6F17uwpJ+X1hE3KrCO5YBqMQZP1KxF+/d5pI0uDhgI+RLl2nIhU3M5S6W6uO5p0sFjtJZeg=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-</head>
-<body class="bg-white min-h-screen flex flex-col">
-  <!-- NAV -->
-    <nav class="fixed w-full bg-black shadow-sm z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-20 items-center">
-            <div class="flex-shrink-0 flex items-center">
-                <a href="index.html" class="heading-font text-2xl font-bold text-white">AKAS STUDIO</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About – AKAS Studio</title>
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-p+U+2qO6VNmeAtB6F17uwpJ+X1hE3KrCO5YBqMQZP1KxF+/d5pI0uDhgI+RLl2nIhU3M5S6W6uO5p0sFjtJZeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-white min-h-screen flex flex-col">
+    <!-- NAV -->
+    <!-- Navigation -->
+<nav class="fixed w-full bg-black shadow-sm z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-20 items-center">
+      <!-- Logo Container - Changed to h-full -->
+      <div class="flex-shrink-0 flex items-center h-full">
+        <a href="index.html" class="flex items-center h-full">
+          <!-- Increased logo height and added padding -->
+          <img 
+            src="images/logo.png" 
+            alt="AKAS STUDIO Logo" 
+            class="h-full w-auto object-contain py-2"
+          />
+        </a>
+      </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a
+                href="index.html"
+                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
+                >HOME</a
+              >
+              <a
+                href="about.html"
+                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
+                >ABOUT</a
+              >
+              <a
+                href="services.html"
+                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
+                >SERVICES</a
+              >
+              <a
+                href="portfolio.html"
+                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
+                >PORTFOLIO</a
+              >
+              <a
+                href="contact.html"
+                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
+                >CONTACT</a
+              >
+              <a
+                href="https://www.instagram.com/akasstudio/?hl=en"
+                class="text-white hover:text-gray-300"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/akas-studio/"
+                class="text-white hover:text-gray-300"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://vimeo.com/1084278716/5a9ea08108"
+                class="text-white hover:text-gray-300"
+                ><i class="fab fa-vimeo-v"></i
+              ></a>
             </div>
-            <div class="hidden md:block">
-                <div class="ml-10 flex items-baseline space-x-8">
-                    <a href="index.html" class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium">HOME</a>
-                    <a href="about.html" class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium">ABOUT</a>
-                    <a href="services.html" class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium">SERVICES</a>
-                    <a href="portfolio.html" class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium">PORTFOLIO</a>
-                    <a href="contact.html" class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium">CONTACT</a>
-                    <a href="https://www.instagram.com/akasstudio/?hl=en" class="text-white hover:text-gray-300">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/company/akas-studio/" class="text-white hover:text-gray-300">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://vimeo.com/1084278716/5a9ea08108" class="text-white hover:text-gray-300"><i class="fab fa-vimeo-v"></i></a>
-                </div>
-            </div>
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-white hover:text-gray-300 focus:outline-none">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-black shadow-lg">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="index.html" class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300">HOME</a>
-            <a href="about.html" class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300">ABOUT</a>
-            <a href="services.html" class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300">SERVICES</a>
-            <a href="projects.html" class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300">PORTFOLIO</a>
-            <a href="contact.html" class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium">CONTACT</a>
-            <div class="flex space-x-4 px-3 pt-2">
-                <a href="https://www.instagram.com/akasstudio/?hl=en" class="text-white hover:text-gray-300">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com/company/akas-studio/" class="text-white hover:text-gray-300">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://vimeo.com/1084278716/5a9ea08108" class="text-white hover:text-gray-300"><i class="fab fa-vimeo-v"></i></a>
-            </div>
-        </div>
-    </div>
-</nav>
-
-  <!-- MAIN CONTENT -->
-  <main class="flex-1 flex items-center max-w-7xl mx-auto px-6 lg:px-8">
-    <!-- Added more top/bottom padding -->
-    <section class="py-12 w-full flex items-center">
-      <div class="flex flex-col md:flex-row items-center gap-12 w-full">
-        <!-- Image: lower height, focus on top -->
-        <div class="w-full md:w-1/2" data-aos="fade-right">
-          <img
-  src="images/ARTHUR KAMHOTI.jpg"
-  alt="Founder"
-  class="rounded-xl shadow-lg w-full max-h-85 object-cover object-center"
-/>
-
-        </div>
-        <!-- Text: smaller sizes -->
-        <div class="w-full md:w-1/2 text-black" data-aos="fade-left">
-          <h2 class="text-xl md:text-2xl font-bold mb-4">ARTHUR KAMHOTI</h2>
-          <p class="text-sm md:text-base leading-relaxed">
-            Arthur Kamhoti is an exceptional individual with a deep passion for design and an unwavering drive for
-            excellence. Arthur’s story is one of determination and vision. Born in Zimbabwe and raised in Cape Town,
-            he pursued his education with a commitment to mastering his craft. In 2018, he received a prestigious bursary
-            to study Interior Architecture, a decision that would shape his career. He quickly became known for his
-            innovative designs and meticulous attention to detail, earning respect from peers and clients alike.
-            Arthur’s philosophy combines technical expertise with a keen sense of aesthetics, resulting in designs that
-            are not only functional but also visually striking. Beyond his technical skills, Arthur is driven by a
-            desire to create meaningful, timeless environments that elevate the human experience. His story is one of
-            resilience, creativity, and leadership, as he continues to push the boundaries of design while staying true
-            to his roots and values. Whether working on high-end residential projects or large-scale commercial ventures,
-            Arthur’s ability to blend form and function has made him a respected name in the field of interior architecture.
-          </p>
+          </div>
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-button"
+              class="text-white hover:text-gray-300 focus:outline-none"
+            >
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
         </div>
       </div>
-    </section>
-  </main>
 
-     <footer class="bg-black text-white font-sans">
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-black shadow-lg">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="index.html"
+            class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300"
+            >HOME</a
+          >
+          <a
+            href="about.html"
+            class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300"
+            >ABOUT</a
+          >
+          <a
+            href="services.html"
+            class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300"
+            >SERVICES</a
+          >
+          <a
+            href="projects.html"
+            class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300"
+            >PORTFOLIO</a
+          >
+          <a
+            href="contact.html"
+            class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
+            >CONTACT</a
+          >
+          <div class="flex space-x-4 px-3 pt-2">
+            <a
+              href="https://www.instagram.com/akasstudio/?hl=en"
+              class="text-white hover:text-gray-300"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/company/akas-studio/"
+              class="text-white hover:text-gray-300"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://vimeo.com/1084278716/5a9ea08108"
+              class="text-white hover:text-gray-300"
+              ><i class="fab fa-vimeo-v"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-1 flex items-center max-w-7xl mx-auto px-6 lg:px-8 pt-20 h-[calc(100vh-5rem)]">
+      <!-- Added more top/bottom padding -->
+      <section class="h-full w-full flex items-center">
+        <div class="flex flex-col md:flex-row items-center gap-12 h-full w-full">
+          <!-- Image: lower height, focus on top -->
+          <div class="w-full md:w-1/2 h-full" data-aos="fade-right">
+            <img
+              src="images\EMP_9453.jpg"
+              alt="Founder"
+              class="shadow-lg w-full max-h-85 object-cover object-center"
+            />
+          </div>
+          <!-- Text: smaller sizes -->
+          <div class="w-full md:w-1/2 text-black h-full flex flex-col justify-center" data-aos="fade-left">
+            <h2 class="text-xl md:text-2xl font-bold mb-4">ARTHUR KAMHOTI</h2>
+            <p class="text-sm md:text-base leading-relaxed overflow-y-auto">
+              Zimbabwe born designer based in Cape Town, South Africa. He 
+pursued his design education at BHC SCHOOL OF DESIGN with a 
+commitment to mastering his craft in 2018. Arthur’s philosophy combines 
+technical expertise with a keen sense of aesthetics, resulting in designs that 
+are not only functional but also visually striking. Beyond his technical skills, 
+Arthur is driven by a desire to create meaningful, timeless environments that 
+elevate the human experience.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-black text-white font-sans">
   <div class="max-w-7xl mx-auto pb-6 pt-6 px-8 flex flex-col md:flex-row md:justify-between md:items-start">
     <!-- Left: Logo -->
     <div class="md:w-1/4">
       <div class="flex items-center gap-3 mb-4">
-        <div class="heading-font font-bold tracking-widest leading-tight text-sm">AKAS STUDIO</div>
+        <a href="index.html" class="flex items-center">
+          <img 
+            src="images/logo.png" 
+            alt="AKAS STUDIO Logo" 
+            class="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+          >
+        </a>
       </div>
     </div>
 
@@ -132,19 +205,19 @@
     <!-- Right: Contact -->
     <div class="flex flex-col items-end mt-6 md:mt-0 md:w-1/4">
       <div class="text-sm text-white text-right">
-        <div>+27 67 647 4091</div>
-        <div>contact@akasstudio.co.za</div>
+        <div>+27 74 260 3393</div>
+        <div>info@akasstudio.co.za</div>
         <div>Cape town, South Africa</div>
       </div>
     </div>
   </div>
 </footer>
 
-  <!-- Mobile menu toggle script -->
-  <script>
-    const btn = document.getElementById('mobile-menu-button');
-    const menu = document.getElementById('mobile-menu');
-    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
-  </script>
-</body>
+    <!-- Mobile menu toggle script -->
+    <script>
+      const btn = document.getElementById("mobile-menu-button");
+      const menu = document.getElementById("mobile-menu");
+      btn.addEventListener("click", () => menu.classList.toggle("hidden"));
+    </script>
+  </body>
 </html>
