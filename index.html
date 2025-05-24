@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/logo.png" type="image/png" />
     <meta
       name="description"
-      content="LUXE Interior Architecture & Design - Creating beautiful, functional spaces that inspire. Residential and commercial design services."
+      content="AKAS STUDIO Architecture & Design - Creating beautiful, functional spaces that inspire. Residential and commercial design services."
     />
     <meta
       name="keywords"
@@ -14,43 +15,32 @@
     <title>AKAS STUDIO | Interior Architecture & Design</title>
     <meta
       property="og:image"
-      content="https://akasstudio.netlify.app/images/WhatsApp%20Image%202025-05-08%20at%2013.56.12_d1ad1fd4.jpg"
+      content="https://akasstudio.netlify.app/images/logo.png"
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="canonical" href="https://www.akasstudio.co.za/" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      
     />
   </head>
 
   <body class="bg-gray-50">
-    <!-- Landing Page -->
-    <div
-      id="landing-page"
-      class="fixed inset-0 bg-black z-[60] flex flex-col items-center justify-center text-center px-4"
-    >
-      <div class="space-y-8 max-w-2xl">
-        <h1
-          class="text-white font-bold text-4xl md:text-6xl tracking-wide scale-fade-in"
-        >
-          Welcome to AKAS STUDIO
-        </h1>
-        <p
-          class="text-gray-300 text-lg md:text-xl scale-fade-in transition-delay-300"
-        >
-          Crafting digital experiences that matter
-        </p>
-        <button
-          id="enter-btn"
-          class="scale-fade-in transition-delay-500 bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-full text-lg md:text-xl transition-all duration-300"
-        >
-          Enter Studio
-        </button>
-      </div>
-    </div>
+ <!-- Landing Animation Screen -->
+<div id="landing" class="fixed inset-0 bg-black flex items-center justify-center z-[9999]">
+  <img 
+    src="images/logo.png" 
+    alt="AKAS STUDIO Logo" 
+    class="w-48 h-auto animate-fade-in"
+  />
+</div>
 
-    <!-- Navigation -->
+
+<!-- Your existing content wrapped -->
+<div id="main-content" class="opacity-0 transition-opacity duration-700">
+   <!-- Navigation -->
 <nav class="fixed w-full bg-black shadow-sm z-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between h-20 items-center">
@@ -115,6 +105,7 @@
             <button
               id="mobile-menu-button"
               class="text-white hover:text-gray-300 focus:outline-none"
+              aria-label="Toggle mobile menu"
             >
               <i class="fas fa-bars text-xl"></i>
             </button>
@@ -123,7 +114,7 @@
       </div>
 
       <!-- Mobile menu -->
-      <div id="mobile-menu" class="hidden md:hidden bg-black shadow-lg">
+      <div id="mobile-menu" class="hidden md:hidden absolute top-20 w-full bg-black shadow-lg">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           <a
             href="index.html"
@@ -173,6 +164,7 @@
       </div>
     </nav>
 
+    
     <!-- Hero Section -->
     <section class="hero-bg h-screen flex items-center pt-20 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
@@ -236,7 +228,7 @@
 
       <!-- Portfolio Grid -->
       <div
-        class="grid grid-cols-2 gap-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
       >
         <!-- Project Cards -->
         <a
@@ -250,7 +242,7 @@
             class="w-full h-80 object-cover transition duration-500 group-hover:scale-105"
           />
           <div
-            class="absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center"
+            class="absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
             <h3 class="text-white text-xl font-semibold mb-2">IR ACADEMIA</h3>
             <p class="text-white text-sm">ACADEMIA, NAMIBIA</p>
@@ -268,7 +260,7 @@
             class="w-full h-80 object-cover transition duration-500 group-hover:scale-105"
           />
           <div
-            class="absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center"
+            class="absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
             <h3 class="text-white text-xl font-semibold mb-2">APARTMENT TK</h3>
             <p class="text-white text-sm">CAPE TOWN, SOUTH AFRICA</p>
@@ -286,7 +278,7 @@
             class="w-full h-80 object-cover transition duration-500 group-hover:scale-105"
           />
           <div
-            class="absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center"
+            class="absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
             <h3 class="text-white text-xl font-semibold mb-2">KILOWATT</h3>
             <p class="text-white text-sm">CAPE TOWN, SOUTH AFRICA</p>
@@ -304,7 +296,7 @@
             class="w-full h-80 object-cover transition duration-500 group-hover:scale-105"
           />
           <div
-            class="absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center"
+            class="absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           >
             <h3 class="text-white text-xl font-semibold mb-2">SNR LIFESTYLE</h3>
             <p class="text-white text-sm">
@@ -359,5 +351,6 @@
 </footer>
 
     <script src="index.js"></script>
-  </body>
+    
+</body>
 </html>
