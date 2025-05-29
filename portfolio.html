@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="images/logo.png" type="image/png" />
+    <link rel="icon" href="images/akaslogo.png" type="image/png" />
     <meta
       name="description"
       content="AKAS Studio Portfolio - Explore our curated collection of interior architecture and design projects showcasing our expertise and creative vision."
@@ -14,6 +14,7 @@
     />
     <title>Portfolio | AKAS STUDIO</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="canonical" href="https://www.akasstudio.co.za/portfolio.html" />
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -33,274 +34,149 @@
   </head>
 
   <body class="bg-gray-50">
-    <!-- Navigation -->
      <!-- Navigation -->
 <nav class="fixed w-full bg-black shadow-sm z-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between h-20 items-center">
-      <!-- Logo Container - Changed to h-full -->
-      <div class="flex-shrink-0 flex items-center h-full">
-        <a href="index.html" class="flex items-center h-full">
-          <!-- Increased logo height and added padding -->
-          <img 
-            src="images/logo.png" 
-            alt="AKAS STUDIO Logo" 
-            class="h-full w-auto object-contain py-2"
-          />
+    <div class="flex items-center justify-between h-20 relative">
+      <!-- Menu toggle (opens & closes) -->
+      <button id="menu-toggle" class="text-white hover:text-gray-300 focus:outline-none flex items-center space-x-2">
+        <i id="menu-icon" class="fas fa-bars text-2xl"></i>
+        <span id="menu-label">MENU</span>
+      </button>
+
+      <!-- Logo -->
+      <a href="index.html" class="flex-shrink-0">
+        <img src="images/logo.png" alt="AKAS STUDIO Logo" class="h-16 object-contain" />
+      </a>
+
+      <div class="w-6"></div>
+    </div>
+  </div>
+
+  <!-- Full-width dropdown -->
+  <div id="mobile-menu" class="hidden absolute top-full left-0 w-screen bg-black shadow-lg z-40">
+    <div class="flex flex-col items-start px-6 py-4 space-y-2">
+      <a href="index.html"     class="w-full py-2 font-medium text-white hover:text-gray-300">HOME</a>
+      <a href="about.html"     class="w-full py-2 font-medium text-white hover:text-gray-300">ABOUT</a>
+      <a href="services.html"  class="w-full py-2 font-medium text-white hover:text-gray-300">SERVICES</a>
+      <a href="portfolio.html" class="w-full py-2 font-medium text-white hover:text-gray-300">PORTFOLIO</a>
+      <a href="contact.html"   class="w-full py-2 font-medium text-white hover:text-gray-300">CONTACT</a>
+
+      <div class="flex space-x-4 pt-2">
+        <a href="https://www.instagram.com/akasstudio/?hl=en" class="text-white hover:text-gray-300">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/akas-studio/" class="text-white hover:text-gray-300">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://vimeo.com/1084278716/5a9ea08108" class="text-white hover:text-gray-300">
+          <i class="fab fa-vimeo-v"></i>
         </a>
       </div>
-          <div class="hidden md:block">
-            <div class="ml-10 flex items-baseline space-x-8">
-              <a
-                href="index.html"
-                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
-                >HOME</a
-              >
-              <a
-                href="about.html"
-                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
-                >ABOUT</a
-              >
-              <a
-                href="services.html"
-                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
-                >SERVICES</a
-              >
-              <a
-                href="portfolio.html"
-                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
-                >PORTFOLIO</a
-              >
-              <a
-                href="contact.html"
-                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
-                >CONTACT</a
-              >
-              <a
-                href="https://www.instagram.com/akasstudio/?hl=en"
-                class="text-white hover:text-gray-300"
-              >
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a
-                href="https://www.linkedin.com/company/akas-studio/"
-                class="text-white hover:text-gray-300"
-              >
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a
-                href="https://vimeo.com/1084278716/5a9ea08108"
-                class="text-white hover:text-gray-300"
-                ><i class="fab fa-vimeo-v"></i
-              ></a>
-            </div>
-          </div>
-          <div class="md:hidden">
-            <button
-              id="mobile-menu-button"
-              class="text-white hover:text-gray-300 focus:outline-none"
-            >
-              <i class="fas fa-bars text-xl"></i>
-            </button>
-          </div>
-        </div>
-      </div>
+    </div>
+  </div>
+</nav>
 
-      <!-- Mobile menu -->
-      <div id="mobile-menu" class="hidden md:hidden bg-black shadow-lg">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <a
-            href="index.html"
-            class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300"
-            >HOME</a
-          >
-          <a
-            href="about.html"
-            class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300"
-            >ABOUT</a
-          >
-          <a
-            href="services.html"
-            class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300"
-            >SERVICES</a
-          >
-          <a
-            href="projects.html"
-            class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300"
-            >PORTFOLIO</a
-          >
-          <a
-            href="contact.html"
-            class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
-            >CONTACT</a
-          >
-          <div class="flex space-x-4 px-3 pt-2">
-            <a
-              href="https://www.instagram.com/akasstudio/?hl=en"
-              class="text-white hover:text-gray-300"
-            >
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/company/akas-studio/"
-              class="text-white hover:text-gray-300"
-            >
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a
-              href="https://vimeo.com/1084278716/5a9ea08108"
-              class="text-white hover:text-gray-300"
-              ><i class="fab fa-vimeo-v"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-    </nav>
+    <section class="w-full bg-white">
+  <div class="w-20 h-1 bg-black mx-auto mb-12"></div>
 
-    <!-- Portfolio Header -->
-    <section class="pt-32 pb-20 bg-white text-black">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-6 font-sans">
-          OUR PORTFOLIO
-        </h1>
-        <p class="text-xl max-w-3xl mx-auto">
-          Showcases a curated selection of interior architecture projects
-          defined by understated luxury through, detailing, and a modern design
-          sensibility. From private residences to botique commercial spaces,
-          each project reflects our commitment to authenticity, functionality
-          and timeless elegance.
+  <div class="grid grid-cols-1 sm:grid-cols-2">
+    <!-- Project 1 -->
+    <a href="apartment.html" class="group relative overflow-hidden block" data-category="residential">
+      <img
+        src="images/Apartment TK/Apartment TK 1.png"
+        alt="APARTMENT TK"
+        class="w-full h-[24rem] object-cover transition duration-500 group-hover:scale-105"
+      />
+      <div
+        class="absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+      >
+        <h3 class="text-white text-xl font-semibold mb-2">APARTMENT TK</h3>
+        <p class="text-white text-sm">CAPE TOWN, SOUTH AFRICA</p>
+      </div>
+    </a>
+
+    <!-- Project 2 -->
+    <a href="mumba.html" class="group relative overflow-hidden block" data-category="residential">
+      <img
+        src="images/DW MUMBA/Mumba Kitchen 2.jpg"
+        alt="DW MUMBA"
+        class="w-full h-[24rem] object-cover transition duration-500 group-hover:scale-105"
+      />
+      <div
+        class="absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+      >
+        <h3 class="text-white text-xl font-semibold mb-2">DW MUMBA</h3>
+        <p class="text-white text-sm">CAPE TOWN, SOUTH AFRICA</p>
+      </div>
+    </a>
+
+    <!-- Project 3 -->
+    <a href="academia.html" class="group relative overflow-hidden block" data-category="residential">
+      <img
+        src="images/IR Academia/IR Academia 6.jpg"
+        alt="IR ACADEMIA"
+        class="w-full h-[24rem] object-cover transition duration-500 group-hover:scale-105"
+      />
+      <div
+        class="absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+      >
+        <h3 class="text-white text-xl font-semibold mb-2">IR ACADEMIA</h3>
+        <p class="text-white text-sm">ACADEMIA, NAMIBIA</p>
+      </div>
+    </a>
+
+    <!-- Project 4 -->
+    <a href="wellness.html" class="group relative overflow-hidden block" data-category="residential">
+      <img
+        src="images/JV HOME WELLNESS CENTRE/JV HOME WELLNESS CENTRE 1.jpg"
+        alt="JV HOME WELLNESS CENTRE"
+        class="w-full h-[24rem] object-cover transition duration-500 group-hover:scale-105"
+      />
+      <div
+        class="absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+      >
+        <h3 class="text-white text-xl font-semibold mb-2">
+          JV HOME WELLNESS CENTRE
+        </h3>
+        <p class="text-white text-sm">CAPE TOWN, SOUTH AFRICA</p>
+      </div>
+    </a>
+
+    <!-- Project 5 -->
+    <a href="kilowatt.html" class="group relative overflow-hidden block" data-category="residential">
+      <img
+        src="images/KILOWATT/KILOWATT 3.jpg"
+        alt="KILOWATT"
+        class="w-full h-[24rem] object-cover transition duration-500 group-hover:scale-105"
+      />
+      <div
+        class="absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+      >
+        <h3 class="text-white text-xl font-semibold mb-2">KILOWATT</h3>
+        <p class="text-white text-sm">CAPE TOWN, SOUTH AFRICA</p>
+      </div>
+    </a>
+
+    <!-- Project 6 -->
+    <a href="lifestyle.html" class="group relative overflow-hidden block" data-category="residential">
+      <img
+        src="images/SNR LIFESTLE/SNR LIFESTYLE 1.jpg"
+        alt="SNR LIFESTYLE"
+        class="w-full h-[24rem] object-cover transition duration-500 group-hover:scale-105"
+      />
+      <div
+        class="absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+      >
+        <h3 class="text-white text-xl font-semibold mb-2">SNR LIFESTYLE</h3>
+        <p class="text-white text-sm">
+          ENGCOBO, EASTERN CAPE, SOUTH AFRICA
         </p>
       </div>
-    </section>
-
-    <!-- Portfolio Grid -->
-<section class="py-12 bg-white">
-    <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-            <!-- Project 1 -->
-            <a
-                href="apartment.html"
-                class="project-card group relative overflow-hidden block"
-                data-category="residential"
-            >
-                <img
-                    src="images\Apartment TK\Apartment TK 1.png"
-                    alt="Modern Apartment"
-                    class="w-full h-96 object-cover transition duration-500 group-hover:scale-105"
-                />
-                <div
-                    class="project-overlay absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center"
-                >
-                    <h3 class="text-white text-xl font-semibold mb-2">
-                        APARTMENT TK
-                    </h3>
-                    <p class="text-white text-sm">CAPE TOWN, SOUTH AFRICA</p>
-                </div>
-            </a>
-
-            <!-- Project 2 -->
-            <a
-                href="mumba.html"
-                class="project-card group relative overflow-hidden block"
-                data-category="residential"
-            >
-                <img
-                    src="images\DW MUMBA\Mumba Kitchen 2.jpg"
-                    alt="Modern Apartment"
-                    class="w-full h-96 object-cover transition duration-500 group-hover:scale-105"
-                />
-                <div
-                    class="project-overlay absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center"
-                >
-                    <h3 class="text-white text-xl font-semibold mb-2">DW MUMBA</h3>
-                    <p class="text-white text-sm">CAPE TOWN, SOUTH AFRICA</p>
-                </div>
-            </a>
-
-            <!-- Project 3 -->
-            <a
-                href="academia.html"
-                class="project-card group relative overflow-hidden block"
-                data-category="residential"
-            >
-                <img
-                    src="images\IR Academia\IR Academia 6.jpg"
-                    alt="Modern Apartment"
-                    class="w-full h-96 object-cover transition duration-500 group-hover:scale-105"
-                />
-                <div
-                    class="project-overlay absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center"
-                >
-                    <h3 class="text-white text-xl font-semibold mb-2">IR ACADEMIA</h3>
-                    <p class="text-white text-sm">ACADEMIA, NAMIBIA</p>
-                </div>
-            </a>
-
-            <!-- Project 4 -->
-            <a
-                href="wellness.html"
-                class="project-card group relative overflow-hidden block"
-                data-category="residential"
-            >
-                <img
-                    src="images\JV HOME WELLNESS CENTRE\JV HOME WELLNESS CENTRE 1.jpg"
-                    alt="Modern Apartment"
-                    class="w-full h-96 object-cover transition duration-500 group-hover:scale-105"
-                />
-                <div
-                    class="project-overlay absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center"
-                >
-                    <h3 class="text-white text-xl font-semibold mb-2">
-                        JV HOME WELLNESS CENTRE
-                    </h3>
-                    <p class="text-white text-sm">CAPE TOWN, SOUTH AFRICA</p>
-                </div>
-            </a>
-
-            <!-- Project 5 -->
-            <a
-                href="kilowatt.html"
-                class="project-card group relative overflow-hidden block"
-                data-category="residential"
-            >
-                <img
-                    src="images\KILOWATT\KILOWATT 3.jpg"
-                    alt="Modern Apartment"
-                    class="w-full h-96 object-cover transition duration-500 group-hover:scale-105"
-                />
-                <div
-                    class="project-overlay absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center"
-                >
-                    <h3 class="text-white text-xl font-semibold mb-2">KILOWATT</h3>
-                    <p class="text-white text-sm">CAPE TOWN, SOUTH AFRICA</p>
-                </div>
-            </a>
-
-            <!-- Project 6 -->
-            <a
-                href="lifestyle.html"
-                class="project-card group relative overflow-hidden block"
-                data-category="residential"
-            >
-                <img
-                    src="images\SNR LIFESTLE\SNR LIFESTYLE 1.jpg"
-                    alt="Modern Apartment"
-                    class="w-full h-96 object-cover transition duration-500 group-hover:scale-105"
-                />
-                <div
-                    class="project-overlay absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center"
-                >
-                    <h3 class="text-white text-xl font-semibold mb-2">
-                        SNR LIFESTYLE
-                    </h3>
-                    <p class="text-white text-sm">
-                        ENGCOBO, EASTERN CAPE, SOUTH AFRICA
-                    </p>
-                </div>
-            </a>
-        </div>
-    </div>
+    </a>
+  </div>
 </section>
+
 
  <footer class="bg-black text-white font-sans">
   <div class="max-w-7xl mx-auto pb-6 pt-6 px-8 flex flex-col md:flex-row md:justify-between md:items-start">
@@ -344,47 +220,7 @@
   </div>
 </footer>
 
-    <script>
-      // Mobile menu toggle
-      document
-        .getElementById("mobile-menu-button")
-        .addEventListener("click", function () {
-          document.getElementById("mobile-menu").classList.toggle("hidden");
-        });
+<script src="index.js"></script>
 
-      // Portfolio filter functionality
-      const filterButtons = document.querySelectorAll(".filter-button");
-      const projectCards = document.querySelectorAll(".project-card");
-
-      filterButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          // Update active state
-          filterButtons.forEach((btn) => btn.classList.remove("active"));
-          button.classList.add("active");
-
-          // Filter projects
-          const filterValue = button.getAttribute("data-filter");
-
-          projectCards.forEach((card) => {
-            if (
-              filterValue === "all" ||
-              card.getAttribute("data-category") === filterValue
-            ) {
-              card.style.display = "block";
-            } else {
-              card.style.display = "none";
-            }
-          });
-        });
-      });
-
-      // Load more functionality
-      document
-        .getElementById("load-more")
-        .addEventListener("click", function () {
-          // In a real implementation, this would load more projects via AJAX
-          alert("Loading more projects...");
-        });
-    </script>
   </body>
 </html>

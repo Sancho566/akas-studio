@@ -1,9 +1,25 @@
  // Mobile menu toggle
- document.getElementById('mobile-menu-button').addEventListener('click', function() {
-    const menu = document.getElementById('mobile-menu');
-    menu.classList.toggle('hidden');
-});
+ const toggleBtn   = document.getElementById('menu-toggle');
+  const menuIcon    = document.getElementById('menu-icon');
+  const menuLabel   = document.getElementById('menu-label');
+  const mobileMenu  = document.getElementById('mobile-menu');
 
+  toggleBtn.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('hidden');
+
+    if (isOpen) {
+      // Close menu
+      mobileMenu.classList.add('hidden');
+      menuIcon.classList.replace('fa-times', 'fa-bars');
+      menuLabel.textContent = 'MENU';
+    } else {
+      // Open menu
+      mobileMenu.classList.remove('hidden');
+      menuIcon.classList.replace('fa-bars', 'fa-times');
+      menuLabel.textContent = 'CLOSE';
+    }
+  });
+  
  // Shrink section on scroll
  const aboutSection = document.getElementById('about');
  window.addEventListener('scroll', () => {

@@ -3,19 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="images/logo.png" type="image/png" />
+    <link rel="icon" href="images/akaslogo.png" type="image/png" />
     <meta
-      name="description"
-      content="AKAS STUDIO Architecture & Design - Creating beautiful, functional spaces that inspire. Residential and commercial design services."
-    />
+  name="description"
+  content="AKAS STUDIO specializes in interior architecture and design, transforming residential and commercial spaces into beautiful, functional environments. Discover bespoke home design, modern interiors, and expert space planning tailored to your needs."
+/>
+
     <meta
-      name="keywords"
-      content="interior design, architecture, home design, commercial design, space planning"
-    />
-    <title>AKAS STUDIO | Interior Architecture & Design</title>
+  name="keywords"
+  content="interior design, architecture, home design, commercial interiors, space planning, residential architecture, modern design, bespoke interiors, office space design"
+/>
+
+    <title>Interior Architecture & Design | AKAS STUDIO - Residential & Commercial Spaces</title>
     <meta
       property="og:image"
-      content="https://akasstudio.netlify.app/images/logo.png"
+      content="https://www.akasstudio.co.za/images/akaslogo.png"
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
@@ -25,10 +27,22 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       
     />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "AKAS STUDIO",
+  "url": "https://www.akasstudio.co.za",
+  "logo": "https://www.akasstudio.co.za/images/akaslogo.png",
+  "description": "Interior Architecture and Design Studio offering bespoke residential and commercial space planning services.",
+  "sameAs": [
+    "https://www.instagram.com/akasstudio",
+  ]
+}
+</script>
   </head>
 
-  <body class="bg-gray-50">
- <!-- Landing Animation Screen -->
+  <body class="bg-white">
 <div id="landing" class="fixed inset-0 bg-black flex items-center justify-center z-[9999]">
   <img 
     src="images/logo.png" 
@@ -37,135 +51,51 @@
   />
 </div>
 
-
-<!-- Your existing content wrapped -->
 <div id="main-content" class="opacity-0 transition-opacity duration-700">
-   <!-- Navigation -->
+  
 <nav class="fixed w-full bg-black shadow-sm z-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between h-20 items-center">
-      <!-- Logo Container - Changed to h-full -->
-      <div class="flex-shrink-0 flex items-center h-full">
-        <a href="index.html" class="flex items-center h-full">
-          <!-- Increased logo height and added padding -->
-          <img 
-            src="images/logo.png" 
-            alt="AKAS STUDIO Logo" 
-            class="h-full w-auto object-contain py-2"
-          />
+    <div class="flex items-center justify-between h-20 relative">
+      <!-- Menu toggle (opens & closes) -->
+      <button id="menu-toggle" class="text-white hover:text-gray-300 focus:outline-none flex items-center space-x-2">
+        <i id="menu-icon" class="fas fa-bars text-2xl"></i>
+        <span id="menu-label">MENU</span>
+      </button>
+
+      <!-- Logo -->
+      <a href="index.html" class="flex-shrink-0">
+        <img src="images/logo.png" alt="AKAS STUDIO Logo" class="h-16 object-contain" />
+      </a>
+
+      <div class="w-6"></div>
+    </div>
+  </div>
+
+  <!-- Full-width dropdown -->
+  <div id="mobile-menu" class="hidden absolute top-full left-0 w-screen bg-black shadow-lg z-40">
+    <div class="flex flex-col items-start px-6 py-4 space-y-2">
+      <a href="index.html"     class="w-full py-2 font-medium text-white hover:text-gray-300">HOME</a>
+      <a href="about.html"     class="w-full py-2 font-medium text-white hover:text-gray-300">ABOUT</a>
+      <a href="services.html"  class="w-full py-2 font-medium text-white hover:text-gray-300">SERVICES</a>
+      <a href="portfolio.html" class="w-full py-2 font-medium text-white hover:text-gray-300">PORTFOLIO</a>
+      <a href="contact.html"   class="w-full py-2 font-medium text-white hover:text-gray-300">CONTACT</a>
+
+      <div class="flex space-x-4 pt-2">
+        <a href="https://www.instagram.com/akasstudio/?hl=en" class="text-white hover:text-gray-300">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/akas-studio/" class="text-white hover:text-gray-300">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://vimeo.com/1084278716/5a9ea08108" class="text-white hover:text-gray-300">
+          <i class="fab fa-vimeo-v"></i>
         </a>
       </div>
-          <div class="hidden md:block">
-            <div class="ml-10 flex items-baseline space-x-8">
-              <a
-                href="index.html"
-                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
-                >HOME</a
-              >
-              <a
-                href="about.html"
-                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
-                >ABOUT</a
-              >
-              <a
-                href="services.html"
-                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
-                >SERVICES</a
-              >
-              <a
-                href="portfolio.html"
-                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
-                >PORTFOLIO</a
-              >
-              <a
-                href="contact.html"
-                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
-                >CONTACT</a
-              >
-              <a
-                href="https://www.instagram.com/akasstudio/?hl=en"
-                class="text-white hover:text-gray-300"
-              >
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a
-                href="https://www.linkedin.com/company/akas-studio/"
-                class="text-white hover:text-gray-300"
-              >
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a
-                href="https://vimeo.com/1084278716/5a9ea08108"
-                class="text-white hover:text-gray-300"
-                ><i class="fab fa-vimeo-v"></i
-              ></a>
-            </div>
-          </div>
-          <div class="md:hidden">
-            <button
-              id="mobile-menu-button"
-              class="text-white hover:text-gray-300 focus:outline-none"
-              aria-label="Toggle mobile menu"
-            >
-              <i class="fas fa-bars text-xl"></i>
-            </button>
-          </div>
-        </div>
-      </div>
+    </div>
+  </div>
+</nav>
 
-      <!-- Mobile menu -->
-      <div id="mobile-menu" class="hidden md:hidden absolute top-20 w-full bg-black shadow-lg">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <a
-            href="index.html"
-            class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300"
-            >HOME</a
-          >
-          <a
-            href="about.html"
-            class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300"
-            >ABOUT</a
-          >
-          <a
-            href="services.html"
-            class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300"
-            >SERVICES</a
-          >
-          <a
-            href="projects.html"
-            class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300"
-            >PORTFOLIO</a
-          >
-          <a
-            href="contact.html"
-            class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
-            >CONTACT</a
-          >
-          <div class="flex space-x-4 px-3 pt-2">
-            <a
-              href="https://www.instagram.com/akasstudio/?hl=en"
-              class="text-white hover:text-gray-300"
-            >
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/company/akas-studio/"
-              class="text-white hover:text-gray-300"
-            >
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a
-              href="https://vimeo.com/1084278716/5a9ea08108"
-              class="text-white hover:text-gray-300"
-              ><i class="fab fa-vimeo-v"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-    </nav>
-
-    
-    <!-- Hero Section -->
+     <!-- Hero Section -->
     <section class="hero-bg h-screen flex items-center pt-20 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
         <div class="max-w-2xl">
@@ -214,103 +144,72 @@
           to completion, we collaborate closely to ensure every decision is
           intentional and elevates daily life. With a deep respect for
           materials, proportion, and craftsmanship, our work is quietly and rich
-          in meaning
+          in meaning.
         </p>
       </div>
     </section>
 
     <!-- Recent Projects -->
-    <section class="w-full bg-white px-6 pt-16 pb-16">
-      <h2 class="text-3xl font-semibold text-black text-center mb-8">
-        RECENT PROJECTS
-      </h2>
-      <div class="w-20 h-1 bg-black mx-auto mb-12"></div>
-
-      <!-- Portfolio Grid -->
-      <div
-        class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-      >
-        <!-- Project Cards -->
-        <a
-          href="academia.html"
-          class="group relative overflow-hidden block"
-          data-category="residential"
-        >
-          <img
-            src="images\IR Academia\IR Academia 1.jpg"
-            alt="IR Academia"
-            class="w-full h-80 object-cover transition duration-500 group-hover:scale-105"
-          />
-          <div
-            class="absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          >
-            <h3 class="text-white text-xl font-semibold mb-2">IR ACADEMIA</h3>
-            <p class="text-white text-sm">ACADEMIA, NAMIBIA</p>
-          </div>
-        </a>
-
-        <a
-          href="apartment.html"
-          class="group relative overflow-hidden block"
-          data-category="residential"
-        >
-          <img
-            src="images/Apartment TK/Apartment TK 1.png"
-            alt="Modern Apartment"
-            class="w-full h-80 object-cover transition duration-500 group-hover:scale-105"
-          />
-          <div
-            class="absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          >
-            <h3 class="text-white text-xl font-semibold mb-2">APARTMENT TK</h3>
-            <p class="text-white text-sm">CAPE TOWN, SOUTH AFRICA</p>
-          </div>
-        </a>
-
-        <a
-          href="kilowatt.html"
-          class="group relative overflow-hidden block"
-          data-category="residential"
-        >
-          <img
-            src="images\KILOWATT\KILOWATT 1.jpg"
-            alt="KILLOWATT"
-            class="w-full h-80 object-cover transition duration-500 group-hover:scale-105"
-          />
-          <div
-            class="absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          >
-            <h3 class="text-white text-xl font-semibold mb-2">KILOWATT</h3>
-            <p class="text-white text-sm">CAPE TOWN, SOUTH AFRICA</p>
-          </div>
-        </a>
-
-        <a
-          href="lifestyle.html"
-          class="group relative overflow-hidden block"
-          data-category="residential"
-        >
-          <img
-            src="images\SNR LIFESTLE\SNR LIFESTYLE 1.jpg"
-            alt="SNR LIFESTYLE"
-            class="w-full h-80 object-cover transition duration-500 group-hover:scale-105"
-          />
-          <div
-            class="absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          >
-            <h3 class="text-white text-xl font-semibold mb-2">SNR LIFESTYLE</h3>
-            <p class="text-white text-sm">
-              ENGCOBO, EASTERN CAPE, SOUTH AFRICA
-            </p>
-          </div>
-        </a>
+<section class="w-full bg-white pt-16 pb-16">
+  <h2 class="text-3xl font-semibold text-black text-center mb-8">
+    RECENT PROJECTS
+  </h2>
+  <div class="w-20 h-1 bg-black mx-auto mb-12"></div>
+  <div class="grid grid-cols-1 sm:grid-cols-2">
+    <!-- Project Cards -->
+    <a href="academia.html" class="group relative overflow-hidden block" data-category="residential">
+      <img
+        src="images/IR Academia/IR Academia 1.jpg"
+        alt="IR Academia"
+        class="w-full h-[24rem] object-cover transition duration-500 group-hover:scale-105"
+      />
+      <div class="absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <h3 class="text-white text-xl font-semibold mb-2">IR ACADEMIA</h3>
+        <p class="text-white text-sm">ACADEMIA, NAMIBIA</p>
       </div>
-    </section>
+    </a>
+
+    <a href="apartment.html" class="group relative overflow-hidden block" data-category="residential">
+      <img
+        src="images/Apartment TK/Apartment TK 1.png"
+        alt="Modern Apartment"
+        class="w-full h-[24rem] object-cover transition duration-500 group-hover:scale-105"
+      />
+      <div class="absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <h3 class="text-white text-xl font-semibold mb-2">APARTMENT TK</h3>
+        <p class="text-white text-sm">CAPE TOWN, SOUTH AFRICA</p>
+      </div>
+    </a>
+
+    <a href="kilowatt.html" class="group relative overflow-hidden block" data-category="residential">
+      <img
+        src="images/KILOWATT/KILOWATT 1.jpg"
+        alt="KILLOWATT"
+        class="w-full h-[24rem] object-cover transition duration-500 group-hover:scale-105"
+      />
+      <div class="absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <h3 class="text-white text-xl font-semibold mb-2">KILOWATT</h3>
+        <p class="text-white text-sm">CAPE TOWN, SOUTH AFRICA</p>
+      </div>
+    </a>
+
+    <a href="lifestyle.html" class="group relative overflow-hidden block" data-category="residential">
+      <img
+        src="images/SNR LIFESTLE/SNR LIFESTYLE 1.jpg"
+        alt="SNR LIFESTYLE"
+        class="w-full h-[24rem] object-cover transition duration-500 group-hover:scale-105"
+      />
+      <div class="absolute inset-0 bg-black/50 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <h3 class="text-white text-xl font-semibold mb-2">SNR LIFESTYLE</h3>
+        <p class="text-white text-sm">ENGCOBO, EASTERN CAPE, SOUTH AFRICA</p>
+      </div>
+    </a>
+  </div>
+</section>
 
     <!-- Footer -->
     <footer class="bg-black text-white font-sans">
   <div class="max-w-7xl mx-auto pb-6 pt-6 px-8 flex flex-col md:flex-row md:justify-between md:items-start">
-    <!-- Left: Logo -->
     <div class="md:w-1/4">
       <div class="flex items-center gap-3 mb-4">
         <a href="index.html" class="flex items-center">
@@ -323,7 +222,6 @@
       </div>
     </div>
 
-    <!-- Center: Socials + Rights -->
     <div class="flex flex-col items-center mt-6 md:mt-0">
       <div class="flex items-center gap-7 mb-4">
         <a href="https://www.instagram.com/akasstudio/?hl=en" class="text-white hover:text-gray-300">
@@ -339,7 +237,6 @@
       <span class="text-xs text-white text-center">© AKAS STUDIO 2025. All Rights Reserved.</span>
     </div>
 
-    <!-- Right: Contact -->
     <div class="flex flex-col items-end mt-6 md:mt-0 md:w-1/4">
       <div class="text-sm text-white text-right">
         <div>+27 74 260 3393</div>

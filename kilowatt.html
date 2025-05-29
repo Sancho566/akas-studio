@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kilowatt | AKAS STUDIO</title>
-    <link rel="icon" href="images/logo.png" type="image/png" />
+    <link rel="icon" href="images/akaslogo.png" type="image/png" />
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.3/dist/tailwind.min.css"
       rel="stylesheet"
@@ -14,6 +14,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href="https://www.akasstudio.co.za/kilowatt.html" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -21,104 +22,62 @@
     <!-- Navigation -->
     <nav class="fixed w-full bg-black shadow-sm z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-20 items-center">
-          <!-- Logo Container - Changed to h-full -->
-          <div class="flex-shrink-0 flex items-center h-full">
-            <a href="index.html" class="flex items-center h-full">
-              <!-- Increased logo height and added padding -->
-              <img
-                src="images/logo.png"
-                alt="AKAS STUDIO Logo"
-                class="h-full w-auto object-contain py-2"
-              />
-            </a>
-          </div>
-          <div class="hidden md:block">
-            <div class="ml-10 flex items-baseline space-x-8">
-              <a
-                href="index.html"
-                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
-                >HOME</a
-              >
-              <a
-                href="about.html"
-                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
-                >ABOUT</a
-              >
-              <a
-                href="services.html"
-                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
-                >SERVICES</a
-              >
-              <a
-                href="portfolio.html"
-                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
-                >PORTFOLIO</a
-              >
-              <a
-                href="contact.html"
-                class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
-                >CONTACT</a
-              >
-              <a
-                href="https://www.instagram.com/akasstudio/?hl=en"
-                class="text-white hover:text-gray-300"
-              >
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a
-                href="https://www.linkedin.com/company/akas-studio/"
-                class="text-white hover:text-gray-300"
-              >
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a
-                href="https://vimeo.com/1084278716/5a9ea08108"
-                class="text-white hover:text-gray-300"
-                ><i class="fab fa-vimeo-v"></i
-              ></a>
-            </div>
-          </div>
-          <div class="md:hidden">
-            <button
-              id="mobile-menu-button"
-              class="text-white hover:text-gray-300 focus:outline-none"
-            >
-              <i class="fas fa-bars text-xl"></i>
-            </button>
-          </div>
+        <div class="flex items-center justify-between h-20 relative">
+          <!-- Menu toggle (opens & closes) -->
+          <button
+            id="menu-toggle"
+            class="text-white hover:text-gray-300 focus:outline-none flex items-center space-x-2"
+          >
+            <i id="menu-icon" class="fas fa-bars text-2xl"></i>
+            <span id="menu-label">MENU</span>
+          </button>
+
+          <!-- Logo -->
+          <a href="index.html" class="flex-shrink-0">
+            <img
+              src="images/logo.png"
+              alt="AKAS STUDIO Logo"
+              class="h-16 object-contain"
+            />
+          </a>
+
+          <div class="w-6"></div>
         </div>
       </div>
 
-      <!-- Mobile menu -->
-      <div id="mobile-menu" class="hidden md:hidden bg-black shadow-lg">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <!-- Full-width dropdown -->
+      <div
+        id="mobile-menu"
+        class="hidden absolute top-full left-0 w-screen bg-black shadow-lg z-40"
+      >
+        <div class="flex flex-col items-start px-6 py-4 space-y-2">
           <a
             href="index.html"
-            class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300"
+            class="w-full py-2 font-medium text-white hover:text-gray-300"
             >HOME</a
           >
           <a
             href="about.html"
-            class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300"
+            class="w-full py-2 font-medium text-white hover:text-gray-300"
             >ABOUT</a
           >
           <a
             href="services.html"
-            class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300"
+            class="w-full py-2 font-medium text-white hover:text-gray-300"
             >SERVICES</a
           >
           <a
-            href="projects.html"
-            class="block px-3 py-2 text-base font-medium text-white hover:text-gray-300"
+            href="portfolio.html"
+            class="w-full py-2 font-medium text-white hover:text-gray-300"
             >PORTFOLIO</a
           >
           <a
             href="contact.html"
-            class="nav-link text-white hover:text-gray-300 px-3 py-2 text-sm font-medium"
+            class="w-full py-2 font-medium text-white hover:text-gray-300"
             >CONTACT</a
           >
-          <div class="flex space-x-4 px-3 pt-2">
+
+          <div class="flex space-x-4 pt-2">
             <a
               href="https://www.instagram.com/akasstudio/?hl=en"
               class="text-white hover:text-gray-300"
@@ -134,8 +93,9 @@
             <a
               href="https://vimeo.com/1084278716/5a9ea08108"
               class="text-white hover:text-gray-300"
-              ><i class="fab fa-vimeo-v"></i
-            ></a>
+            >
+              <i class="fab fa-vimeo-v"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -159,7 +119,7 @@
       <!-- Left (Text) -->
       <div class="flex-1">
         <h1
-          class="text-3xl md:text-4xl font-bold tracking-wide mb-6 text-black"
+          class="text-xl md:text-xl font-bold tracking-wide mb-6 text-black"
         >
           KILOWATT
         </h1>
@@ -183,7 +143,7 @@
       <aside
         class="w-full lg:w-96 border-t lg:border-t-0 lg:border-l border-black pt-8 lg:pt-0 lg:pl-10"
       >
-        <h2 class="text-xl font-bold mb-4 text-black">OVERVIEW</h2>
+        <h2 class="text-lg font-bold mb-4 text-black">OVERVIEW</h2>
         <div class="grid grid-cols-2 gap-y-4 gap-x-4 text-black text-sm">
           <div class="font-semibold">LOCATION</div>
           <div>CAPE TOWN, SOUTH AFRICA</div>
@@ -281,13 +241,26 @@
     </footer>
 
     <script>
-      // Mobile menu toggle
-      document
-        .getElementById("mobile-menu-button")
-        .addEventListener("click", function () {
-          const menu = document.getElementById("mobile-menu");
-          menu.classList.toggle("hidden");
-        });
+      const toggleBtn   = document.getElementById('menu-toggle');
+  const menuIcon    = document.getElementById('menu-icon');
+  const menuLabel   = document.getElementById('menu-label');
+  const mobileMenu  = document.getElementById('mobile-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('hidden');
+
+    if (isOpen) {
+      // Close menu
+      mobileMenu.classList.add('hidden');
+      menuIcon.classList.replace('fa-times', 'fa-bars');
+      menuLabel.textContent = 'MENU';
+    } else {
+      // Open menu
+      mobileMenu.classList.remove('hidden');
+      menuIcon.classList.replace('fa-bars', 'fa-times');
+      menuLabel.textContent = 'CLOSE';
+    }
+  });
 
       (function () {
         const images = [
