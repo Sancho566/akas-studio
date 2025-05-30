@@ -1,81 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Services | AKAS STUDIO</title>
     <link rel="icon" href="images/akaslogo.png" type="image/png" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="canonical" href="https://www.akasstudio.co.za/services.html" />
     <style>
-        .hero-bg {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                        url('images/IR Academia/IR Academia 10.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-        
-        .service-card:hover .service-icon {
-            transform: rotateY(180deg) scale(1.1);
-        }
-        
-        .service-icon {
-            transition: all 0.5s ease;
-        }
-        
-        .process-step::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 24px;
-            height: 100%;
-            width: 2px;
-            background: #d1d5db;
-            z-index: 0;
-        }
-        
-        .process-step:last-child::before {
-            display: none;
-        }
-        
-        .hover-scale {
-            transition: transform 0.3s ease;
-        }
-        
-        .hover-scale:hover {
-            transform: scale(1.03);
-        }
-        
-        .fade-in-section {
-            opacity: 0;
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        
-        .fade-in-section.visible {
-            opacity: 1;
-        }
-    </style>
-</head>
+      .hero-bg {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url("images/IR Academia/IR Academia 10.jpg");
+        background-size: cover;
+        background-position: center;
+      }
 
-<body class="bg-gray-50">
+      .service-card:hover .service-icon {
+        transform: rotateY(180deg) scale(1.1);
+      }
+
+      .service-icon {
+        transition: all 0.5s ease;
+      }
+
+      .process-step::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 24px;
+        height: 100%;
+        width: 2px;
+        background: #d1d5db;
+        z-index: 0;
+      }
+
+      .process-step:last-child::before {
+        display: none;
+      }
+
+      .hover-scale {
+        transition: transform 0.3s ease;
+      }
+
+      .hover-scale:hover {
+        transform: scale(1.03);
+      }
+
+      .fade-in-section {
+        opacity: 0;
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+
+      .fade-in-section.visible {
+        opacity: 1;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50">
     <!-- Navigation -->
-  <nav class="fixed w-full bg-black shadow-sm z-50">
+    <nav class="fixed w-full bg-black shadow-sm z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-20 relative">
+        <div class="flex items-center h-20 relative">
           <!-- Menu toggle (opens & closes) -->
           <button
             id="menu-toggle"
-            class="text-white hover:text-gray-300 focus:outline-none flex items-center space-x-2"
+            class="text-white hover:text-gray-300 focus:outline-none flex items-center space-x-2 -ml-4 sm:-ml-6 lg:-ml-8"
           >
             <i id="menu-icon" class="fas fa-bars text-2xl"></i>
-            <span id="menu-label">MENU</span>
           </button>
 
           <!-- Logo -->
-          <a href="index.html" class="flex-shrink-0">
+          <a href="index.html" class="flex-shrink-0 ml-auto">
             <img
               src="images/logo.png"
               alt="AKAS STUDIO Logo"
@@ -142,126 +147,153 @@
         </div>
       </div>
     </nav>
-   
-   <!-- Hero Section -->
- <section class="hero-bg h-screen flex items-center justify-center text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="text-2xl md:text-4xl font-bold mb-4">OUR SERVICES</h1>
-    </div>
-    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-      <a href="javascript:void(0);" class="text-white text-4xl cursor-pointer">
-         <i class="fas fa-chevron-down"></i>
-      </a>
-    </div>
-  </section>
 
-<main class="flex-grow bg-white px-4 py-16 md:py-24">
-  <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-center items-center gap-16">
+    <!-- Hero Section -->
+    <section
+      class="hero-bg h-screen flex items-center justify-center text-white"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-2xl md:text-4xl font-bold mb-4">OUR SERVICES</h1>
+      </div>
+      <div
+        class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
+      >
+        <a
+          href="javascript:void(0);"
+          class="text-white text-4xl cursor-pointer"
+        >
+          <i class="fas fa-chevron-down"></i>
+        </a>
+      </div>
+    </section>
 
-     <div class="flex-1 text-center md:text-left">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4">DESIGN SERVICES</h2>
-      <ul class="space-y-2 text-sm md:text-base font-medium uppercase tracking-wider text-black">
-        <li>Interior Architecture</li>
-        <li>Interior Design</li>
-        <li>Interior Decorating</li>
-        <li>Project Management</li>
-        <li>Eff Procurement</li>
-      </ul>
-    </div>
-    
-    <!-- Design Project Categories -->
-    <div class="flex-1 text-center md:text-left">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4">DESIGN PROJECT CATEGORIES</h2>
-      <ul class="space-y-2 text-sm md:text-base font-medium uppercase tracking-wider text-bla">
-        <li>Hospitality development projects (restaurant, night lounge, airport lounge)</li>
-        <li>Single residential / multi-residential projects</li>
-        <li>Retail / brand experiences</li>
-        <li>Corporate (offices and brand experiences)</li>
-      </ul>
-    </div>
-    
-  </div>
-</main>
-
-   <footer class="bg-black text-white font-sans">
-  <div class="max-w-7xl mx-auto pb-6 pt-6 px-8 flex flex-col md:flex-row md:justify-between md:items-start">
-    <!-- Left: Logo -->
-    <div class="md:w-1/4">
-      <div class="flex items-center gap-3 mb-4">
-        <a href="index.html" class="flex items-center">
-          <img 
-            src="images/logo.png" 
-            alt="AKAS STUDIO Logo" 
-            class="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+    <main class="flex-grow bg-white px-4 py-16 md:py-24">
+      <div
+        class="max-w-4xl mx-auto flex flex-col md:flex-row justify-center items-center gap-16"
+      >
+        <div class="flex-1 text-center md:text-left">
+          <h2 class="text-2xl md:text-3xl font-bold mb-4">DESIGN SERVICES</h2>
+          <ul
+            class="space-y-2 text-sm md:text-base font-medium uppercase tracking-wider text-black"
           >
-        </a>
+            <li>Interior Architecture</li>
+            <li>Interior Design</li>
+            <li>Interior Decorating</li>
+            <li>Project Management</li>
+            <li>Eff Procurement</li>
+          </ul>
+        </div>
+
+        <!-- Design Project Categories -->
+        <div class="flex-1 text-center md:text-left">
+          <h2 class="text-2xl md:text-3xl font-bold mb-4">
+            DESIGN PROJECT CATEGORIES
+          </h2>
+          <ul
+            class="space-y-2 text-sm md:text-base font-medium uppercase tracking-wider text-bla"
+          >
+            <li>
+              Hospitality development projects (restaurant, night lounge,
+              airport lounge)
+            </li>
+            <li>Single residential / multi-residential projects</li>
+            <li>Retail / brand experiences</li>
+            <li>Corporate (offices and brand experiences)</li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </main>
 
-    <!-- Center: Socials + Rights -->
-    <div class="flex flex-col items-center mt-6 md:mt-0">
-      <div class="flex items-center gap-7 mb-4">
-        <a href="https://www.instagram.com/akasstudio/?hl=en" class="text-white hover:text-gray-300">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.linkedin.com/company/akas-studio/" class="text-white hover:text-gray-300">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="https://vimeo.com/1084278716/5a9ea08108" class="text-white hover:text-gray-300">
-          <i class="fab fa-vimeo-v"></i>
-        </a> 
+    <footer class="bg-black text-white font-sans">
+      <div
+        class="max-w-7xl mx-auto pb-6 pt-6 px-8 flex flex-col md:flex-row md:items-start"
+      >
+        <div class="md:flex-1 flex justify-start">
+          <a href="index.html" class="flex items-center">
+            <img
+              src="images/logo.png"
+              alt="AKAS STUDIO Logo"
+              class="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+            />
+          </a>
+        </div>
+
+        <div class="md:flex-1 flex flex-col items-center justify-center">
+          <div class="flex items-center gap-7 mb-4">
+            <a
+              href="https://www.instagram.com/akasstudio/?hl=en"
+              class="text-white hover:text-gray-300"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/company/akas-studio/"
+              class="text-white hover:text-gray-300"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://vimeo.com/1084278716/5a9ea08108"
+              class="text-white hover:text-gray-300"
+            >
+              <i class="fab fa-vimeo-v"></i>
+            </a>
+          </div>
+          <span class="text-xs text-white text-center"
+            >© AKAS STUDIO 2025. All Rights Reserved.</span
+          >
+        </div>
+
+        <div class="md:flex-1 flex justify-end">
+          <div class="text-sm text-white text-right">
+            <div>+27 74 260 3393</div>
+            <div>info@akasstudio.co.za</div>
+            <div>Cape Town, South Africa</div>
+          </div>
+        </div>
       </div>
-      <span class="text-xs text-white text-center">© AKAS STUDIO 2025. All Rights Reserved.</span>
-    </div>
+    </footer>
 
-    <!-- Right: Contact -->
-    <div class="flex flex-col items-end mt-6 md:mt-0 md:w-1/4">
-      <div class="text-sm text-white text-right">
-        <div>+27 74 260 3393</div>
-        <div>info@akasstudio.co.za</div>
-        <div>Cape town, South Africa</div>
-      </div>
-    </div>
-  </div>
-</footer>
+    <script>
+      // Mobile menu toggle
+      const toggleBtn = document.getElementById("menu-toggle");
+      const menuIcon = document.getElementById("menu-icon");
+      const menuLabel = document.getElementById("menu-label");
+      const mobileMenu = document.getElementById("mobile-menu");
 
-      <script>
-        // Mobile menu toggle
-       const toggleBtn   = document.getElementById('menu-toggle');
-  const menuIcon    = document.getElementById('menu-icon');
-  const menuLabel   = document.getElementById('menu-label');
-  const mobileMenu  = document.getElementById('mobile-menu');
+      toggleBtn.addEventListener("click", () => {
+        const isOpen = !mobileMenu.classList.contains("hidden");
 
-  toggleBtn.addEventListener('click', () => {
-    const isOpen = !mobileMenu.classList.contains('hidden');
+        if (isOpen) {
+          // Close menu
+          mobileMenu.classList.add("hidden");
+          menuIcon.classList.replace("fa-times", "fa-bars");
+          menuLabel.textContent = "MENU";
+        } else {
+          // Open menu
+          mobileMenu.classList.remove("hidden");
+          menuIcon.classList.replace("fa-bars", "fa-times");
+          menuLabel.textContent = "CLOSE";
+        }
+      });
 
-    if (isOpen) {
-      // Close menu
-      mobileMenu.classList.add('hidden');
-      menuIcon.classList.replace('fa-times', 'fa-bars');
-      menuLabel.textContent = 'MENU';
-    } else {
-      // Open menu
-      mobileMenu.classList.remove('hidden');
-      menuIcon.classList.replace('fa-bars', 'fa-times');
-      menuLabel.textContent = 'CLOSE';
-    }
-  });
+      // Scroll animation
+      const fadeElements = document.querySelectorAll(".fade-in-section");
 
-        // Scroll animation
-        const fadeElements = document.querySelectorAll('.fade-in-section');
-        
-        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) return;
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            });
-        }, {threshold: 0.1});
-        
-        fadeElements.forEach(element => {
-            appearOnScroll.observe(element);
-        });
+      const appearOnScroll = new IntersectionObserver(
+        function (entries, observer) {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      fadeElements.forEach((element) => {
+        appearOnScroll.observe(element);
+      });
     </script>
-</body>
+  </body>
 </html>

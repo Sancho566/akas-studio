@@ -1,254 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact AKAS Studio - Interior Architecture & Design. Get in touch for design consultations and project inquiries.">
-    <meta name="keywords" content="interior design contact, architecture firm contact, design consultation">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact AKAS Studio - Interior Architecture & Design. Get in touch for design consultations and project inquiries."
+    />
+    <meta
+      name="keywords"
+      content="interior design contact, architecture firm contact, design consultation"
+    />
     <title>Contact Us | AKAS STUDIO</title>
     <link rel="icon" href="images/akaslogo.png" type="image/png" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="canonical" href="https://www.akasstudio.co.za/contact.html" />
     <style>
-        .input-field:focus {
-            outline: none;
-            box-shadow: 0 0 0 2px rgba(180, 83, 9, 0.5);
-        }
-        
-        .map-container {
-            height: 400px;
-            width: 100%;
-        }
+      .input-field:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(180, 83, 9, 0.5);
+      }
+
+      .map-container {
+        height: 400px;
+        width: 100%;
+      }
     </style>
-</head>
+  </head>
 
-<body class="bg-gray-50">
+  <body class="bg-gray-50">
     <!-- Navigation -->
-<nav class="fixed w-full bg-black shadow-sm z-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-20 relative">
-      <!-- Menu toggle (opens & closes) -->
-      <button id="menu-toggle" class="text-white hover:text-gray-300 focus:outline-none flex items-center space-x-2">
-        <i id="menu-icon" class="fas fa-bars text-2xl"></i>
-        <span id="menu-label">MENU</span>
-      </button>
-
-      <!-- Logo -->
-      <a href="index.html" class="flex-shrink-0">
-        <img src="images/logo.png" alt="AKAS STUDIO Logo" class="h-16 object-contain" />
-      </a>
-
-      <div class="w-6"></div>
-    </div>
-  </div>
-
-  <!-- Full-width dropdown -->
-  <div id="mobile-menu" class="hidden absolute top-full left-0 w-screen bg-black shadow-lg z-40">
-    <div class="flex flex-col items-start px-6 py-4 space-y-2">
-      <a href="index.html"     class="w-full py-2 font-medium text-white hover:text-gray-300">HOME</a>
-      <a href="about.html"     class="w-full py-2 font-medium text-white hover:text-gray-300">ABOUT</a>
-      <a href="services.html"  class="w-full py-2 font-medium text-white hover:text-gray-300">SERVICES</a>
-      <a href="portfolio.html" class="w-full py-2 font-medium text-white hover:text-gray-300">PORTFOLIO</a>
-      <a href="contact.html"   class="w-full py-2 font-medium text-white hover:text-gray-300">CONTACT</a>
-
-      <div class="flex space-x-4 pt-2">
-        <a href="https://www.instagram.com/akasstudio/?hl=en" class="text-white hover:text-gray-300">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.linkedin.com/company/akas-studio/" class="text-white hover:text-gray-300">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="https://vimeo.com/1084278716/5a9ea08108" class="text-white hover:text-gray-300">
-          <i class="fab fa-vimeo-v"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-</nav>
-
-<!-- Contact Section -->
-<section class="pt-32 pb-20 bg-white text-black">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col lg:flex-row gap-12">
-            <!-- Contact Form -->
-            <div class="lg:w-1/2">
-                <h2 class="text-2xl md:text-3xl font-bold text-black mb-8">Send Us a Message</h2>
-                <form id="contactForm" class="space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label for="firstName" class="block text-sm font-medium text-black mb-1">First Name*</label>
-                            <input type="text" id="firstName" name="firstName" required 
-                                class="input-field w-full px-4 py-3 border border-black rounded-md focus:border-black">
-                        </div>
-                        <div>
-                            <label for="lastName" class="block text-sm font-medium text-black mb-1">Last Name*</label>
-                            <input type="text" id="lastName" name="lastName" required 
-                                class="input-field w-full px-4 py-3 border border-black rounded-md focus:border-black">
-                        </div>
-                    </div>
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-black mb-1">Email*</label>
-                        <input type="email" id="email" name="email" required 
-                            class="input-field w-full px-4 py-3 border border-black rounded-md focus:border-black">
-                    </div>
-                    <div>
-                        <label for="phone" class="block text-sm font-medium text-black mb-1">Phone</label>
-                        <input type="tel" id="phone" name="phone" 
-                            class="input-field w-full px-4 py-3 border border-black rounded-md focus:border-black">
-                    </div>
-                    <div>
-                        <label for="service" class="block text-sm font-medium text-black mb-1">Service Interested In</label>
-                        <select id="service" name="service" 
-                            class="input-field w-full px-4 py-3 border border-black rounded-md focus:border-black">
-                            <option value="">Select a service</option>
-                            <option value="residential">Single residential/ Multi-residential</option>
-                            <option value="retail">Retail/ brand experiences</option>
-                            <option value="commercial">Hospitality development</option>
-                            <option value="corporate">Corporate (offices and brand experiences)</option>
-                            <option value="procurement">FFE Procurement</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="message" class="block text-sm font-medium text-black mb-1">Your Message*</label>
-                        <textarea id="message" name="message" rows="5" required 
-                            class="input-field w-full px-4 py-3 border border-black rounded-md focus:border-black"></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-black hover:bg-black text-white px-6 py-4 rounded-md font-medium transition duration-300">
-                        Send Message <i class="fas fa-paper-plane ml-2"></i>
-                    </button>
-                </form>
-            </div>
-
-            <!-- Contact Info -->
-            <div class="lg:w-1/2">
-                <h2 class="text-2xl md:text-3xl font-bold text-black mb-8">Contact Information</h2>
-                <div class="space-y-8">
-                    <div class="flex items-start">
-                        <div class="flex-shrink-0 bg-gray-200 p-3 rounded-full text-black">
-                            <i class="fas fa-map-marker-alt text-xl"></i>
-                        </div>
-                        <div class="ml-4">
-                            <h3 class="text-lg font-semibold text-black">Our Studio,</h3>
-                            <p class="text-black mt-1">Cape Town, South Africa.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <div class="flex-shrink-0 bg-gray-200 p-3 rounded-full text-black">
-                            <i class="fas fa-phone-alt text-xl"></i>
-                        </div>
-                        <div class="ml-4">
-                            <h3 class="text-lg font-semibold text-black">Call Us</h3>
-                            <p class="text-black mt-1">
-                              <a href="tel:+12125551234" class="hover:text-gray-800">+27 74 260 3393</a><br>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <div class="flex-shrink-0 bg-gray-200 p-3 rounded-full text-black">
-                            <i class="fas fa-envelope text-xl"></i>
-                        </div>
-                        <div class="ml-4">
-                            <h3 class="text-lg font-semibold text-black">Email Us</h3>
-                            <p class="text-black mt-1">
-                                <a href="mailto:info@akasstudio.com" class="hover:text-gray-800">info@akasstudio.co.za</a><br>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-   <footer class="bg-black text-white font-sans">
-  <div class="max-w-7xl mx-auto pb-6 pt-6 px-8 flex flex-col md:flex-row md:justify-between md:items-start">
-    <!-- Left: Logo -->
-    <div class="md:w-1/4">
-      <div class="flex items-center gap-3 mb-4">
-        <a href="index.html" class="flex items-center">
-          <img 
-            src="images/logo.png" 
-            alt="AKAS STUDIO Logo" 
-            class="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+    <nav class="fixed w-full bg-black shadow-sm z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center h-20 relative">
+          <!-- Menu toggle (opens & closes) -->
+          <button
+            id="menu-toggle"
+            class="text-white hover:text-gray-300 focus:outline-none flex items-center space-x-2 -ml-4 sm:-ml-6 lg:-ml-8"
           >
-        </a>
+            <i id="menu-icon" class="fas fa-bars text-2xl"></i>
+          </button>
+
+          <!-- Logo -->
+          <a href="index.html" class="flex-shrink-0 ml-auto">
+            <img
+              src="images/logo.png"
+              alt="AKAS STUDIO Logo"
+              class="h-16 object-contain"
+            />
+          </a>
+
+          <div class="w-6"></div>
+        </div>
       </div>
-    </div>
 
-    <!-- Center: Socials + Rights -->
-    <div class="flex flex-col items-center mt-6 md:mt-0">
-      <div class="flex items-center gap-7 mb-4">
-        <a href="https://www.instagram.com/akasstudio/?hl=en" class="text-white hover:text-gray-300">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.linkedin.com/company/akas-studio/" class="text-white hover:text-gray-300">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="https://vimeo.com/1084278716/5a9ea08108" class="text-white hover:text-gray-300">
-          <i class="fab fa-vimeo-v"></i>
-        </a> 
+      <!-- Full-width dropdown -->
+      <div
+        id="mobile-menu"
+        class="hidden absolute top-full left-0 w-screen bg-black shadow-lg z-40"
+      >
+        <div class="flex flex-col items-start px-6 py-4 space-y-2">
+          <a
+            href="index.html"
+            class="w-full py-2 font-medium text-white hover:text-gray-300"
+            >HOME</a
+          >
+          <a
+            href="about.html"
+            class="w-full py-2 font-medium text-white hover:text-gray-300"
+            >ABOUT</a
+          >
+          <a
+            href="services.html"
+            class="w-full py-2 font-medium text-white hover:text-gray-300"
+            >SERVICES</a
+          >
+          <a
+            href="portfolio.html"
+            class="w-full py-2 font-medium text-white hover:text-gray-300"
+            >PORTFOLIO</a
+          >
+          <a
+            href="contact.html"
+            class="w-full py-2 font-medium text-white hover:text-gray-300"
+            >CONTACT</a
+          >
+
+          <div class="flex space-x-4 pt-2">
+            <a
+              href="https://www.instagram.com/akasstudio/?hl=en"
+              class="text-white hover:text-gray-300"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/company/akas-studio/"
+              class="text-white hover:text-gray-300"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://vimeo.com/1084278716/5a9ea08108"
+              class="text-white hover:text-gray-300"
+            >
+              <i class="fab fa-vimeo-v"></i>
+            </a>
+          </div>
+        </div>
       </div>
-      <span class="text-xs text-white text-center">© AKAS STUDIO 2025. All Rights Reserved.</span>
-    </div>
+    </nav>
 
-    <!-- Right: Contact -->
-    <div class="flex flex-col items-end mt-6 md:mt-0 md:w-1/4">
-      <div class="text-sm text-white text-right">
-        <div>+27 74 260 3393</div>
-        <div>info@akasstudio.co.za</div>
-        <div>Cape town, South Africa</div>
+    <!-- Contact Section -->
+    <section class="pt-32 pb-20 bg-white text-black">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row gap-12">
+          <!-- Contact Form -->
+          <div class="lg:w-1/2">
+            <h2 class="text-2xl md:text-3xl font-bold text-black mb-8">
+              Send Us a Message
+            </h2>
+            <form id="contactForm" class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    for="firstName"
+                    class="block text-sm font-medium text-black mb-1"
+                    >First Name*</label
+                  >
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    required
+                    class="input-field w-full px-4 py-3 border border-black rounded-md focus:border-black"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="lastName"
+                    class="block text-sm font-medium text-black mb-1"
+                    >Last Name*</label
+                  >
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    required
+                    class="input-field w-full px-4 py-3 border border-black rounded-md focus:border-black"
+                  />
+                </div>
+              </div>
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-black mb-1"
+                  >Email*</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="input-field w-full px-4 py-3 border border-black rounded-md focus:border-black"
+                />
+              </div>
+              <div>
+                <label
+                  for="phone"
+                  class="block text-sm font-medium text-black mb-1"
+                  >Phone</label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="input-field w-full px-4 py-3 border border-black rounded-md focus:border-black"
+                />
+              </div>
+              <div>
+                <label
+                  for="service"
+                  class="block text-sm font-medium text-black mb-1"
+                  >Service Interested In</label
+                >
+                <select
+                  id="service"
+                  name="service"
+                  class="input-field w-full px-4 py-3 border border-black rounded-md focus:border-black"
+                >
+                  <option value="">Select a service</option>
+                  <option value="residential">
+                    Single residential/ Multi-residential
+                  </option>
+                  <option value="retail">Retail/ brand experiences</option>
+                  <option value="commercial">Hospitality development</option>
+                  <option value="corporate">
+                    Corporate (offices and brand experiences)
+                  </option>
+                  <option value="procurement">FFE Procurement</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div>
+                <label
+                  for="message"
+                  class="block text-sm font-medium text-black mb-1"
+                  >Your Message*</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  class="input-field w-full px-4 py-3 border border-black rounded-md focus:border-black"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-black hover:bg-black text-white px-6 py-4 rounded-md font-medium transition duration-300"
+              >
+                Send Message <i class="fas fa-paper-plane ml-2"></i>
+              </button>
+            </form>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="lg:w-1/2">
+            <h2 class="text-2xl md:text-3xl font-bold text-black mb-8">
+              Contact Information
+            </h2>
+            <div class="space-y-8">
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 bg-gray-200 p-3 rounded-full text-black"
+                >
+                  <i class="fas fa-map-marker-alt text-xl"></i>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-lg font-semibold text-black">Our Studio,</h3>
+                  <p class="text-black mt-1">Cape Town, South Africa.</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 bg-gray-200 p-3 rounded-full text-black"
+                >
+                  <i class="fas fa-phone-alt text-xl"></i>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-lg font-semibold text-black">Call Us</h3>
+                  <p class="text-black mt-1">
+                    <a href="tel:+12125551234" class="hover:text-gray-800"
+                      >+27 74 260 3393</a
+                    ><br />
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 bg-gray-200 p-3 rounded-full text-black"
+                >
+                  <i class="fas fa-envelope text-xl"></i>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-lg font-semibold text-black">Email Us</h3>
+                  <p class="text-black mt-1">
+                    <a
+                      href="mailto:info@akasstudio.com"
+                      class="hover:text-gray-800"
+                      >info@akasstudio.co.za</a
+                    ><br />
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</footer>
+    </section>
 
-    
-        <script>
-        // Toggle mobile menu
-   const toggleBtn   = document.getElementById('menu-toggle');
-  const menuIcon    = document.getElementById('menu-icon');
-  const menuLabel   = document.getElementById('menu-label');
-  const mobileMenu  = document.getElementById('mobile-menu');
+    <footer class="bg-black text-white font-sans">
+      <div
+        class="max-w-7xl mx-auto pb-6 pt-6 px-8 flex flex-col md:flex-row md:items-start"
+      >
+        <div class="md:flex-1 flex justify-start">
+          <a href="index.html" class="flex items-center">
+            <img
+              src="images/logo.png"
+              alt="AKAS STUDIO Logo"
+              class="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+            />
+          </a>
+        </div>
 
-  toggleBtn.addEventListener('click', () => {
-    const isOpen = !mobileMenu.classList.contains('hidden');
+        <div class="md:flex-1 flex flex-col items-center justify-center">
+          <div class="flex items-center gap-7 mb-4">
+            <a
+              href="https://www.instagram.com/akasstudio/?hl=en"
+              class="text-white hover:text-gray-300"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/company/akas-studio/"
+              class="text-white hover:text-gray-300"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://vimeo.com/1084278716/5a9ea08108"
+              class="text-white hover:text-gray-300"
+            >
+              <i class="fab fa-vimeo-v"></i>
+            </a>
+          </div>
+          <span class="text-xs text-white text-center"
+            >© AKAS STUDIO 2025. All Rights Reserved.</span
+          >
+        </div>
 
-    if (isOpen) {
-      // Close menu
-      mobileMenu.classList.add('hidden');
-      menuIcon.classList.replace('fa-times', 'fa-bars');
-      menuLabel.textContent = 'MENU';
-    } else {
-      // Open menu
-      mobileMenu.classList.remove('hidden');
-      menuIcon.classList.replace('fa-bars', 'fa-times');
-      menuLabel.textContent = 'CLOSE';
-    }
-  });
+        <div class="md:flex-1 flex justify-end">
+          <div class="text-sm text-white text-right">
+            <div>+27 74 260 3393</div>
+            <div>info@akasstudio.co.za</div>
+            <div>Cape Town, South Africa</div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-        // FAQ toggle functionality
-        document.querySelectorAll('.faq-toggle').forEach(button => {
-            button.addEventListener('click', () => {
-                const content = button.nextElementSibling;
-                const icon = button.querySelector('i');
-                
-                content.classList.toggle('hidden');
-                icon.classList.toggle('rotate-180');
-            });
+    <script>
+      // Toggle mobile menu
+      const toggleBtn = document.getElementById("menu-toggle");
+      const menuIcon = document.getElementById("menu-icon");
+      const menuLabel = document.getElementById("menu-label");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      toggleBtn.addEventListener("click", () => {
+        const isOpen = !mobileMenu.classList.contains("hidden");
+
+        if (isOpen) {
+          // Close menu
+          mobileMenu.classList.add("hidden");
+          menuIcon.classList.replace("fa-times", "fa-bars");
+          menuLabel.textContent = "MENU";
+        } else {
+          // Open menu
+          mobileMenu.classList.remove("hidden");
+          menuIcon.classList.replace("fa-bars", "fa-times");
+          menuLabel.textContent = "CLOSE";
+        }
+      });
+
+      // FAQ toggle functionality
+      document.querySelectorAll(".faq-toggle").forEach((button) => {
+        button.addEventListener("click", () => {
+          const content = button.nextElementSibling;
+          const icon = button.querySelector("i");
+
+          content.classList.toggle("hidden");
+          icon.classList.toggle("rotate-180");
         });
+      });
 
-        // Form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Here you would typically send the form data to your server
-            // For this example, we'll just show a success message
-            alert('Thank you for your message! We will get back to you soon.');
-            this.reset();
+      // Form submission
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Here you would typically send the form data to your server
+          // For this example, we'll just show a success message
+          alert("Thank you for your message! We will get back to you soon.");
+          this.reset();
         });
     </script>
-</body>
+  </body>
 </html>

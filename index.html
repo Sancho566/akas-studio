@@ -35,8 +35,23 @@
   "url": "https://www.akasstudio.co.za",
   "logo": "https://www.akasstudio.co.za/images/akaslogo.png",
   "description": "Interior Architecture and Design Studio offering bespoke residential and commercial space planning services.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Cape Town",
+    "addressRegion": "Western Cape",
+    "addressCountry": "ZA"
+  },
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "telephone": "+27 74 260 3393",
+    "email": "info@akasstudio.co.za",
+    "contactType": "customer service",
+    "areaServed": "ZA"
+  }],
   "sameAs": [
     "https://www.instagram.com/akasstudio",
+    "https://www.linkedin.com/company/akas-studio/",
+    "https://vimeo.com/1084278716/5a9ea08108",
   ]
 }
 </script>
@@ -53,47 +68,85 @@
 
 <div id="main-content" class="opacity-0 transition-opacity duration-700">
   
-<nav class="fixed w-full bg-black shadow-sm z-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-20 relative">
-      <!-- Menu toggle (opens & closes) -->
-      <button id="menu-toggle" class="text-white hover:text-gray-300 focus:outline-none flex items-center space-x-2">
-        <i id="menu-icon" class="fas fa-bars text-2xl"></i>
-        <span id="menu-label">MENU</span>
-      </button>
+ <nav class="fixed w-full bg-black shadow-sm z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center h-20 relative">
+          <!-- Menu toggle (opens & closes) -->
+          <button
+            id="menu-toggle"
+            class="text-white hover:text-gray-300 focus:outline-none flex items-center space-x-2 -ml-4 sm:-ml-6 lg:-ml-8"
+          >
+            <i id="menu-icon" class="fas fa-bars text-2xl"></i>
+          </button>
 
-      <!-- Logo -->
-      <a href="index.html" class="flex-shrink-0">
-        <img src="images/logo.png" alt="AKAS STUDIO Logo" class="h-16 object-contain" />
-      </a>
+          <!-- Logo -->
+          <a href="index.html" class="flex-shrink-0 ml-auto">
+            <img
+              src="images/logo.png"
+              alt="AKAS STUDIO Logo"
+              class="h-16 object-contain"
+            />
+          </a>
 
-      <div class="w-6"></div>
-    </div>
-  </div>
-
-  <!-- Full-width dropdown -->
-  <div id="mobile-menu" class="hidden absolute top-full left-0 w-screen bg-black shadow-lg z-40">
-    <div class="flex flex-col items-start px-6 py-4 space-y-2">
-      <a href="index.html"     class="w-full py-2 font-medium text-white hover:text-gray-300">HOME</a>
-      <a href="about.html"     class="w-full py-2 font-medium text-white hover:text-gray-300">ABOUT</a>
-      <a href="services.html"  class="w-full py-2 font-medium text-white hover:text-gray-300">SERVICES</a>
-      <a href="portfolio.html" class="w-full py-2 font-medium text-white hover:text-gray-300">PORTFOLIO</a>
-      <a href="contact.html"   class="w-full py-2 font-medium text-white hover:text-gray-300">CONTACT</a>
-
-      <div class="flex space-x-4 pt-2">
-        <a href="https://www.instagram.com/akasstudio/?hl=en" class="text-white hover:text-gray-300">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.linkedin.com/company/akas-studio/" class="text-white hover:text-gray-300">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="https://vimeo.com/1084278716/5a9ea08108" class="text-white hover:text-gray-300">
-          <i class="fab fa-vimeo-v"></i>
-        </a>
+          <div class="w-6"></div>
+        </div>
       </div>
-    </div>
-  </div>
-</nav>
+
+      <!-- Full-width dropdown -->
+      <div
+        id="mobile-menu"
+        class="hidden absolute top-full left-0 w-screen bg-black shadow-lg z-40"
+      >
+        <div class="flex flex-col items-start px-6 py-4 space-y-2">
+          <a
+            href="index.html"
+            class="w-full py-2 font-medium text-white hover:text-gray-300"
+            >HOME</a
+          >
+          <a
+            href="about.html"
+            class="w-full py-2 font-medium text-white hover:text-gray-300"
+            >ABOUT</a
+          >
+          <a
+            href="services.html"
+            class="w-full py-2 font-medium text-white hover:text-gray-300"
+            >SERVICES</a
+          >
+          <a
+            href="portfolio.html"
+            class="w-full py-2 font-medium text-white hover:text-gray-300"
+            >PORTFOLIO</a
+          >
+          <a
+            href="contact.html"
+            class="w-full py-2 font-medium text-white hover:text-gray-300"
+            >CONTACT</a
+          >
+
+          <div class="flex space-x-4 pt-2">
+            <a
+              href="https://www.instagram.com/akasstudio/?hl=en"
+              class="text-white hover:text-gray-300"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/company/akas-studio/"
+              class="text-white hover:text-gray-300"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://vimeo.com/1084278716/5a9ea08108"
+              class="text-white hover:text-gray-300"
+            >
+              <i class="fab fa-vimeo-v"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
 
      <!-- Hero Section -->
     <section class="hero-bg h-screen flex items-center pt-20 relative">
@@ -128,11 +181,11 @@
 
     <!-- Our Approach -->
     <section
-      class="w-full h-screen bg-black items-center justify-center text-white flex flex-col px-8 md:px-16 lg:px-24 py-24 relative"
-    >
-      <div class="mb-12">
-        <h2 class="text-2xl font-bold">OUR APPROACH</h2>
-      </div>
+  class="w-full h-screen bg-black items-center justify-center text-white flex flex-col px-8 md:px-16 lg:px-24 pt-24 pb-0 relative"
+>
+  <div class="mb-12 -mt-8">
+    <h2 class="text-2xl font-bold">OUR APPROACH</h2>
+  </div>
       <div class="max-w-3xl text-lg">
         <p>
           At AKAS STUDIO, we craft interiors that rise above trends, grounded in
@@ -150,11 +203,7 @@
     </section>
 
     <!-- Recent Projects -->
-<section class="w-full bg-white pt-16 pb-16">
-  <h2 class="text-3xl font-semibold text-black text-center mb-8">
-    RECENT PROJECTS
-  </h2>
-  <div class="w-20 h-1 bg-black mx-auto mb-12"></div>
+<section class="w-full bg-white mt-0">
   <div class="grid grid-cols-1 sm:grid-cols-2">
     <!-- Project Cards -->
     <a href="academia.html" class="group relative overflow-hidden block" data-category="residential">
@@ -207,22 +256,23 @@
   </div>
 </section>
 
-    <!-- Footer -->
-    <footer class="bg-black text-white font-sans">
-  <div class="max-w-7xl mx-auto pb-6 pt-6 px-8 flex flex-col md:flex-row md:justify-between md:items-start">
-    <div class="md:w-1/4">
-      <div class="flex items-center gap-3 mb-4">
-        <a href="index.html" class="flex items-center">
-          <img 
-            src="images/logo.png" 
-            alt="AKAS STUDIO Logo" 
-            class="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
-          >
-        </a>
-      </div>
+<!-- Footer -->
+<footer class="bg-black text-white font-sans">
+  <div class="max-w-7xl mx-auto pb-6 pt-6 px-8 flex flex-col md:flex-row md:items-start">
+    
+    <!-- Logo pushed far left -->
+    <div class="md:flex-1 flex justify-start">
+      <a href="index.html" class="flex items-center">
+        <img 
+          src="images/logo.png" 
+          alt="AKAS STUDIO Logo" 
+          class="h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+        >
+      </a>
     </div>
 
-    <div class="flex flex-col items-center mt-6 md:mt-0">
+    <!-- Socials and copyright centered -->
+    <div class="md:flex-1 flex flex-col items-center justify-center">
       <div class="flex items-center gap-7 mb-4">
         <a href="https://www.instagram.com/akasstudio/?hl=en" class="text-white hover:text-gray-300">
           <i class="fab fa-instagram"></i>
@@ -237,13 +287,15 @@
       <span class="text-xs text-white text-center">© AKAS STUDIO 2025. All Rights Reserved.</span>
     </div>
 
-    <div class="flex flex-col items-end mt-6 md:mt-0 md:w-1/4">
+    <!-- Contact info pushed far right -->
+    <div class="md:flex-1 flex justify-end">
       <div class="text-sm text-white text-right">
         <div>+27 74 260 3393</div>
         <div>info@akasstudio.co.za</div>
-        <div>Cape town, South Africa</div>
+        <div>Cape Town, South Africa</div>
       </div>
     </div>
+
   </div>
 </footer>
 
