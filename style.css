@@ -58,7 +58,7 @@ body {
 }
 
 .hero-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('images/IR Academia/IR Academia 6.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('images/Zios/Image3.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -156,4 +156,57 @@ body {
       transition: all 0.9s cubic-bezier(.4,0,.2,1);
     }
 
-    
+    /* ------------------------------------------------ */
+/* About*/
+/* ------------------------------------------------ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 
+   Utility to apply the above keyframes:
+   - duration: 0.8s (can be changed)
+   - easing: ease-out for a smooth deceleration
+   - forwards: so it stays at opacity:1 / translateY(0) when complete
+*/
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* 
+   We’ll stagger children by adding small delays via inline styles or extra classes.
+   Here are two helper classes for incremental delays if you prefer class-based:
+*/
+.fade-delay-200 { animation-delay: 0.2s; }
+.fade-delay-400 { animation-delay: 0.4s; }
+.fade-delay-600 { animation-delay: 0.6s; }
+
+      
+      /* Portfolio*/
+       .project-card:hover .project-overlay {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .project-overlay {
+        transition: all 0.3s ease;
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      /* Contact*/
+      .input-field:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(180, 83, 9, 0.5);
+      }
+
+      .map-container {
+        height: 400px;
+        width: 100%;
+      }

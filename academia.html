@@ -17,33 +17,28 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body class="bg-white text-zinc-900">
-    <!-- Navigation -->
     <nav class="fixed w-full bg-black shadow-sm z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center h-20 relative">
-          <!-- Menu toggle (opens & closes) -->
+        <div class="flex items-center justify-between h-20">
           <button
             id="menu-toggle"
-            class="text-white hover:text-gray-300 focus:outline-none flex items-center space-x-2 -ml-4 sm:-ml-6 lg:-ml-8"
+            class="text-white hover:text-gray-300 focus:outline-none flex items-center space-x-2"
           >
             <i id="menu-icon" class="fas fa-bars text-2xl"></i>
           </button>
 
-          <!-- Logo -->
-          <a href="index.html" class="flex-shrink-0 ml-auto">
+          <a href="index.html" class="flex-shrink-0">
             <img
               src="images/logo.png"
               alt="AKAS STUDIO Logo"
               class="h-16 object-contain"
             />
           </a>
-
-          <div class="w-6"></div>
         </div>
       </div>
 
-      <!-- Full-width dropdown -->
       <div
         id="mobile-menu"
         class="hidden absolute top-full left-0 w-screen bg-black shadow-lg z-40"
@@ -58,11 +53,6 @@
             href="about.html"
             class="w-full py-2 font-medium text-white hover:text-gray-300"
             >ABOUT</a
-          >
-          <a
-            href="services.html"
-            class="w-full py-2 font-medium text-white hover:text-gray-300"
-            >SERVICES</a
           >
           <a
             href="portfolio.html"
@@ -99,27 +89,24 @@
       </div>
     </nav>
 
-    <!-- Hero image -->
     <div
       class="w-full h-72 md:h-[400px] lg:h-[475px] overflow-hidden flex items-center justify-center bg-zinc-200"
     >
       <img
-        src="images\IR Academia\IR Academia 1.jpg"
+        src="images/IR Academia/IR Academia 2.jpg"
         alt="Hero"
         class="w-full h-full object-cover object-center"
       />
     </div>
 
-    <!-- Main Section -->
     <section
       class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 px-6 py-16 bg-white"
     >
-      <!-- Left (Text) -->
       <div class="flex-1">
         <h1 class="text-xl md:text-xl font-bold tracking-wide mb-6 text-black">
           IR ACADEMIA
         </h1>
-        <p class="text-base md:text-base text-black leading-relaxed mb-6">
+        <p class="text-xs text-black leading-relaxed mb-6">
           This contemporary residential project by AKAS STUDIO was shaped by a
           rich interplay of materials, each selected to inform and inspire the
           creative journey. At the heart of the design process was the
@@ -142,12 +129,12 @@
           architecture.
         </p>
       </div>
-      <!-- Right (Overview) -->
+
       <aside
         class="w-full lg:w-96 border-t lg:border-t-0 lg:border-l border-black pt-8 lg:pt-0 lg:pl-10"
       >
         <h2 class="text-lg font-bold mb-4 text-black">OVERVIEW</h2>
-        <div class="grid grid-cols-2 gap-y-4 gap-x-4 text-black text-sm">
+        <div class="grid grid-cols-2 gap-y-4 gap-x-4 text-black text-xs">
           <div class="font-semibold">LOCATION</div>
           <div>ACADEMIA, NAMIBIA</div>
           <div class="font-semibold">CLIENT</div>
@@ -169,18 +156,16 @@
           class="w-full h-96 md:h-[520px] object-cover"
         />
 
-        <!-- Left Arrow -->
         <button
           id="carousel-prev"
-          class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 focus:outline-none text-xl"
+          class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white w-10 h-10 flex items-center justify-center text-xl rounded-none hover:bg-opacity-75 focus:outline-none"
         >
           &#10094;
         </button>
 
-        <!-- Right Arrow -->
         <button
           id="carousel-next"
-          class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 focus:outline-none text-xl"
+          class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white w-10 h-10 flex items-center justify-center text-xl rounded-none hover:bg-opacity-75 focus:outline-none"
         >
           &#10095;
         </button>
@@ -189,10 +174,9 @@
 
     <footer class="bg-black text-white font-sans">
       <div
-        class="max-w-7xl mx-auto pb-6 pt-6 px-8 flex flex-col md:flex-row md:items-start"
+        class="max-w-7xl mx-auto py-6 px-4 flex flex-wrap items-center justify-between gap-6"
       >
-        <!-- Logo pushed far left -->
-        <div class="md:flex-1 flex justify-start">
+        <div class="flex justify-start w-full sm:w-auto">
           <a href="index.html" class="flex items-center">
             <img
               src="images/logo.png"
@@ -202,9 +186,10 @@
           </a>
         </div>
 
-        <!-- Socials and copyright centered -->
-        <div class="md:flex-1 flex flex-col items-center justify-center">
-          <div class="flex items-center gap-7 mb-4">
+        <div
+          class="flex flex-col items-center justify-center w-full sm:w-auto text-center"
+        >
+          <div class="flex items-center gap-6 mb-3">
             <a
               href="https://www.instagram.com/akasstudio/?hl=en"
               class="text-white hover:text-gray-300"
@@ -224,14 +209,11 @@
               <i class="fab fa-vimeo-v"></i>
             </a>
           </div>
-          <span class="text-xs text-white text-center"
-            >© AKAS STUDIO 2025. All Rights Reserved.</span
-          >
+          <span class="text-xs">© AKAS STUDIO 2025. All Rights Reserved.</span>
         </div>
 
-        <!-- Contact info pushed far right -->
-        <div class="md:flex-1 flex justify-end">
-          <div class="text-xs text-white text-right">
+        <div class="flex justify-end w-full sm:w-auto text-right text-xs">
+          <div>
             <div>+27 74 260 3393</div>
             <div>info@akasstudio.co.za</div>
             <div>Cape Town, South Africa</div>
@@ -241,7 +223,6 @@
     </footer>
 
     <script>
-      // Mobile menu toggle
       const toggleBtn = document.getElementById("menu-toggle");
       const menuIcon = document.getElementById("menu-icon");
       const menuLabel = document.getElementById("menu-label");
@@ -251,12 +232,10 @@
         const isOpen = !mobileMenu.classList.contains("hidden");
 
         if (isOpen) {
-          // Close menu
           mobileMenu.classList.add("hidden");
           menuIcon.classList.replace("fa-times", "fa-bars");
           menuLabel.textContent = "MENU";
         } else {
-          // Open menu
           mobileMenu.classList.remove("hidden");
           menuIcon.classList.replace("fa-bars", "fa-times");
           menuLabel.textContent = "CLOSE";
@@ -266,7 +245,7 @@
       (function () {
         const images = [
           "images/IR Academia/IR Academia 11.jpg",
-          "images/IR Academia/IR Academia 2.jpg",
+          "images/IR Academia/IR Academia 1.jpg",
           "images/IR Academia/IR Academia 3.jpg",
           "images/IR Academia/IR Academia 4.jpg",
           "images/IR Academia/IR Academia 5.jpg",

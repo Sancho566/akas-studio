@@ -12,33 +12,29 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
   </head>
+
   <body class="bg-white min-h-screen flex flex-col">
-    <!-- NAVIGATION -->
+   
     <nav class="fixed w-full bg-black shadow-sm z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center h-20 relative">
-          <!-- Menu toggle (opens & closes) -->
+        <div class="flex items-center justify-between h-20">
           <button
             id="menu-toggle"
-            class="text-white hover:text-gray-300 focus:outline-none flex items-center space-x-2 -ml-4 sm:-ml-6 lg:-ml-8"
+            class="text-white hover:text-gray-300 focus:outline-none flex items-center space-x-2"
           >
             <i id="menu-icon" class="fas fa-bars text-2xl"></i>
           </button>
 
-          <!-- Logo -->
-          <a href="index.html" class="flex-shrink-0 ml-auto">
+          <a href="index.html" class="flex-shrink-0">
             <img
               src="images/logo.png"
               alt="AKAS STUDIO Logo"
               class="h-16 object-contain"
             />
           </a>
-
-          <div class="w-6"></div>
         </div>
       </div>
 
-      <!-- Full-width dropdown -->
       <div
         id="mobile-menu"
         class="hidden absolute top-full left-0 w-screen bg-black shadow-lg z-40"
@@ -53,11 +49,6 @@
             href="about.html"
             class="w-full py-2 font-medium text-white hover:text-gray-300"
             >ABOUT</a
-          >
-          <a
-            href="services.html"
-            class="w-full py-2 font-medium text-white hover:text-gray-300"
-            >SERVICES</a
           >
           <a
             href="portfolio.html"
@@ -94,16 +85,13 @@
       </div>
     </nav>
 
-    <!-- MAIN CONTENT -->
     <main
       class="flex-1 flex items-center max-w-7xl mx-auto px-6 lg:px-8 pt-20 h-[calc(100vh-5rem)]"
     >
-      <!-- Added more top/bottom padding -->
       <section class="h-full w-full flex items-center min-h-0">
         <div
           class="flex flex-col md:flex-row items-center gap-12 h-full w-full min-h-0"
         >
-          <!-- Image: lower height, focus on top -->
           <div
             class="w-full md:w-1/2 text-black h-full flex flex-col justify-center min-h-0"
           >
@@ -113,13 +101,12 @@
               class="shadow-lg w-full max-h-85 object-cover object-center"
             />
           </div>
-          <!-- Text: smaller sizes -->
           <div
             class="w-full md:w-1/2 text-black h-full flex flex-col justify-center"
             data-aos="fade-left"
           >
-            <h2 class="text-xl md:text-2xl font-bold mb-4">ARTHUR KAMHOTI</h2>
-            <p class="text-sm md:text-base leading-relaxed overflow-y-auto">
+            <h2 class="text-lg md:text-xl font-bold mb-4">ARTHUR KAMHOTI</h2>
+            <p class="text-xs  leading-relaxed overflow-y-auto">
               Zimbabwe born designer based in Cape Town, South Africa. He
               pursued his design education at BHC SCHOOL OF DESIGN with a
               commitment to mastering his craft in 2018. Arthur’s philosophy
@@ -134,11 +121,11 @@
       </section>
     </main>
 
-    <footer class="bg-black text-white font-sans">
+   <footer class="bg-black text-white font-sans">
       <div
-        class="max-w-7xl mx-auto pb-6 pt-6 px-8 flex flex-col md:flex-row md:items-start"
+        class="max-w-7xl mx-auto py-6 px-4 flex flex-wrap items-center justify-between gap-6"
       >
-        <div class="md:flex-1 flex justify-start">
+        <div class="flex justify-start w-full sm:w-auto">
           <a href="index.html" class="flex items-center">
             <img
               src="images/logo.png"
@@ -148,8 +135,10 @@
           </a>
         </div>
 
-        <div class="md:flex-1 flex flex-col items-center justify-center">
-          <div class="flex items-center gap-7 mb-4">
+        <div
+          class="flex flex-col items-center justify-center w-full sm:w-auto text-center"
+        >
+          <div class="flex items-center gap-6 mb-3">
             <a
               href="https://www.instagram.com/akasstudio/?hl=en"
               class="text-white hover:text-gray-300"
@@ -169,13 +158,11 @@
               <i class="fab fa-vimeo-v"></i>
             </a>
           </div>
-          <span class="text-xs text-white text-center"
-            >© AKAS STUDIO 2025. All Rights Reserved.</span
-          >
+          <span class="text-xs">© AKAS STUDIO 2025. All Rights Reserved.</span>
         </div>
 
-        <div class="md:flex-1 flex justify-end">
-          <div class="text-xs text-white text-right">
+        <div class="flex justify-end w-full sm:w-auto text-right text-xs">
+          <div>
             <div>+27 74 260 3393</div>
             <div>info@akasstudio.co.za</div>
             <div>Cape Town, South Africa</div>
