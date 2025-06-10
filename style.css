@@ -1,164 +1,259 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
-        
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap");
+
 body {
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
-  @keyframes fadeIn {
-    0% { opacity: 0; transform: scale(0.8); }
-    100% { opacity: 1; transform: scale(1); }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
   }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
-  .animate-fade-in {
-    animation: fadeIn 1.5s ease-out forwards;
-    animation-delay: 0.3s;
-  }
+.animate-fade-in {
+  animation: fadeIn 1.5s ease-out forwards;
+  animation-delay: 0.3s;
+}
 
 @keyframes blob {
-    0% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-40px) rotate(180deg); }
-    100% { transform: translateY(0) rotate(360deg); }
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-40px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
 }
 .animate-blob {
-    animation: blob 12s infinite linear;
+  animation: blob 12s infinite linear;
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-30px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
 }
 .animate-float {
-    animation: float 8s ease-in-out infinite;
+  animation: float 8s ease-in-out infinite;
 }
 
 .animate-underline {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 .animate-underline::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: currentColor;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .animate-underline:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .heading-font {
-    font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
+}
+
+/* 1. Background Ken Burns effect */
+@keyframes bg-panzoom {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.05) translate(-2%, -2%);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
 }
 
 .hero-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('images/Zios/Image3.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("images/Zios/Image3.jpg");
+  background-size: cover;
+  background-position: center;
+  animation: bg-panzoom 20s ease-in-out infinite;
+  overflow: hidden;
+  position: relative;
+}
+
+@keyframes fade-slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-bg .max-w-2xl > * {
+  opacity: 0;
+  animation: fade-slide-up 1s ease-out forwards;
+}
+
+.hero-bg h1 {
+  animation-delay: 0.5s;
+}
+
+.hero-bg p {
+  animation-delay: 1s;
+}
+
+.hero-bg .flex {
+  animation-delay: 1.5s;
+}
+
+@keyframes pop-in {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.hero-bg .flex a {
+  animation: pop-in 0.6s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
+  transform-origin: center;
+}
+
+.hero-bg .flex a:hover {
+  animation: none;
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
 }
 
 .project-card {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .nav-link {
-    position: relative;
+  position: relative;
 }
 
 .nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -2px;
-    left: 0;
-    background-color: #ffffff;
-    transition: width 0.3s ease;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
 }
 
 .nav-link:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
-  @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
-        }
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 
-        .floating {
-            animation: float 6s ease-in-out infinite;
-        }
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
 
-        .gradient-overlay {
-            position: relative;
-        }
+.gradient-overlay {
+  position: relative;
+}
 
-        .gradient-overlay::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, rgba(146, 64, 14, 0.4) 0%, rgba(0, 0, 0, 0.3) 100%);
-            z-index: 1;   
-        }
+.gradient-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(146, 64, 14, 0.4) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  z-index: 1;
+}
 
-        .hero-bg h1, .hero-bg p {
-        position: relative;
-        z-index: 2; /* Ensure text is above the gradient overlay */
-       }
+.hero-bg h1,
+.hero-bg p {
+  position: relative;
+  z-index: 2;
+}
 
-        .hover-scale {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+.hover-scale {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        .hover-scale:hover {
-            transform: scale(1.03);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        }
+.hover-scale:hover {
+  transform: scale(1.03);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
 
-        .icon-hover {
-            transition: all 0.3s ease;
-        }
+.icon-hover {
+  transition: all 0.3s ease;
+}
 
-        .icon-hover:hover {
-            transform: rotate(-5deg) scale(1.1);
-            color: #b45309;
-        }
+.icon-hover:hover {
+  transform: rotate(-5deg) scale(1.1);
+  color: #b45309;
+}
 
-         /* Add landing page animations */
-    .scale-fade-in {
-      opacity: 0;
-      transform: scale(0.85);
-      transition: opacity 0.9s cubic-bezier(.4,0,.2,1), transform 0.9s cubic-bezier(.4,0,.2,1);
-    }
-    .scale-fade-in.visible {
-      opacity: 1;
-      transform: scale(1);
-    }
-    .landing-page-fade-out {
-      opacity: 0;
-      transform: scale(1.1);
-      transition: all 0.9s cubic-bezier(.4,0,.2,1);
-    }
+/* Add landing page animations */
+.scale-fade-in {
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.scale-fade-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+.landing-page-fade-out {
+  opacity: 0;
+  transform: scale(1.1);
+  transition: all 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-    /* ------------------------------------------------ */
 /* About*/
-/* ------------------------------------------------ */
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -170,43 +265,76 @@ body {
   }
 }
 
-/* 
-   Utility to apply the above keyframes:
-   - duration: 0.8s (can be changed)
-   - easing: ease-out for a smooth deceleration
-   - forwards: so it stays at opacity:1 / translateY(0) when complete
-*/
 .fade-in-up {
   animation: fadeInUp 0.8s ease-out forwards;
 }
 
-/* 
-   We’ll stagger children by adding small delays via inline styles or extra classes.
-   Here are two helper classes for incremental delays if you prefer class-based:
-*/
-.fade-delay-200 { animation-delay: 0.2s; }
-.fade-delay-400 { animation-delay: 0.4s; }
-.fade-delay-600 { animation-delay: 0.6s; }
+.fade-delay-200 {
+  animation-delay: 0.2s;
+}
+.fade-delay-400 {
+  animation-delay: 0.4s;
+}
+.fade-delay-600 {
+  animation-delay: 0.6s;
+}
+/* About*/
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+.fade-delay-250 {
+  animation-delay: 0.25s;
+}
+.fade-delay-450 {
+  animation-delay: 0.45s;
+}
+.fade-delay-600 {
+  animation-delay: 0.6s;
+}
 
-      
-      /* Portfolio*/
-       .project-card:hover .project-overlay {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      .project-overlay {
-        transition: all 0.3s ease;
-        opacity: 0;
-        transform: translateY(20px);
-      }
+/* Pulse button on hover */
+.btn-pulse:hover {
+  animation: pulse 1s ease-in-out infinite;
+}
 
-      /* Contact*/
-      .input-field:focus {
-        outline: none;
-        box-shadow: 0 0 0 2px rgba(180, 83, 9, 0.5);
-      }
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+/* Portfolio*/
+.project-card:hover .project-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+.project-overlay {
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
 
-      .map-container {
-        height: 400px;
-        width: 100%;
-      }
+/* Contact*/
+.input-field:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(180, 83, 9, 0.5);
+}
+
+.map-container {
+  height: 400px;
+  width: 100%;
+}
