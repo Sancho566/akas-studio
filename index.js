@@ -27,5 +27,9 @@ window.addEventListener("load", () => {
   }, 2000);
 });
 
-
-
+AOS.init({
+  duration: 700,
+  easing: "ease-in-out",
+  once: true,
+  offset: 120,
+});
