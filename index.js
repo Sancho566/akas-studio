@@ -33,3 +33,34 @@ AOS.init({
   once: true,
   offset: 120,
 });
+
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+
+  const btn = form.querySelector('button[type="submit"]');
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+
+  try {
+    const res  = await fetch('contact-form-handler.php', {
+      method: 'POST',
+      body: data
+    });
+    const json = await res.json();
+
+    if (res.ok && json.success) {
+      alert(json.success);
+      form.reset();
+    } else {
+      alert(json.error || 'An error occurred. Please try again.');
+    }
+  } catch (err) {
+    console.error(err);
+    alert('Could not send message. Please try again later.');
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = 'Send Message <i class="fas fa-paper-plane ml-2"></i>';
+  }
+});
