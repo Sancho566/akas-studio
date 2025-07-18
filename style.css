@@ -88,11 +88,11 @@ body {
 }
 
 .hero-bg {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.19), rgba(0, 0, 0, 0.28)),
     url("images/Zios/Image3.jpg");
   background-size: cover;
   background-position: center;
-  animation: bg-panzoom 20s ease-in-out infinite;
+  background-repeat: no-repeat;
   overflow: hidden;
   position: relative;
 }
